@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$footer-height: 70px;
+//region FOOTER CLASS
+
+.bottom-footer {
+  bottom: $footer-height;
+}
+
+.h-footer {
+    height: $footer-height;
+}
+
+.pb-footer {
+    padding-bottom: $footer-height;
+}
+
+//endregion
+
+body {
+  @apply text-mainText bg-main;
+}
+
+@layer components {
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flex-center-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gap-main {
+    gap: 1rem;
+  }
+}
+
+.main-container  > * {
+  @apply min-h-dvh w-full border border-mainText;
+  padding-bottom: $footer-height;
+}
