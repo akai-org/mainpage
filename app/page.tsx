@@ -1,5 +1,4 @@
 'use client';
-import Character from '@/app/components/Character';
 import useLoadingClient from '@/app/resources/useLoadingClient';
 import Home from '@/app/pages/Home';
 import About from '@/app/pages/About';
@@ -40,7 +39,6 @@ export default function Page() {
             <Partners />
             <Contact />
           </div>
-          <Character />
           <Footer />
         </>
       ) : (

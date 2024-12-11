@@ -4,7 +4,7 @@ export default function MobileMenu({
   setIsOpen: (value: boolean) => void;
 }) {
   return (
-    <div className="bottom-footer fixed top-0 flex w-full flex-col sm:hidden">
+    <div className="pb-footer fixed top-0 flex h-full w-full flex-col sm:hidden">
       <div
         className="w-full flex-grow bg-black bg-opacity-25"
         onClick={() => setIsOpen(false)}
