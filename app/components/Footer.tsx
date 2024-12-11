@@ -8,7 +8,7 @@ export default function Footer() {
 
   return (
     <>
-      <div className="h-footer flex-center-col fixed bottom-0 z-50 w-full gap-2 border-t border-black bg-main">
+      <div className="fade-up-gsap h-footer flex-center-col fixed bottom-0 z-50 w-full gap-2 border-t border-black bg-main">
         {isOpen && <MobileMenu setIsOpen={setIsOpen} />}
         <IoMdMenu
           className="sm:hidden"

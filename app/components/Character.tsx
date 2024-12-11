@@ -26,7 +26,7 @@ export default function Character() {
     <>
       <div
         ref={characterRef}
-        className="bottom-footer flex-center fixed z-50 size-10 border border-black bg-white"
+        className="fade-up-gsap bottom-footer flex-center fixed z-50 size-10 border border-black bg-white"
       >
         <div>CAT</div>
       </div>

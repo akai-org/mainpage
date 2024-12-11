@@ -6,12 +6,35 @@ import About from '@/app/pages/About';
 import Projects from '@/app/pages/Projects';
 import Partners from '@/app/pages/Partners';
 import Contact from '@/app/pages/Contact';
+import Footer from '@/app/components/Footer';
+import { gsap } from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { TextPlugin } from 'gsap/TextPlugin';
 
 export default function Page() {
-  const { loadingJSX, isLoading } = useLoadingClient();
+  const { loadingJSX, isClient } = useLoadingClient();
+
+  gsap.registerPlugin(useGSAP);
+  gsap.registerPlugin(TextPlugin);
+
+  useGSAP(() => {
+    if (!isClient) return;
+    const elements = document.querySelectorAll(
+      'div.fade-up-gsap, div.fade-down-gsap',
+    );
+    gsap.to(elements, {
+      y: 0,
+      ease: 'power2.inOut',
+      duration: 1,
+      onComplete: () => {
+        document.body.style.overflow = 'auto';
+      },
+    });
+  }, [isClient]);
+
   return (
     <>
-      {isLoading ? (
+      {isClient ? (
         <>
           <div className="main-container">
             <Home />
@@ -21,6 +44,7 @@ export default function Page() {
             <Contact />
           </div>
           <Character />
+          <Footer />
         </>
       ) : (
         loadingJSX

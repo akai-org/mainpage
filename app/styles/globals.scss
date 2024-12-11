@@ -10,17 +10,17 @@ $footer-height: 70px;
 }
 
 .h-footer {
-    height: $footer-height;
+  height: $footer-height;
 }
 
 .pb-footer {
-    padding-bottom: $footer-height;
+  padding-bottom: $footer-height;
 }
 
 //endregion
 
 body {
-  @apply text-mainText bg-main;
+  @apply bg-main text-mainText;
 }
 
 @layer components {
@@ -42,7 +42,17 @@ body {
   }
 }
 
-.main-container  > * {
-  @apply min-h-dvh w-full border-y border-mainText;
+.main-container > * {
+  @apply min-h-dvh w-full;
   padding-bottom: $footer-height;
 }
+
+//region GSAP
+.fade-up-gsap {
+  transform: translateY(100dvh);
+}
+.fade-down-gsap {
+  transform: translateY(-100dvh);
+}
+
+//endregion
