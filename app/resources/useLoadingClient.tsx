@@ -4,7 +4,7 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import Image from 'next/image';
 
-export default function useLoadingClient() {
+const useLoadingClient = () => {
   const [isWindow, setIsWindow] = useState(false);
   const [isClient, setIsClient] = useState(false);
 
@@ -39,4 +39,6 @@ export default function useLoadingClient() {
     ),
     isClient,
   };
-}
+};
+
+export default useLoadingClient;

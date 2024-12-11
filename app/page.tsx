@@ -9,14 +9,11 @@ import Contact from '@/app/pages/Contact';
 import Footer from '@/app/components/Footer';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { TextPlugin } from 'gsap/TextPlugin';
 
 export default function Page() {
   const { loadingJSX, isClient } = useLoadingClient();
 
   gsap.registerPlugin(useGSAP);
-  gsap.registerPlugin(TextPlugin);
-
   useGSAP(() => {
     if (!isClient) return;
     const elements = document.querySelectorAll(
