@@ -1,8 +1,6 @@
 import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaX } from 'react-icons/fa6';
 
-export const LOADING_TIME = 0 * 1000; // 1 000 ms = 1 s
-
 export const MAIL = 'kontakt@akai.org.pl';
 
 export const SOCIALS = [

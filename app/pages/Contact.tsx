@@ -3,6 +3,7 @@ import { MAIL, SOCIALS } from '@/app/resources/constants';
 export default function Contact() {
   return (
     <div className="flex-center-col gap-10">
+      <div className="mb-auto" />
       <h1 className="text-5xl font-bold">Kontakt</h1>
       <a href={`mailto:${MAIL}`}>{MAIL}</a>
       <div className="flex gap-7">
@@ -12,7 +13,7 @@ export default function Contact() {
           </a>
         ))}
       </div>
-      <div className="text-[10px]">
+      <div className="mt-auto text-[10px]">
         © 2020-{new Date().getFullYear()} Akademickie Koło Aplikacji
         Internetowych
       </div>

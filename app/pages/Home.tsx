@@ -7,7 +7,13 @@ export default function Home() {
   gsap.registerPlugin(TextPlugin);
 
   useGSAP(() => {
-    gsap.to('.akai', {
+    const tl = gsap.timeline();
+    tl.to('.home-gsap', {
+      y: 0,
+      ease: 'power2.inOut',
+      duration: 1,
+    });
+    tl.to('.akai', {
       duration: 2,
       ease: 'none',
       text: {
@@ -16,7 +22,7 @@ export default function Home() {
     });
   });
   return (
-    <div className="flex-center-col gap-main">
+    <div className="home-gsap flex-center-col gap-main -translate-y-[100dvh]">
       <h1 className="text-5xl font-bold">AKAI</h1>
       <div className="h-1 w-7 rounded bg-secondary"></div>
       <div className="akai">_</div>

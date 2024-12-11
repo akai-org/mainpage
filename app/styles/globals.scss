@@ -43,6 +43,6 @@ body {
 }
 
 .main-container  > * {
-  @apply min-h-dvh w-full border border-mainText;
+  @apply min-h-dvh w-full border-y border-mainText;
   padding-bottom: $footer-height;
 }
