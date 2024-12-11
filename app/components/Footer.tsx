@@ -5,6 +5,7 @@ import MobileMenu from '@/app/components/MobileMenu';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Image from 'next/image';
 
 export default function Footer() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,6 +15,8 @@ export default function Footer() {
   gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(() => {
+    console.log(document.body.style.overflow);
+    if (document.body.style.overflow === 'hidden') return;
     gsap.to(characterRef.current, {
       x: referenceRef.current!.clientWidth - characterRef.current!.clientWidth,
       scrollTrigger: {
@@ -25,6 +28,23 @@ export default function Footer() {
     });
   });
 
+  const { contextSafe } = useGSAP();
+  const onClickMenu = contextSafe(() => {
+    const tl = gsap.timeline();
+    tl.to('.scrollContainer', {
+      duration: 1,
+      ease: 'power2.inOut',
+      y: 0,
+      onComplete: () => {
+        window.scrollTo(0, 0);
+      },
+    });
+    tl.to('.scrollContainer', {
+      duration: 1,
+      ease: 'power2.inOut',
+      y: '100dvh',
+    });
+  });
   return (
     <>
       <div
@@ -37,7 +57,7 @@ export default function Footer() {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         />
         <div className="sm:flex-center hidden gap-5">
-          <div>Strona główna</div>
+          <div onClick={onClickMenu}>Strona główna</div>
           <div>O Nas</div>
           <div>Projekty</div>
           <div>Partnerzy</div>
@@ -45,6 +65,9 @@ export default function Footer() {
         </div>
       </div>
       {isMenuOpen && <MobileMenu setIsOpen={setIsMenuOpen} />}
+      <div className="scrollContainer flex-center fixed left-0 top-0 z-[60] h-dvh w-full translate-y-[100dvh] border-y border-black bg-main">
+        <Image src="/AKAI_logo.png" alt="logo" width={200} height={200} />
+      </div>
       <div
         ref={characterRef}
         className="fade-up-gsap bottom-footer flex-center fixed z-50 size-10 border border-black bg-white"
