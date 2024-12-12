@@ -17,9 +17,7 @@ export default function Page() {
   gsap.registerPlugin(useGSAP, ScrollTrigger, TextPlugin); //register all plugins use in app
   useGSAP(() => {
     if (!isClient) return;
-    const elements = document.querySelectorAll(
-      'div.fade-up-gsap, div.fade-down-gsap',
-    );
+    const elements = document.querySelectorAll('div.fade-up-gsap');
     gsap.to(elements, {
       y: 0,
       ease: 'power2.inOut',

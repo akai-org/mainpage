@@ -12,7 +12,6 @@ export default function About() {
       scrollTrigger: {
         trigger: '#container',
         scrub: 1,
-        markers: true,
       },
     });
   });
