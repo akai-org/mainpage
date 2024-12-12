@@ -15,7 +15,7 @@ const useLoadingClient = () => {
   const loadingRef = useRef(null);
   useGSAP(() => {
     if (!isWindow || !loadingRef) return;
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflowY = 'scroll';
 
     gsap.to(loadingRef.current, {
       y: '100dvh',
