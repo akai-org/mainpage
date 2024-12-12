@@ -12,8 +12,6 @@ export default function Footer() {
   const characterRef = useRef<HTMLDivElement>(null);
   const referenceRef = useRef<HTMLDivElement>(null);
   useGSAP(() => {
-    console.log(document.body.style.overflow);
-    if (document.body.style.overflow === 'hidden') return;
     gsap.to(characterRef.current, {
       x: referenceRef.current!.clientWidth - characterRef.current!.clientWidth,
       scrollTrigger: {

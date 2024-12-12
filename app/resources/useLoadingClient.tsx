@@ -15,7 +15,7 @@ const useLoadingClient = () => {
   const loadingRef = useRef(null);
   useGSAP(() => {
     if (!isWindow || !loadingRef) return;
-    document.body.style.overflowY = 'scroll';
+    document.body.style.overflowY = 'hidden';
 
     gsap.to(loadingRef.current, {
       y: '100dvh',
@@ -23,6 +23,7 @@ const useLoadingClient = () => {
       display: 'none',
       ease: 'power2.inOut',
       onComplete: () => {
+        document.body.style.overflow = 'auto';
         setIsClient(true);
       },
     });

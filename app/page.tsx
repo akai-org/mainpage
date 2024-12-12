@@ -22,9 +22,6 @@ export default function Page() {
       y: 0,
       ease: 'power2.inOut',
       duration: 1,
-      onComplete: () => {
-        document.body.style.overflow = 'auto';
-      },
     });
   }, [isClient]);
 
