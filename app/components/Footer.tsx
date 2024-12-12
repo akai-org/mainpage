@@ -30,7 +30,7 @@ export default function Footer() {
   });
 
   const { contextSafe } = useGSAP();
-  const onClickMenu = contextSafe((to: string) => {
+  const onClickMenuItem = contextSafe((to: string, onComplete?: () => void) => {
     const tl = gsap.timeline();
     tl.to('.scrollContainer', {
       duration: 1,
@@ -41,6 +41,8 @@ export default function Footer() {
         if (to === 'home') animateScroll.scrollToTop(options);
         else if (to === 'contact') animateScroll.scrollToBottom(options);
         else scroller.scrollTo(to, options);
+
+        onComplete && onComplete();
       },
     });
     tl.to('.scrollContainer', {
@@ -49,11 +51,12 @@ export default function Footer() {
       y: '100dvh',
     });
   });
+
   return (
     <>
       <div
         ref={referenceRef}
-        className="fade-up-gsap h-footer flex-center-col fixed bottom-0 z-50 w-full gap-2 border-t border-black bg-main"
+        className="fade-up-gsap h-footer flex-center-col fixed bottom-0 z-40 w-full gap-2 border-t border-black bg-main"
       >
         <IoMdMenu
           className="sm:hidden"
@@ -61,22 +64,25 @@ export default function Footer() {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         />
         <div className="sm:flex-center hidden gap-5">
-          <div onClick={() => onClickMenu('home')}>Strona główna</div>
-          <div onClick={() => onClickMenu('about')}>O Nas</div>
-          <div onClick={() => onClickMenu('projects')}>Projekty</div>
-          <div onClick={() => onClickMenu('partners')}>Partnerzy</div>
-          <div onClick={() => onClickMenu('contact')}>Kontakt</div>
+          <div onClick={() => onClickMenuItem('home')}>Strona główna</div>
+          <div onClick={() => onClickMenuItem('about')}>O Nas</div>
+          <div onClick={() => onClickMenuItem('projects')}>Projekty</div>
+          <div onClick={() => onClickMenuItem('partners')}>Partnerzy</div>
+          <div onClick={() => onClickMenuItem('contact')}>Kontakt</div>
         </div>
       </div>
       {isMenuOpen && (
-        <MobileMenu setIsOpen={setIsMenuOpen} onClickMenu={onClickMenu} />
+        <MobileMenu
+          setIsOpen={setIsMenuOpen}
+          onClickMenuItem={onClickMenuItem}
+        />
       )}
       <div className="scrollContainer flex-center fixed left-0 top-0 z-[60] h-dvh w-full translate-y-[100dvh] border-y border-black bg-main">
         <Image src="/AKAI_logo.png" alt="logo" width={200} height={200} />
       </div>
       <div
         ref={characterRef}
-        className="fade-up-gsap bottom-footer flex-center fixed z-50 size-10 border border-black bg-white"
+        className="fade-up-gsap bottom-footer flex-center fixed z-40 size-10 border border-black bg-white"
       >
         <div>CAT</div>
       </div>

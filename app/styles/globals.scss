@@ -54,5 +54,10 @@ body {
 .fade-down-gsap {
   transform: translateY(-100dvh);
 }
-
+.translate-y-dvh {
+  transform: translateY(100dvh);
+}
+.-translate-y-dvh {
+  transform: translateY(-100dvh);
+}
 //endregion
