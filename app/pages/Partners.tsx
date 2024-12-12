@@ -1,8 +1,9 @@
+import { Element } from 'react-scroll';
 import { PARTNERS } from '@/app/resources/constants';
 
 export default function Partners() {
   return (
-    <div className="flex-center-col px-main gap-20">
+    <Element name="partners" className="flex-center-col gap-20 px-main">
       <h1 className="text-5xl font-bold">Nasi partnerzy</h1>
       <div className="flex w-full flex-col justify-around md:flex-row">
         {PARTNERS.map((partner, i) => (
@@ -11,6 +12,6 @@ export default function Partners() {
           </div>
         ))}
       </div>
-    </div>
+    </Element>
   );
 }

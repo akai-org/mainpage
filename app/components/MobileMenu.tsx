@@ -1,8 +1,12 @@
-export default function MobileMenu({
-  setIsOpen,
-}: {
+type MobileMenuT = {
   setIsOpen: (value: boolean) => void;
-}) {
+  onClickMenu: (to: string) => void;
+};
+export default function MobileMenu({ setIsOpen, onClickMenu }: MobileMenuT) {
+  const handleClick = (to: string) => {
+    setIsOpen(false);
+    onClickMenu(to);
+  };
   return (
     <div className="pb-footer fixed top-0 flex h-full w-full flex-col sm:hidden">
       <div
@@ -10,11 +14,11 @@ export default function MobileMenu({
         onClick={() => setIsOpen(false)}
       />
       <div className="flex-center-col gap-5 border-t border-black bg-main p-5">
-        <div>Strona główna</div>
-        <div>O nas</div>
-        <div>Projekty</div>
-        <div>Partnerzy</div>
-        <div>Kontakt</div>
+        <div onClick={() => handleClick('home')}>Strona główna</div>
+        <div onClick={() => handleClick('about')}>O Nas</div>
+        <div onClick={() => handleClick('projects')}>Projekty</div>
+        <div onClick={() => handleClick('partners')}>Partnerzy</div>
+        <div onClick={() => handleClick('contact')}>Kontakt</div>
       </div>
     </div>
   );

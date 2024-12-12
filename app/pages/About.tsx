@@ -2,6 +2,7 @@
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Element } from 'react-scroll';
 
 export default function About() {
   gsap.registerPlugin(ScrollTrigger);
@@ -19,7 +20,7 @@ export default function About() {
     });
   });
   return (
-    <div id="container" className="flex-center-col px-20">
+    <Element name="about" className="flex-center-col px-20">
       <div className="flex w-full justify-between">
         <div
           className="-translate-y-20 border-2 border-secondary p-1 text-xl opacity-0"
@@ -65,6 +66,6 @@ export default function About() {
           projektowania aplikacji internetowych.
         </div>
       </div>
-    </div>
+    </Element>
   );
 }

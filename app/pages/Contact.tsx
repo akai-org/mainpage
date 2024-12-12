@@ -1,8 +1,9 @@
 import { MAIL, SOCIALS } from '@/app/resources/constants';
+import { Element } from 'react-scroll';
 
 export default function Contact() {
   return (
-    <div className="flex-center-col gap-10">
+    <Element name="contact" className="flex-center-col gap-10">
       <div className="mb-auto" />
       <h1 className="text-5xl font-bold">Kontakt</h1>
       <a href={`mailto:${MAIL}`}>{MAIL}</a>
@@ -17,6 +18,6 @@ export default function Contact() {
         © 2020-{new Date().getFullYear()} Akademickie Koło Aplikacji
         Internetowych
       </div>
-    </div>
+    </Element>
   );
 }

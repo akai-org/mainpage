@@ -6,6 +6,7 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
+import { scroller, animateScroll } from 'react-scroll';
 
 export default function Footer() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,14 +30,17 @@ export default function Footer() {
   });
 
   const { contextSafe } = useGSAP();
-  const onClickMenu = contextSafe(() => {
+  const onClickMenu = contextSafe((to: string) => {
     const tl = gsap.timeline();
     tl.to('.scrollContainer', {
       duration: 1,
       ease: 'power2.inOut',
       y: 0,
       onComplete: () => {
-        window.scrollTo(0, 0);
+        const options = { duration: 0, delay: 0 };
+        if (to === 'home') animateScroll.scrollToTop(options);
+        else if (to === 'contact') animateScroll.scrollToBottom(options);
+        else scroller.scrollTo(to, options);
       },
     });
     tl.to('.scrollContainer', {
@@ -57,14 +61,16 @@ export default function Footer() {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         />
         <div className="sm:flex-center hidden gap-5">
-          <div onClick={onClickMenu}>Strona główna</div>
-          <div>O Nas</div>
-          <div>Projekty</div>
-          <div>Partnerzy</div>
-          <div>Kontakt</div>
+          <div onClick={() => onClickMenu('home')}>Strona główna</div>
+          <div onClick={() => onClickMenu('about')}>O Nas</div>
+          <div onClick={() => onClickMenu('projects')}>Projekty</div>
+          <div onClick={() => onClickMenu('partners')}>Partnerzy</div>
+          <div onClick={() => onClickMenu('contact')}>Kontakt</div>
         </div>
       </div>
-      {isMenuOpen && <MobileMenu setIsOpen={setIsMenuOpen} />}
+      {isMenuOpen && (
+        <MobileMenu setIsOpen={setIsMenuOpen} onClickMenu={onClickMenu} />
+      )}
       <div className="scrollContainer flex-center fixed left-0 top-0 z-[60] h-dvh w-full translate-y-[100dvh] border-y border-black bg-main">
         <Image src="/AKAI_logo.png" alt="logo" width={200} height={200} />
       </div>
