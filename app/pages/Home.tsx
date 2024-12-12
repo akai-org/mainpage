@@ -1,12 +1,8 @@
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { TextPlugin } from 'gsap/TextPlugin';
 import { Element } from 'react-scroll';
 
 export default function Home() {
-  gsap.registerPlugin(useGSAP);
-  gsap.registerPlugin(TextPlugin);
-
   useGSAP(() => {
     gsap.to('.akai', {
       duration: 2,

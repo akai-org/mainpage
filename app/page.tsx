@@ -7,12 +7,14 @@ import Partners from '@/app/pages/Partners';
 import Contact from '@/app/pages/Contact';
 import Footer from '@/app/components/Footer';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { TextPlugin } from 'gsap/TextPlugin';
 import { useGSAP } from '@gsap/react';
 
 export default function Page() {
   const { loadingJSX, isClient } = useLoadingClient();
 
-  gsap.registerPlugin(useGSAP);
+  gsap.registerPlugin(useGSAP, ScrollTrigger, TextPlugin); //register all plugins use in app
   useGSAP(() => {
     if (!isClient) return;
     const elements = document.querySelectorAll(

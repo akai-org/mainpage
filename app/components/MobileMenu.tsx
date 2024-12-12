@@ -10,7 +10,6 @@ export default function MobileMenu({
   setIsOpen,
   onClickMenuItem,
 }: MobileMenuT) {
-  gsap.registerPlugin(useGSAP);
   useGSAP(() => {
     gsap.to('#mobile-menu', {
       duration: 0.5,

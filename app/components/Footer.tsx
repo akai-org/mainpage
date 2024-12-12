@@ -4,7 +4,6 @@ import { IoMdMenu } from 'react-icons/io';
 import MobileMenu from '@/app/components/MobileMenu';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import { scroller, animateScroll } from 'react-scroll';
 
@@ -12,9 +11,6 @@ export default function Footer() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const characterRef = useRef<HTMLDivElement>(null);
   const referenceRef = useRef<HTMLDivElement>(null);
-  gsap.registerPlugin(useGSAP);
-  gsap.registerPlugin(ScrollTrigger);
-
   useGSAP(() => {
     console.log(document.body.style.overflow);
     if (document.body.style.overflow === 'hidden') return;

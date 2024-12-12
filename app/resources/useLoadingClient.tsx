@@ -13,7 +13,6 @@ const useLoadingClient = () => {
   }, []);
 
   const loadingRef = useRef(null);
-  gsap.registerPlugin(useGSAP);
   useGSAP(() => {
     if (!isWindow || !loadingRef) return;
     document.body.style.overflow = 'hidden';

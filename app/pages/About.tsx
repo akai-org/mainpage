@@ -1,12 +1,9 @@
 'use client';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Element } from 'react-scroll';
 
 export default function About() {
-  gsap.registerPlugin(ScrollTrigger);
-
   useGSAP(() => {
     gsap.to('#fadeDown', {
       y: 0,
