@@ -1,4 +1,5 @@
-import { RefObject, useRef } from 'react';
+'use client';
+import { RefObject, useRef, useState } from 'react';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 import Image from 'next/image';
@@ -8,6 +9,7 @@ export default function Character({
 }: {
   referenceRef: RefObject<HTMLDivElement | null>;
 }) {
+  const [anim, setAnim] = useState<'left' | 'middle' | 'right'>('left');
   const characterRef = useRef<HTMLDivElement>(null);
   useGSAP(() => {
     gsap.to(characterRef.current, {
@@ -21,6 +23,12 @@ export default function Character({
           gsap.to(characterRef.current, {
             rotateY: self.direction === -1 ? 180 : 0,
           });
+          //usprawnic animacje
+          const interval = 5;
+          const wynik =
+            (Math.round((self.progress * 100) / interval) * interval) %
+            (2 * interval);
+          setAnim(wynik == 0 ? 'left' : 'right');
         },
       },
     });
@@ -33,7 +41,7 @@ export default function Character({
     >
       <div>
         <Image
-          src="/cat_middle.png"
+          src={`/cat_${anim}.png`}
           alt="cat"
           width={80}
           height={50}
