@@ -6,24 +6,14 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import Image from 'next/image';
 import { scroller, animateScroll } from 'react-scroll';
+import { MENU } from '@/app/resources/constants';
+import Character from '@/app/components/Character';
 
 export default function Footer() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const characterRef = useRef<HTMLDivElement>(null);
   const referenceRef = useRef<HTMLDivElement>(null);
-  useGSAP(() => {
-    gsap.to(characterRef.current, {
-      x: referenceRef.current!.clientWidth - characterRef.current!.clientWidth,
-      scrollTrigger: {
-        start: 'top top',
-        end: 'max',
-        scrub: true,
-        pin: true,
-      },
-    });
-  });
-
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { contextSafe } = useGSAP();
+
   const onClickMenuItem = contextSafe((to: string, onComplete?: () => void) => {
     const tl = gsap.timeline();
     tl.to('.scrollContainer', {
@@ -46,40 +36,53 @@ export default function Footer() {
     });
   });
 
+  const handleMobileClose = contextSafe(() => {
+    gsap.to('#mobile-menu-bg', {
+      duration: 0.25,
+      opacity: 0,
+    });
+    gsap.to('#mobile-menu', {
+      duration: 0.5,
+      ease: 'power2.inOut',
+      y: '100dvh',
+      onComplete: () => {
+        setIsMobileMenuOpen(false);
+      },
+    });
+  });
+
   return (
     <>
       <div
         ref={referenceRef}
-        className="fade-up-gsap h-footer flex-center-col fixed bottom-0 z-40 w-full gap-2 border-t border-black bg-main"
+        className="fade-up-gsap h-footer flex-center-col fixed bottom-0 z-[60] w-full gap-2 border-t border-black bg-main"
       >
         <IoMdMenu
           className="sm:hidden"
           size={20}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={() =>
+            !isMobileMenuOpen ? setIsMobileMenuOpen(true) : handleMobileClose()
+          }
         />
         <div className="sm:flex-center hidden gap-5">
-          <div onClick={() => onClickMenuItem('home')}>Strona główna</div>
-          <div onClick={() => onClickMenuItem('about')}>O Nas</div>
-          <div onClick={() => onClickMenuItem('projects')}>Projekty</div>
-          <div onClick={() => onClickMenuItem('partners')}>Partnerzy</div>
-          <div onClick={() => onClickMenuItem('contact')}>Kontakt</div>
+          {MENU.map((item, i) => (
+            <div key={i} onClick={() => onClickMenuItem(item.to)}>
+              {item.name}
+            </div>
+          ))}
         </div>
       </div>
-      {isMenuOpen && (
+      {isMobileMenuOpen && (
         <MobileMenu
-          setIsOpen={setIsMenuOpen}
+          setIsOpen={setIsMobileMenuOpen}
+          handleMobileClose={handleMobileClose}
           onClickMenuItem={onClickMenuItem}
         />
       )}
       <div className="scrollContainer flex-center fixed left-0 top-0 z-[60] h-dvh w-full translate-y-[100dvh] border-y border-black bg-main">
         <Image src="/AKAI_logo.png" alt="logo" width={200} height={200} />
       </div>
-      <div
-        ref={characterRef}
-        className="fade-up-gsap bottom-footer flex-center fixed z-40 size-10 border border-black bg-white"
-      >
-        <div>CAT</div>
-      </div>
+      <Character referenceRef={referenceRef} />
     </>
   );
 }
