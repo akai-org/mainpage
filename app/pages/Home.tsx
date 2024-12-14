@@ -11,7 +11,7 @@ export default function Home() {
       scaleX: 1,
     });
     tlMain.to(logo, {
-      duration: 0.5,
+      duration: 0.75,
       opacity: 1,
       y: 0,
       x: 0,
