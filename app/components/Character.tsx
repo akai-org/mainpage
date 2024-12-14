@@ -1,6 +1,7 @@
 import { RefObject, useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
+import Image from 'next/image';
 
 export default function Character({
   referenceRef,
@@ -16,6 +17,11 @@ export default function Character({
         end: 'max',
         scrub: true,
         pin: true,
+        onUpdate: self => {
+          gsap.to(characterRef.current, {
+            rotateY: self.direction === -1 ? 180 : 0,
+          });
+        },
       },
     });
   });
@@ -23,9 +29,17 @@ export default function Character({
   return (
     <div
       ref={characterRef}
-      className="fade-up-gsap bottom-footer flex-center fixed z-40 size-10 border border-black bg-white"
+      className="fade-up-gsap bottom-footer flex-center fixed z-40"
     >
-      <div>CAT</div>
+      <div>
+        <Image
+          src="/cat_middle.png"
+          alt="cat"
+          width={80}
+          height={50}
+          className="cat -mb-2"
+        />
+      </div>
     </div>
   );
 }
