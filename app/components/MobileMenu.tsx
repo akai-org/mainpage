@@ -1,6 +1,7 @@
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { MENU } from '@/app/resources/constants';
+import clsx from 'clsx';
 
 type MobileMenuT = {
   setIsOpen: (value: boolean) => void;
@@ -33,12 +34,18 @@ export default function MobileMenu({
       />
       <div
         id="mobile-menu"
-        className="bottom-footer translate-y-dvh flex-center-col fixed z-50 w-full gap-5 border-t border-black bg-main p-5"
+        className="bottom-footer translate-y-dvh flex-center-col fixed z-50 w-full border-t border-black bg-main"
       >
         {MENU.map((item, i) => (
           <div
             key={i}
             onClick={() => onClickMenuItem(item.to, () => setIsOpen(false))}
+            className={clsx(
+              'size-full border-b border-black p-4 text-center duration-300 active:bg-black active:text-white',
+              {
+                'border-none': i == MENU.length - 1,
+              },
+            )}
           >
             {item.name}
           </div>

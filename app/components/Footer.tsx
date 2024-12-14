@@ -1,13 +1,13 @@
 'use client';
 import { useRef, useState } from 'react';
-import { IoMdMenu } from 'react-icons/io';
 import MobileMenu from '@/app/components/MobileMenu';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import Image from 'next/image';
-import { scroller, animateScroll } from 'react-scroll';
+import { animateScroll, scroller } from 'react-scroll';
 import { MENU } from '@/app/resources/constants';
 import Character from '@/app/components/Character';
+import clsx from 'clsx';
 
 export default function Footer() {
   const referenceRef = useRef<HTMLDivElement>(null);
@@ -57,19 +57,33 @@ export default function Footer() {
         ref={referenceRef}
         className="fade-up-gsap h-footer flex-center-col fixed bottom-0 z-[60] w-full gap-2 border-t border-black bg-main"
       >
-        <IoMdMenu
-          className="sm:hidden"
-          size={20}
-          onClick={() =>
-            !isMobileMenuOpen ? setIsMobileMenuOpen(true) : handleMobileClose()
-          }
-        />
-        <div className="sm:flex-center hidden gap-5">
+        <div className="flex-center size-full">
+          <div className="mt-auto h-1/2 w-full flex-grow border-t border-black"></div>
+          <div
+            className="flex-center h-full w-40 cursor-pointer border-x border-black duration-300 active:bg-black active:text-xl active:text-white sm:hidden"
+            onClick={() =>
+              !isMobileMenuOpen
+                ? setIsMobileMenuOpen(true)
+                : handleMobileClose()
+            }
+          >
+            MENU
+          </div>
           {MENU.map((item, i) => (
-            <div key={i} onClick={() => onClickMenuItem(item.to)}>
+            <div
+              key={i}
+              onClick={() => onClickMenuItem(item.to)}
+              className={clsx(
+                'flex-center hidden h-full w-40 cursor-pointer text-nowrap border-l border-black px-5 duration-300 hover:bg-black hover:text-white active:text-xl sm:flex',
+                {
+                  'border-r': i == MENU.length - 1,
+                },
+              )}
+            >
               {item.name}
             </div>
           ))}
+          <div className="mt-auto h-1/2 w-full flex-grow border-t border-black"></div>
         </div>
       </div>
       {isMobileMenuOpen && (
