@@ -5,21 +5,35 @@ import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 
 export default function Partners() {
-  const { contextSafe } = useGSAP();
-  const onClickPartner = contextSafe((i: number) => {
+  useGSAP(() => {
     const partners = document.querySelectorAll('#partner');
     const partners2 = document.querySelectorAll('#partner-2');
-    if (partners2[i].textContent === PARTNERS[i].name) return;
-    gsap.from(partners[i], {
-      rotationY: 360,
-      duration: 1,
-    });
-    gsap.to(partners2[i], {
-      duration: 1,
-      borderWidth: 2,
-      text: {
-        value: PARTNERS[i].name,
-      },
+
+    partners.forEach((partner, i) => {
+      gsap.to(partner, {
+        rotationY: 360,
+        duration: 1,
+        scrollTrigger: {
+          trigger: partner,
+          start: 'top 50%',
+          end: 'bottom 50% ',
+          markers: true,
+        },
+      });
+      partners2.forEach((partner, i) => {
+        gsap.to(partner, {
+          duration: 1,
+          borderWidth: 2,
+          scrollTrigger: {
+            trigger: partner,
+            start: 'top 50%',
+            end: 'bottom 50% ',
+          },
+          text: {
+            value: PARTNERS[i].name,
+          },
+        });
+      });
     });
   });
 
@@ -34,7 +48,6 @@ export default function Partners() {
           <div
             key={i}
             id="partner"
-            onClick={() => onClickPartner(i)}
             className="w-fit border-2 border-secondary p-1"
           >
             <div
