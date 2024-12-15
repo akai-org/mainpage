@@ -3,8 +3,11 @@ import { Element } from 'react-scroll';
 import { PARTNERS } from '@/app/resources/constants';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
+import { useState } from 'react';
+import clsx from 'clsx';
 
 export default function Partners() {
+  const [isHref, setisHref] = useState(false);
   useGSAP(() => {
     const partners = document.querySelectorAll('#partner');
     const partners2 = document.querySelectorAll('#partner-2');
@@ -17,7 +20,6 @@ export default function Partners() {
           trigger: partner,
           start: 'top 50%',
           end: 'bottom 50% ',
-          markers: true,
         },
       });
       partners2.forEach((partner, i) => {
@@ -32,6 +34,7 @@ export default function Partners() {
           text: {
             value: PARTNERS[i].name,
           },
+          onComplete: () => setisHref(true),
         });
       });
     });
@@ -44,18 +47,24 @@ export default function Partners() {
     >
       <h1 className="text-3xl font-bold sm:text-5xl">Nasi partnerzy</h1>
       <div className="flex-center-col flex w-full gap-10 md:flex-row md:justify-around md:gap-0">
-        {PARTNERS.map((_, i) => (
+        {PARTNERS.map((partner, i) => (
           <div
             key={i}
             id="partner"
-            className="w-fit border-2 border-secondary p-1"
+            className="w-32 border-2 border-secondary p-1"
           >
-            <div
-              id="partner-2"
-              className="cursor-pointer select-none rounded border-secondary p-2 text-center"
+            <a
+              target="_blank"
+              href={partner.link}
+              className={clsx({ 'pointer-events-none': !isHref })}
             >
-              PARTNER
-            </div>
+              <div
+                id="partner-2"
+                className="cursor-pointer select-none rounded border-secondary p-2 text-center"
+              >
+                PARTNER
+              </div>
+            </a>
           </div>
         ))}
       </div>

@@ -67,9 +67,12 @@ export default function Contact() {
           ))}
         </div>
       </div>
-      <div className="mt-auto text-[10px]">
-        © 2020-{new Date().getFullYear()} Akademickie Koło Aplikacji
-        Internetowych
+      <div className="flex-center-col mt-auto text-[10px]">
+        <span>Realizacja Beniamin Szawracki</span>
+        <span>
+          © 2020-{new Date().getFullYear()} Akademickie Koło Aplikacji
+          Internetowych
+        </span>
       </div>
     </Element>
   );
