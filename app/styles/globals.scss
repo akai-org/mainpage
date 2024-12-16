@@ -40,6 +40,10 @@ body {
   .gap-main {
     gap: 1rem;
   }
+
+  .border-secondary-1 {
+    @apply border border-secondary;
+  }
 }
 
 .main-container > * {
