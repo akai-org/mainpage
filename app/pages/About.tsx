@@ -36,7 +36,6 @@ export default function About() {
       y: 100,
       opacity: 0,
       scrollTrigger: {
-        markers: true,
         trigger: '#about-main',
         start: 'top 80%',
         end: 'bottom 80% ',
@@ -46,7 +45,7 @@ export default function About() {
   return (
     <Element
       name="about"
-      className="flex-center-col lg gap-10 overflow-hidden !py-5 px-5 lg:gap-5 lg:px-20"
+      className="flex-center-col gap-10 overflow-hidden !py-5 px-5 lg:gap-5 lg:px-20"
     >
       <div className="flex w-full flex-col justify-between gap-5 sm:flex-row sm:gap-0 lg:h-36">
         <div
@@ -86,9 +85,10 @@ export default function About() {
         </div>
         <div className="flex-center-col flex-grow">
           <div
-            className="border-secondary-1 p-5 lg:mt-auto"
             id="about-fade-right"
-          >
+            className="border-secondary-1 hidden w-full flex-grow lg:block"
+          />
+          <div className="border-secondary-1 p-5" id="about-fade-right">
             Zależy nam na promowaniu idei sieci budowanej przez
             profesjonalistów, którzy znają wartość swojej wiedzy i są zawsze
             głodni nowych umiejętności i doświadczenia.
@@ -96,7 +96,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="flex w-full flex-col lg:h-36">
+      <div className="flex w-full flex-col">
         <div
           id="about-fade-left"
           className="border-secondary-1 p-5 text-center"
@@ -113,7 +113,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="flex w-full lg:h-36">
+      <div className="flex w-full sm:h-36">
         <div id="about-fade-left" className="border-secondary-1 p-5">
           Staramy się nawiązywać współpracę z placówkami naukowymi,
           przedstawicielami firm oraz znanymi specjalistami ze świata IT.
@@ -121,14 +121,17 @@ export default function About() {
           doświadczenie przekazywane przez naszą organizacja stanowi przyszłość
           projektowania aplikacji internetowych.
         </div>
-        <Image
-          src="/AKAI_logo.png"
-          alt="logo"
-          width={200}
-          height={200}
+        <div
           id="about-fade-right"
-          className="border-secondary-1 hidden h-full w-24 p-5 sm:block lg:w-fit"
-        />
+          className="border-secondary-1 relative hidden h-full w-72 flex-grow sm:block"
+        >
+          <Image
+            src="/AKAI_logo.png"
+            alt="logo"
+            fill
+            className="absolute h-full object-contain p-2"
+          />
+        </div>
       </div>
     </Element>
   );
