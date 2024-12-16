@@ -23,7 +23,7 @@ export default function Footer() {
         console.log(to);
         // TODO Scroll to section
 
-        onComplete && onComplete();
+        if (onComplete) onComplete();
       },
     });
     tl.to('.scrollContainer', {
