@@ -4,28 +4,25 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
 export default function Contact() {
-  const { contextSafe } = useGSAP();
-  const onClick = contextSafe(() => {
+  useGSAP(() => {
     const socials = document.querySelectorAll('#contact-social');
 
-    const tl = gsap.timeline();
-    tl.to('#contact-container', {
-      scale: 0,
-      display: 'none',
-      duration: 0.2,
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#contact-container',
+        start: 'top 70%',
+        end: 'bottom 70% ',
+      },
     });
-    tl.to('#contact-container-2', {
-      scale: 1,
-      display: 'flex',
-      duration: 0.2,
+    tl.from('#contact-container-2', {
+      duration: 0.5,
+      x: -100,
+      opacity: 0,
     });
-    socials.forEach((social, i) => {
-      tl.to(social, {
-        scale: 1,
-        y: 20,
-        display: 'block',
-        duration: 0.2,
-      });
+    tl.from(socials, {
+      duration: 0.5,
+      y: 100,
+      opacity: 0,
     });
     tl.to(socials, {
       rotation: 360,
@@ -38,26 +35,21 @@ export default function Contact() {
   return (
     <Element name="contact" className="flex-center-col gap-10">
       <div className="mb-auto" />
-      <div
-        id="contact-container"
-        onClick={onClick}
-        className="cursor-pointer select-none rounded border border-b border-black p-2 text-center duration-200"
-      >
+      <div id="contact-container">
         <div className="text-5xl font-bold">Kontakt</div>
-        <div>Kliknij mnie!</div>
       </div>
       <div
         id="contact-container-2"
-        className="flex-center-col hidden scale-0 gap-10 text-center"
+        className="flex-center-col gap-10 text-center"
       >
-        <a className="text-5xl" href={`mailto:${MAIL}`}>
+        <a className="text-2xl sm:text-5xl" href={`mailto:${MAIL}`}>
           {MAIL}
         </a>
         <div className="flex gap-7">
           {SOCIALS.map((social, i) => (
             <div
               id="contact-social"
-              className="hidden scale-0 rounded-[500px] border-2 border-b-black border-l-secondary border-r-secondary border-t-black p-2 text-2xl"
+              className="rounded-[500px] border-2 border-b-black border-l-secondary border-r-secondary border-t-black p-2 text-2xl"
               key={i}
             >
               <a target="_blank" href={social.link}>
