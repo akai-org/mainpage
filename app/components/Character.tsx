@@ -23,7 +23,6 @@ export default function Character({
           gsap.to(characterRef.current, {
             rotateY: self.direction === -1 ? 180 : 0,
           });
-          //usprawnic animacje
           const interval = 5;
           const wynik =
             (Math.round((self.progress * 100) / interval) * interval) %

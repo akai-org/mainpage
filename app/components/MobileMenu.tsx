@@ -1,6 +1,6 @@
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { MENU } from '@/app/resources/constants';
+import { MENU } from '../resources/constants';
 import clsx from 'clsx';
 
 type MobileMenuT = {

@@ -1,11 +1,11 @@
 'use client';
-import useLoadingClient from '@/app/resources/useLoadingClient';
-import Home from '@/app/pages/Home';
-import About from '@/app/pages/About';
-import Projects from '@/app/pages/Projects';
-import Partners from '@/app/pages/Partners';
-import Contact from '@/app/pages/Contact';
-import Footer from '@/app/components/Footer';
+import useLoadingClient from './resources/useLoadingClient';
+import Home from './pages/Home';
+import About from './pages/About';
+import Projects from './pages/Projects';
+import Partners from './pages/Partners';
+import Contact from './pages/Contact';
+import Footer from './components/Footer';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextPlugin } from 'gsap/TextPlugin';

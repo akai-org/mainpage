@@ -1,5 +1,5 @@
 'use client';
-import { PARTNERS } from '@/app/resources/constants';
+import { PARTNERS } from '../resources/constants';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 

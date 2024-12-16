@@ -1,11 +1,11 @@
 'use client';
 import { useRef, useState } from 'react';
-import MobileMenu from '@/app/components/MobileMenu';
+import MobileMenu from './MobileMenu';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import Image from 'next/image';
-import { MENU } from '@/app/resources/constants';
-import Character from '@/app/components/Character';
+import { MENU } from '../resources/constants';
+import Character from './Character';
 import clsx from 'clsx';
 
 export default function Footer() {
@@ -20,10 +20,6 @@ export default function Footer() {
       ease: 'power2.inOut',
       y: 0,
       onComplete: () => {
-        // const options = { duration: 0, delay: 0 };
-        // if (to === 'home') animateScroll.scrollToTop(options);
-        // else if (to === 'contact') animateScroll.scrollToBottom(options);
-        // else scroller.scrollTo(to, options);
         // TODO Scroll to section
 
         onComplete && onComplete();
@@ -94,7 +90,13 @@ export default function Footer() {
         />
       )}
       <div className="scrollContainer flex-center fixed left-0 top-0 z-[60] h-dvh w-full translate-y-[100dvh] border-y border-black bg-main">
-        <Image src="/AKAI_logo.png" alt="logo" width={200} height={200} />
+        <Image
+          src="/AKAI_logo.png"
+          priority
+          alt="logo"
+          width={200}
+          height={200}
+        />
       </div>
       <Character referenceRef={referenceRef} />
     </>

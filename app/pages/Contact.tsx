@@ -1,4 +1,4 @@
-import { MAIL, SOCIALS } from '@/app/resources/constants';
+import { MAIL, SOCIALS } from '../resources/constants';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 

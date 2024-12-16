@@ -1,4 +1,4 @@
-import { APPS } from '@/app/resources/constants';
+import { APPS } from '../resources/constants';
 
 export default function Projects() {
   return (
