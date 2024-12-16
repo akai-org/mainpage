@@ -20,6 +20,7 @@ export default function Footer() {
       ease: 'power2.inOut',
       y: 0,
       onComplete: () => {
+        console.log(to);
         // TODO Scroll to section
 
         onComplete && onComplete();

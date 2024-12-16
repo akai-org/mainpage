@@ -8,7 +8,7 @@ export default function Partners() {
     const partners = document.querySelectorAll('#partner');
     const partners2 = document.querySelectorAll('#partner-2');
 
-    partners.forEach((partner, i) => {
+    partners.forEach(partner => {
       gsap.to(partner, {
         rotationY: 360,
         duration: 1,
@@ -19,7 +19,7 @@ export default function Partners() {
         },
       });
     });
-    partners2.forEach((partner, i) => {
+    partners2.forEach(partner => {
       gsap.to(partner, {
         duration: 1,
         borderWidth: 2,
@@ -31,7 +31,7 @@ export default function Partners() {
       });
     });
     const partnerText = document.querySelectorAll('#partner-text');
-    partnerText.forEach((partnerText, i) => {
+    partnerText.forEach(partnerText => {
       gsap.from(partnerText, {
         opacity: 0,
         duration: 1,
