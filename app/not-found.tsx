@@ -28,29 +28,31 @@ export default function NotFound() {
   }, [referenceRef.current]);
   return (
     <>
-      {Array.from({ length: 3 }, (_, i1) => (
-        <div
-          key={i1}
-          id="not-found"
-          className="fixed z-40 flex w-full justify-between"
-          style={{ top: 200 * i1 }}
-        >
-          {Array.from({ length: 10 }, (_, i2) => (
-            <div
-              key={i2}
-              className="w-fit flex-shrink-0 px-5 text-[70px] sm:text-[150px]"
-            >
-              {i2 % 2 == 0 ? (
-                404
-              ) : (
-                <>
-                  <span className="text-secondary">A</span>KAI
-                </>
-              )}
-            </div>
-          ))}
-        </div>
-      ))}
+      <div className="fixed z-40 flex h-dvh flex-col justify-around sm:justify-between">
+        {Array.from({ length: 3 }, (_, i1) => (
+          <div
+            key={i1}
+            id="not-found"
+            className="flex w-full justify-between"
+            style={{ top: 200 * i1 }}
+          >
+            {Array.from({ length: 10 }, (_, i2) => (
+              <div
+                key={i2}
+                className="w-fit flex-shrink-0 px-5 text-[70px] sm:text-[150px]"
+              >
+                {i2 % 2 == 0 ? (
+                  404
+                ) : (
+                  <>
+                    <span className="text-secondary">A</span>KAI
+                  </>
+                )}
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
 
       <div ref={referenceRef} className="flex-center mt-auto h-dvh w-full">
         <div className="flex-center-col z-50 mx-auto gap-5 rounded border-4 border-red-500 bg-white p-5">
