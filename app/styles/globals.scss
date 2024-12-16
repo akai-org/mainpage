@@ -47,7 +47,7 @@ body {
 }
 
 .main-container > * {
-  @apply min-h-dvh w-full border-y border-black;
+  @apply min-h-dvh w-full;
   padding-bottom: $footer-height;
 }
 
