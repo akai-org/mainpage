@@ -4,7 +4,6 @@ import MobileMenu from '@/app/components/MobileMenu';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import Image from 'next/image';
-import { animateScroll, scroller } from 'react-scroll';
 import { MENU } from '@/app/resources/constants';
 import Character from '@/app/components/Character';
 import clsx from 'clsx';
@@ -21,10 +20,11 @@ export default function Footer() {
       ease: 'power2.inOut',
       y: 0,
       onComplete: () => {
-        const options = { duration: 0, delay: 0 };
-        if (to === 'home') animateScroll.scrollToTop(options);
-        else if (to === 'contact') animateScroll.scrollToBottom(options);
-        else scroller.scrollTo(to, options);
+        // const options = { duration: 0, delay: 0 };
+        // if (to === 'home') animateScroll.scrollToTop(options);
+        // else if (to === 'contact') animateScroll.scrollToBottom(options);
+        // else scroller.scrollTo(to, options);
+        // TODO Scroll to section
 
         onComplete && onComplete();
       },

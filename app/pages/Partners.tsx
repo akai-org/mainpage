@@ -1,5 +1,4 @@
 'use client';
-import { Element } from 'react-scroll';
 import { PARTNERS } from '@/app/resources/constants';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
@@ -47,7 +46,7 @@ export default function Partners() {
   });
 
   return (
-    <Element name="partners" className="flex-center gap-20 px-5 sm:px-main">
+    <div className="flex-center gap-20 px-5 sm:px-main">
       <div className="flex-center-col text-5xl font-bold">
         {Array.from('Partnerzy').map((t, i) => (
           <span key={i} id="partner-text">
@@ -73,6 +72,6 @@ export default function Partners() {
           </div>
         ))}
       </div>
-    </Element>
+    </div>
   );
 }

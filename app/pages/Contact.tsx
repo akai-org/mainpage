@@ -1,5 +1,4 @@
 import { MAIL, SOCIALS } from '@/app/resources/constants';
-import { Element } from 'react-scroll';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
@@ -33,7 +32,7 @@ export default function Contact() {
   });
 
   return (
-    <Element name="contact" className="flex-center-col gap-10">
+    <div className="flex-center-col gap-10">
       <div className="mb-auto" />
       <div id="contact-container">
         <div className="text-5xl font-bold">Kontakt</div>
@@ -66,6 +65,6 @@ export default function Contact() {
           Internetowych
         </span>
       </div>
-    </Element>
+    </div>
   );
 }

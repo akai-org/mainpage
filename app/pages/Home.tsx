@@ -1,6 +1,5 @@
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { Element } from 'react-scroll';
 
 export default function Home() {
   useGSAP(() => {
@@ -29,11 +28,7 @@ export default function Home() {
     });
   });
   return (
-    <Element
-      id="home"
-      name="home"
-      className="flex-center-col gap-main scale-x-0"
-    >
+    <div id="home" className="flex-center-col gap-main scale-x-0">
       <div className="flex-center-col w-fit text-5xl font-bold">
         <div className="flex w-full justify-between">
           <div id="gsap-logo" className="-translate-x-10 opacity-0">
@@ -54,6 +49,6 @@ export default function Home() {
       </div>
       <div className="h-1 w-7 rounded bg-secondary"></div>
       <div className="akai opacity-0">_</div>
-    </Element>
+    </div>
   );
 }
