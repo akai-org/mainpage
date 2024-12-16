@@ -41,7 +41,7 @@ export default function MobileMenu({
             key={i}
             onClick={() => onClickMenuItem(item.to, () => setIsOpen(false))}
             className={clsx(
-              'size-full border-b border-black p-4 text-center duration-300 active:bg-black active:text-white',
+              'size-full border-b border-black p-4 text-center duration-300 active:bg-secondary active:text-white',
               {
                 'border-none': i == MENU.length - 1,
               },

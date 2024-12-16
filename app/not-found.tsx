@@ -36,7 +36,10 @@ export default function NotFound() {
           style={{ top: 200 * i1 }}
         >
           {Array.from({ length: 10 }, (_, i2) => (
-            <div key={i2} className="w-fit flex-shrink-0 px-5 text-[150px]">
+            <div
+              key={i2}
+              className="w-fit flex-shrink-0 px-5 text-[70px] sm:text-[150px]"
+            >
               {i2 % 2 == 0 ? (
                 404
               ) : (

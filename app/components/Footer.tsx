@@ -60,7 +60,7 @@ export default function Footer() {
         <div className="flex-center size-full">
           <div className="mt-auto h-1/2 w-full flex-grow border-t border-black"></div>
           <div
-            className="flex-center h-full w-40 cursor-pointer border-x border-black duration-300 active:bg-black active:text-xl active:text-white sm:hidden"
+            className="flex-center h-full w-40 cursor-pointer border-x border-black duration-300 active:bg-secondary active:text-white sm:hidden"
             onClick={() =>
               !isMobileMenuOpen
                 ? setIsMobileMenuOpen(true)
@@ -74,7 +74,7 @@ export default function Footer() {
               key={i}
               onClick={() => onClickMenuItem(item.to)}
               className={clsx(
-                'flex-center hidden h-full w-40 cursor-pointer text-nowrap border-l border-black px-5 duration-300 hover:bg-black hover:text-white active:text-xl sm:flex',
+                'flex-center hidden h-full w-40 cursor-pointer text-nowrap border-l border-black px-5 duration-300 hover:bg-secondary hover:text-white active:text-xl sm:flex',
                 {
                   'border-r': i == MENU.length - 1,
                 },
