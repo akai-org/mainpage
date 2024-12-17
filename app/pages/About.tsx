@@ -96,32 +96,21 @@ export default function About() {
         <div className="flex gap-2">
           <div
             id="about-fade-left"
+            className="border-secondary-1 hidden w-80 bg-secondary bg-opacity-25 lg:block"
+          />
+          <div
+            id="about-fade-right"
             className="border-secondary-1 flex-grow p-5 text-center"
           >
             Liczymy, że realizacje w sektorze prywatnym oraz publicznym, dadzą
-            członkom <span className="font-bold">AKAI</span>
-          </div>
-          <div
-            id="about-fade-right"
-            className="border-secondary-1 hidden w-40 bg-secondary bg-opacity-25 lg:block"
-          />
-        </div>
-        <div className="flex gap-2">
-          <div
-            id="about-fade-left"
-            className="border-secondary-1 hidden w-40 bg-secondary bg-opacity-25 lg:block"
-          />
-          <div
-            id="about-fade-right"
-            className="border-secondary-1 flex-grow p-5 text-center"
-          >
+            członkom <span className="font-bold">AKAI </span>
             szansę na budowanie profesjonalizmu i zdobycie tak ważnego
             doświadczenia dla obecnej i przyszłej działalności.
           </div>
         </div>
       </div>
 
-      <div className="flex w-full gap-2 sm:h-36">
+      <div className="flex w-full gap-2">
         <div id="about-fade-left" className="border-secondary-1 p-5">
           Staramy się nawiązywać współpracę z placówkami naukowymi,
           przedstawicielami firm oraz znanymi specjalistami ze świata IT.
@@ -131,7 +120,7 @@ export default function About() {
         </div>
         <div
           id="about-fade-right"
-          className="border-secondary-1 relative hidden h-full w-72 flex-grow bg-secondary bg-opacity-25 sm:block"
+          className="border-secondary-1 relative hidden min-h-full w-72 flex-grow bg-secondary bg-opacity-25 sm:block"
         >
           <Image
             src="/AKAI_logo.png"

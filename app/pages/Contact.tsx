@@ -58,7 +58,7 @@ export default function Contact() {
           ))}
         </div>
       </div>
-      <div className="flex-center-col mt-auto text-[10px]">
+      <div className="mt-auto flex flex-col items-center text-[10px]">
         <span>Realizacja Beniamin Szawracki</span>
         <span>
           © 2020-{new Date().getFullYear()} Akademickie Koło Aplikacji
