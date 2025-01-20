@@ -10,6 +10,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextPlugin } from 'gsap/TextPlugin';
 import { useGSAP } from '@gsap/react';
 import Footer from '@/app/components/Footer';
+import Join from '@/app/pages/Join';
 
 export default function Page() {
   const { loadingJSX, isClient } = useLoadingClient();
@@ -29,13 +30,12 @@ export default function Page() {
     <>
       {isClient ? (
         <>
-          <div className="main-container">
-            <Home />
-            <About />
-            <Projects />
-            <Partners />
-            <Contact />
-          </div>
+          <Home />
+          <About />
+          <Join />
+          <Projects />
+          <Partners />
+          <Contact />
           <Footer />
         </>
       ) : (

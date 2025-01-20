@@ -35,9 +35,6 @@ export default function Contact() {
   return (
     <div className="flex-center-col gap-10">
       <div className="mb-auto" />
-      <div id="contact-container">
-        <Heading size="9">Kontakt</Heading>
-      </div>
       <div
         id="contact-container-2"
         className="flex-center-col gap-10 text-center"

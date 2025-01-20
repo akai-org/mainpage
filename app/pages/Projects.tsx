@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Projects() {
   return (
-    <div className="flex-center-col gap-5">
+    <div className="flex-center-col h-dvh gap-5">
       <Heading size={{ initial: '5', xs: '7', sm: '8', md: '9' }}>
         Zobacz nasze <span id="projects-number">150</span> projektów
       </Heading>

@@ -55,7 +55,7 @@ export default function NotFound() {
       </div>
 
       <div ref={referenceRef} className="flex-center mt-auto h-dvh w-full">
-        <div className="flex-center-col z-50 mx-auto gap-5 rounded border-4 border-red-500 bg-white p-5">
+        <div className="flex-center-col bg-radix-gray-1 z-50 mx-auto gap-5 rounded border-4 border-red-500 p-5">
           <h1 className="text-4xl font-bold sm:text-5xl">Not Found :(</h1>
           <Link
             href="/#top"

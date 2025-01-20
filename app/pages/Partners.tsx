@@ -54,19 +54,25 @@ export default function Partners() {
         <Heading className="text-center">Nasi partnerzy</Heading>
         <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
           {PARTNERS.map((partner, i) => (
-            <Card
+            <a
               key={i}
-              className={clsx('col-span-2 h-16 w-full lg:col-span-1', {
-                'col-start-2 sm:col-start-auto': i == PARTNERS.length - 1,
-              })}
+              href={partner.link}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Image
-                alt={partner.name}
-                src={partner.logo}
-                fill
-                className="object-contain"
-              />
-            </Card>
+              <Card
+                className={clsx('col-span-2 h-16 w-full lg:col-span-1', {
+                  'col-start-2 sm:col-start-auto': i == PARTNERS.length - 1,
+                })}
+              >
+                <Image
+                  alt={partner.name}
+                  src={partner.logo}
+                  fill
+                  className="object-contain p-1 dark:grayscale dark:invert"
+                />
+              </Card>
+            </a>
           ))}
         </div>
       </div>

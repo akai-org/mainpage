@@ -37,10 +37,6 @@
   --cursor-switch: pointer;
 }
 
-.main-container > * {
-  @apply min-h-dvh w-full;
-}
-
 .fade-up-gsap {
   transform: translateY(100dvh);
 }
