@@ -1,7 +1,7 @@
 import { MAIL, SOCIALS } from '../resources/constants';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { Heading, Text } from '@radix-ui/themes';
+import { Text } from '@radix-ui/themes';
 
 export default function Contact() {
   useGSAP(() => {
@@ -10,11 +10,12 @@ export default function Contact() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '#contact-container',
-        start: 'top 70%',
-        end: 'bottom 70% ',
+        start: 'top 80%',
+        end: 'bottom 80% ',
+        markers: true,
       },
     });
-    tl.from('#contact-container-2', {
+    tl.from('#contact-container', {
       duration: 0.5,
       x: -100,
       opacity: 0,
@@ -34,9 +35,8 @@ export default function Contact() {
 
   return (
     <div className="flex-center-col gap-10">
-      <div className="mb-auto" />
       <div
-        id="contact-container-2"
+        id="contact-container"
         className="flex-center-col gap-10 text-center"
       >
         <a href={`mailto:${MAIL}`}>

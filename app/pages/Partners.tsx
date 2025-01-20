@@ -61,9 +61,12 @@ export default function Partners() {
               rel="noopener noreferrer"
             >
               <Card
-                className={clsx('col-span-2 h-16 w-full lg:col-span-1', {
-                  'col-start-2 sm:col-start-auto': i == PARTNERS.length - 1,
-                })}
+                className={clsx(
+                  'border-accent-6 col-span-2 h-16 w-full hover:border lg:col-span-1',
+                  {
+                    'col-start-2 sm:col-start-auto': i == PARTNERS.length - 1,
+                  },
+                )}
               >
                 <Image
                   alt={partner.name}

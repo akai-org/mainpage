@@ -17,6 +17,9 @@ export default {
         'accent-6': 'var(--accent-6)',
         'radix-gray-1': 'var(--gray-1)',
       },
+      boxShadow: {
+        'radix-1': 'var(--shadow-1)',
+      },
     },
   },
   darkMode: 'class',

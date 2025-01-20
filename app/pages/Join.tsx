@@ -39,7 +39,13 @@ export default function Join() {
           );
         })}
       </Flex>
-      <Flex direction="column" justify="center" align="center" gap="2">
+      <Flex
+        direction="column"
+        justify="center"
+        align="center"
+        gap="2"
+        className="mt-8"
+      >
         <Heading>Chcesz do nas dołączyć?</Heading>
         <a href={`mailto:${MAIL}`}>
           <Button variant="classic" className="!cursor-pointer">

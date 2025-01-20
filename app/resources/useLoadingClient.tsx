@@ -31,7 +31,7 @@ const useLoadingClient = () => {
   return {
     loadingJSX: (
       <div ref={loadingRef}>
-        <div className="flex-center-col absolute h-dvh w-full gap-10 border-t border-black dark:border-none">
+        <div className="flex-center-col shadow-radix-1 absolute h-dvh w-full gap-10 border-t">
           <Image src="/AKAI_logo.png" alt="logo" width={200} height={200} />
           <div className="size-10 animate-spin rounded-[100px] border-4 border-x-black border-y-secondary dark:border-x-white" />
         </div>

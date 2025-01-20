@@ -42,7 +42,7 @@ export default function About() {
     });
   });
   return (
-    <div className="flex-center-col gap-8 p-5 lg:gap-4 lg:px-20">
+    <div className="flex-center-col gap-8 overflow-hidden p-5 lg:gap-4 lg:px-20">
       <div className="flex w-full flex-col justify-between gap-2 sm:flex-row lg:h-36">
         <div
           id="about-fade-left"
