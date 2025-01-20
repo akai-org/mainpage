@@ -29,9 +29,29 @@ export const SOCIALS = [
 ];
 
 export const PARTNERS = [
-  { name: 'AppUnite', logo: '', link: 'https://www.appunite.com' },
-  { name: 'WITH secure', logo: '', link: 'https://www.withsecure.com' },
-  { name: 'inetum', logo: '', link: 'https://inetum.pl' },
-  { name: 'NOBL', logo: '', link: 'https://www.nobl9.com' },
-  { name: 'VML', logo: '', link: 'https://www.vml.com' },
+  {
+    name: 'AppUnite',
+    logo: 'https://tailwindui.com/plus/img/logos/158x48/reform-logo-gray-900.svg',
+    link: 'https://www.appunite.com',
+  },
+  {
+    name: 'WITH secure',
+    logo: 'https://tailwindui.com/plus/img/logos/158x48/reform-logo-gray-900.svg',
+    link: 'https://www.withsecure.com',
+  },
+  {
+    name: 'inetum',
+    logo: 'https://tailwindui.com/plus/img/logos/158x48/reform-logo-gray-900.svg',
+    link: 'https://inetum.pl',
+  },
+  {
+    name: 'NOBL',
+    logo: 'https://tailwindui.com/plus/img/logos/158x48/reform-logo-gray-900.svg',
+    link: 'https://www.nobl9.com',
+  },
+  {
+    name: 'VML',
+    logo: 'https://tailwindui.com/plus/img/logos/158x48/reform-logo-gray-900.svg',
+    link: 'https://www.vml.com',
+  },
 ];

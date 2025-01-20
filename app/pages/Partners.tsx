@@ -3,6 +3,8 @@ import { PARTNERS } from '../resources/constants';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 import { Card, Heading } from '@radix-ui/themes';
+import clsx from 'clsx';
+import Image from 'next/image';
 
 export default function Partners() {
   useGSAP(() => {
@@ -47,26 +49,26 @@ export default function Partners() {
   });
 
   return (
-    <div className="flex-center gap-20 px-5 sm:px-main">
-      <div className="flex-center-col">
-        {Array.from('PARTNERZY').map((t, i) => (
-          <Heading key={i} size="9" id="partner-text">
-            {t}
-          </Heading>
-        ))}
-      </div>
-      <div className="flex-center-col flex gap-10">
-        {PARTNERS.map((partner, i) => (
-          <Card
-            key={i}
-            id="partner"
-            className="border-accent-6 w-40 border p-2"
-          >
-            <a target="_blank" href={partner.link}>
-              {partner.name}
-            </a>
-          </Card>
-        ))}
+    <div className="py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <Heading className="text-center">Nasi partnerzy</Heading>
+        <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+          {PARTNERS.map((partner, i) => (
+            <Card
+              key={i}
+              className={clsx('col-span-2 h-16 w-full lg:col-span-1', {
+                'col-start-2 sm:col-start-auto': i == PARTNERS.length - 1,
+              })}
+            >
+              <Image
+                alt={partner.name}
+                src={partner.logo}
+                fill
+                className="object-contain"
+              />
+            </Card>
+          ))}
+        </div>
       </div>
     </div>
   );
