@@ -37,14 +37,14 @@ export default function Home() {
       <div className="flex-center w-fit text-5xl font-bold">
         <Image
           id="logo-left"
-          src="/AKAI_logo_left.png"
+          src="/logos/AKAI_logo_left.png"
           alt="logo left"
           width={100}
           height={100}
         />
         <Image
           id="logo-right"
-          src="/AKAI_logo_right.png"
+          src="/logos/AKAI_logo_right.png"
           alt="logo right"
           width={100}
           height={100}

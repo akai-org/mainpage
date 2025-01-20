@@ -20,7 +20,7 @@ export default function Projects() {
         <a href={APPS} target="_blank">
           <Flex align="center" gap="1">
             <Image
-              src="/AKAI_logo.png"
+              src="/logos/AKAI_logo.png"
               alt="AKAI Apps logo"
               width={50}
               height={50}

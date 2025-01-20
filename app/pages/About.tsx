@@ -123,7 +123,7 @@ export default function About() {
           className="border-accent-6 bg-accent-2 relative hidden min-h-full w-72 flex-grow border bg-opacity-25 sm:block"
         >
           <Image
-            src="/AKAI_logo.png"
+            src="/logos/AKAI_logo.png"
             alt="logo"
             fill
             className="absolute h-full object-contain p-2"

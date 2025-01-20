@@ -38,9 +38,7 @@ export default function Contact() {
         id="contact-container"
         className="flex-center-col gap-10 text-center"
       >
-        <a href={`mailto:${MAIL}`}>
-          <Text size="7">{MAIL}</Text>
-        </a>
+        <Text size="7">{MAIL}</Text>
         <div className="flex gap-7">
           {SOCIALS.map((social, i) => (
             <div

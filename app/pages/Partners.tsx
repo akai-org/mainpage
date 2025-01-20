@@ -47,11 +47,6 @@ export default function Partners() {
       });
     });
   });
-  //col-span-2 max-h-12 w-full object-contain lg:col-span-1
-  //col-span-2 max-h-12 w-full object-contain lg:col-span-1
-  //col-span-2 max-h-12 w-full object-contain lg:col-span-1
-  //col-span-2 max-h-12 w-full object-contain lg:col-span-1 sm:col-start-2
-  //col-span-2 max-h-12 w-full object-contain lg:col-span-1
 
   return (
     <div className="py-24 sm:py-32">
