@@ -48,7 +48,7 @@ export default function Contact() {
           {SOCIALS.map((social, i) => (
             <div
               id="contact-social"
-              className="rounded-[500px] border-2 border-b-black border-l-secondary border-r-secondary border-t-black p-2 text-2xl"
+              className="rounded-[500px] border-2 border-x-secondary border-y-black p-2 text-2xl dark:border-y-white"
               key={i}
             >
               <a target="_blank" href={social.link}>

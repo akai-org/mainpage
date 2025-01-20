@@ -5,11 +5,11 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Partners from './pages/Partners';
 import Contact from './pages/Contact';
-import Footer from './components/Footer';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextPlugin } from 'gsap/TextPlugin';
 import { useGSAP } from '@gsap/react';
+import Footer from '@/app/components/Footer';
 
 export default function Page() {
   const { loadingJSX, isClient } = useLoadingClient();
