@@ -34,7 +34,7 @@ export default function MobileMenu({
       />
       <div
         id="mobile-menu"
-        className="bottom-footer translate-y-dvh flex-center-col fixed z-50 w-full border-t border-black bg-main"
+        className="bottom-footer translate-y-dvh flex-center-col bg-radix-gray-1 fixed z-50 w-full border-t border-black"
       >
         {MENU.map((item, i) => (
           <div

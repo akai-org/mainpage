@@ -12,11 +12,11 @@ export default {
         main: '80px',
       },
       colors: {
-        main: 'lightblue',
         secondary: 'orange',
-        mainText: 'black',
+        'radix-gray-1': 'var(--gray-1)',
       },
     },
   },
+  darkMode: 'class',
   plugins: [],
 } satisfies Config;

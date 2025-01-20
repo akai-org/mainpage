@@ -24,10 +24,10 @@ export default function Character({
             rotateY: self.direction === -1 ? 180 : 0,
           });
           const interval = 5;
-          const wynik =
+          const side =
             (Math.round((self.progress * 100) / interval) * interval) %
             (2 * interval);
-          setAnim(wynik == 0 ? 'left' : 'right');
+          setAnim(side == 0 ? 'left' : 'right');
         },
       },
     });

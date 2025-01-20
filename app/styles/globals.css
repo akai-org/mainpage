@@ -2,25 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-$footer-height: 40px;
-//region FOOTER CLASS
+/*footer-height: 40px;*/
 
 .bottom-footer {
-  bottom: $footer-height;
+  bottom: 40px;
 }
 
 .h-footer {
-  height: $footer-height;
+  height: 40px;
 }
 
 .pb-footer {
-  padding-bottom: $footer-height;
-}
-
-//endregion
-
-body {
-  @apply bg-main text-mainText;
+  padding-bottom: 40px;
 }
 
 @layer components {
@@ -48,10 +41,9 @@ body {
 
 .main-container > * {
   @apply min-h-dvh w-full;
-  padding-bottom: $footer-height;
+  padding-bottom: 40px;
 }
 
-//region GSAP
 .fade-up-gsap {
   transform: translateY(100dvh);
 }
@@ -61,7 +53,6 @@ body {
 .-translate-y-dvh {
   transform: translateY(-100dvh);
 }
-//endregion
 
 .cat {
   transform: rotateY(180deg);

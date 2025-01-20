@@ -52,7 +52,7 @@ export default function Footer() {
     <>
       <div
         ref={referenceRef}
-        className="fade-up-gsap h-footer flex-center-col fixed bottom-0 z-[60] w-full gap-2 border-t border-black bg-main"
+        className="fade-up-gsap h-footer flex-center-col bg-radix-gray-1 fixed bottom-0 z-[60] w-full gap-2 border-t border-black"
       >
         <div className="flex-center size-full">
           <div className="mt-auto h-1/2 w-full flex-grow border-t border-black"></div>
@@ -90,7 +90,7 @@ export default function Footer() {
           onClickMenuItem={onClickMenuItem}
         />
       )}
-      <div className="scrollContainer flex-center fixed left-0 top-0 z-[60] h-dvh w-full translate-y-[100dvh] border-y border-black bg-main">
+      <div className="scrollContainer flex-center bg-radix-gray-1 fixed left-0 top-0 z-[60] h-dvh w-full translate-y-[100dvh] border-y border-black">
         <Image
           src="/AKAI_logo.png"
           priority
