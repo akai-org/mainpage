@@ -19,6 +19,11 @@ export default {
       },
       boxShadow: {
         'radix-1': 'var(--shadow-1)',
+        'radix-2': 'var(--shadow-2)',
+        'radix-3': 'var(--shadow-3)',
+        'radix-4': 'var(--shadow-4)',
+        'radix-5': 'var(--shadow-5)',
+        'radix-6': 'var(--shadow-6)',
       },
     },
   },

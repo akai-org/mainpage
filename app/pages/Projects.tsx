@@ -8,7 +8,7 @@ export default function Projects() {
       <Heading size={{ initial: '5', xs: '7', sm: '8', md: '9' }}>
         Zobacz nasze <span id="projects-number">150</span> projektów
       </Heading>
-      <Text>W takich językach jak: </Text>
+      <Text>W takich językach programowania jak: </Text>
       <Flex align="center" gap="2">
         <Badge variant="outline">C#</Badge>
         <Badge variant="outline">Java</Badge>

@@ -47,6 +47,11 @@ export default function Partners() {
       });
     });
   });
+  //col-span-2 max-h-12 w-full object-contain lg:col-span-1
+  //col-span-2 max-h-12 w-full object-contain lg:col-span-1
+  //col-span-2 max-h-12 w-full object-contain lg:col-span-1
+  //col-span-2 max-h-12 w-full object-contain lg:col-span-1 sm:col-start-2
+  //col-span-2 max-h-12 w-full object-contain lg:col-span-1
 
   return (
     <div className="py-24 sm:py-32">
@@ -54,28 +59,23 @@ export default function Partners() {
         <Heading className="text-center">Nasi partnerzy</Heading>
         <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
           {PARTNERS.map((partner, i) => (
-            <a
+            <Card
               key={i}
-              href={partner.link}
-              target="_blank"
-              rel="noopener noreferrer"
+              className={clsx('col-span-2 w-full lg:col-span-1', {
+                'sm:col-start-2': i == PARTNERS.length - 2,
+                'col-start-2 sm:col-start-auto': i == PARTNERS.length - 1,
+              })}
             >
-              <Card
-                className={clsx(
-                  'border-accent-6 col-span-2 h-16 w-full hover:border lg:col-span-1',
-                  {
-                    'col-start-2 sm:col-start-auto': i == PARTNERS.length - 1,
-                  },
-                )}
-              >
+              <a href={partner.link} target="_blank" rel="noopener noreferrer">
                 <Image
                   alt={partner.name}
                   src={partner.logo}
-                  fill
-                  className="object-contain p-1 dark:grayscale dark:invert"
+                  width="158"
+                  height="48"
+                  className="mx-auto h-12 object-contain dark:grayscale dark:invert"
                 />
-              </Card>
-            </a>
+              </a>
+            </Card>
           ))}
         </div>
       </div>
