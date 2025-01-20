@@ -1,6 +1,7 @@
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import Image from 'next/image';
+import { Heading } from '@radix-ui/themes';
 
 export default function Home() {
   useGSAP(() => {
@@ -38,21 +39,25 @@ export default function Home() {
           id="logo-left"
           src="/AKAI_logo_left.png"
           alt="logo left"
-          width={50}
-          height={50}
+          width={100}
+          height={100}
         />
         <Image
           id="logo-right"
           src="/AKAI_logo_right.png"
           alt="logo right"
-          width={50}
-          height={50}
+          width={100}
+          height={100}
         />
       </div>
       <div className="h-1 w-7 rounded bg-secondary"></div>
-      <div id="akai" className="opacity-0">
+      <Heading
+        size={{ initial: '2', xs: '4', sm: '8' }}
+        id="akai"
+        className="opacity-0"
+      >
         _
-      </div>
+      </Heading>
     </div>
   );
 }

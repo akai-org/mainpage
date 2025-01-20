@@ -1,6 +1,7 @@
 import { MAIL, SOCIALS } from '../resources/constants';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { Heading, Text } from '@radix-ui/themes';
 
 export default function Contact() {
   useGSAP(() => {
@@ -35,14 +36,14 @@ export default function Contact() {
     <div className="flex-center-col gap-10">
       <div className="mb-auto" />
       <div id="contact-container">
-        <div className="text-5xl font-bold">Kontakt</div>
+        <Heading size="9">Kontakt</Heading>
       </div>
       <div
         id="contact-container-2"
         className="flex-center-col gap-10 text-center"
       >
-        <a className="text-2xl sm:text-5xl" href={`mailto:${MAIL}`}>
-          {MAIL}
+        <a href={`mailto:${MAIL}`}>
+          <Text size="7">{MAIL}</Text>
         </a>
         <div className="flex gap-7">
           {SOCIALS.map((social, i) => (

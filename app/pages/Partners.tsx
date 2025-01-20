@@ -2,6 +2,7 @@
 import { PARTNERS } from '../resources/constants';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
+import { Card, Heading } from '@radix-ui/themes';
 
 export default function Partners() {
   useGSAP(() => {
@@ -47,29 +48,24 @@ export default function Partners() {
 
   return (
     <div className="flex-center gap-20 px-5 sm:px-main">
-      <div className="flex-center-col text-5xl font-bold">
-        {Array.from('Partnerzy').map((t, i) => (
-          <span key={i} id="partner-text">
-            {t.toUpperCase()}
-          </span>
+      <div className="flex-center-col">
+        {Array.from('PARTNERZY').map((t, i) => (
+          <Heading key={i} size="9" id="partner-text">
+            {t}
+          </Heading>
         ))}
       </div>
       <div className="flex-center-col flex gap-10">
         {PARTNERS.map((partner, i) => (
-          <div
+          <Card
             key={i}
             id="partner"
-            className="w-32 border-2 border-secondary p-1"
+            className="border-accent-6 w-40 border p-2"
           >
             <a target="_blank" href={partner.link}>
-              <div
-                id="partner-2"
-                className="cursor-pointer select-none rounded border-secondary p-2 text-center"
-              >
-                {partner.name}
-              </div>
+              {partner.name}
             </a>
-          </div>
+          </Card>
         ))}
       </div>
     </div>

@@ -9,7 +9,7 @@ export default function Footer() {
   };
 
   return (
-    <div className="fade-up-gsap fixed bottom-0 right-0 flex gap-2 p-2">
+    <div className="fade-up-gsap fixed bottom-0 right-0 z-50 flex gap-2 p-2">
       <IconButton
         variant="outline"
         highContrast
@@ -19,7 +19,7 @@ export default function Footer() {
             behavior: 'smooth',
           });
         }}
-        className="!cursor-pointer"
+        className="!bg-radix-gray-1 !cursor-pointer"
       >
         <HiArrowSmUp size="24" />
       </IconButton>
@@ -28,7 +28,7 @@ export default function Footer() {
         variant="outline"
         highContrast
         onClick={changeTheme}
-        className="!cursor-pointer"
+        className="!bg-radix-gray-1 !cursor-pointer"
       >
         {resolvedTheme === 'dark' ? <HiSun size="24" /> : <HiMoon size="24" />}
       </IconButton>

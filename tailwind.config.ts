@@ -13,6 +13,8 @@ export default {
       },
       colors: {
         secondary: 'orange',
+        'accent-2': 'var(--accent-2)',
+        'accent-6': 'var(--accent-6)',
         'radix-gray-1': 'var(--gray-1)',
       },
     },
