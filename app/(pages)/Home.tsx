@@ -53,7 +53,7 @@ export default function Home() {
           height={100}
         />
       </div>
-      <div className="h-1 w-7 rounded bg-secondary"></div>
+      <div className="bg-accent-9 h-1 w-7 rounded"></div>
       <Heading
         size={{ initial: '2', xs: '4', sm: '8' }}
         id="akai"
