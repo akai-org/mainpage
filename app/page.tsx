@@ -34,7 +34,7 @@ export default function Page() {
           <Container size="4" className="-mt-1 px-1">
             <div className="flex flex-col lg:shadow-radix-1">
               <Home />
-              <Separator className="mb-5 w-full" />
+              <Separator className="w-full" />
               <About />
               <Separator className="my-10 w-full sm:my-5" />
               <Join />
