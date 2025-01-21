@@ -1,9 +1,11 @@
 import { Card, Heading, Separator, Text } from '@radix-ui/themes';
 import Image from 'next/image';
+import { DotPattern } from '@/components/DotPattern';
+import { cn } from '@/lib/utils';
 
 export default function About() {
   return (
-    <div className="flex flex-col">
+    <div className="flex w-full flex-col">
       <div className="flex flex-col md:flex-row">
         <div className="flex w-full flex-col gap-2 pt-5 md:w-1/2">
           <Heading size="9" className="pl-5">
@@ -22,7 +24,7 @@ export default function About() {
             i otwarte dla wszystkich.
           </Text>
         </div>
-        <div className="relative h-52 w-full md:w-1/2">
+        <div className="relative min-h-80 w-full md:w-1/2">
           <Image
             src="/members.jpg"
             alt="Founders of AKAI"
@@ -43,23 +45,29 @@ export default function About() {
           <Separator className="w-full" />
         </div>
 
-        <div className="flex flex-col gap-5 p-5">
+        <div className="relative flex flex-col gap-5 p-5">
+          <DotPattern
+            className={cn(
+              'p-1',
+              '[mask-image:linear-gradient(to_bottom_left,white,transparent,transparent,white)]',
+            )}
+          />
           <Heading className="text-center" size="8">
             Co robimy?
           </Heading>
           <div className="flex flex-col gap-5 sm:gap-2">
-            <Card className="max-w-[300px]">
+            <Card className="w-full sm:max-w-[400px]">
               Skupiamy młodych i ambitnych ludzi, którzy jako cel stawiają sobie
               rozwój i osiągnięcie sukcesu w dziedzinie aplikacji internetowych.
             </Card>
-            <Card className="mx-auto max-w-[450px]">
+            <Card className="mx-auto w-full max-w-[500px]">
               Nawiązujemy współprace z placówkami naukowymi, przedstawicielami
               firm oraz znanymi specjalistami ze świata IT. Podejmujemy kolejne
               wyzwania i pokazujemy, że wiedza i doświadczenie przekazywane
               przez naszą organizacja stanowi przyszłość projektowania aplikacji
               internetowych.
             </Card>
-            <Card className="ml-auto max-w-[500px]">
+            <Card className="ml-auto w-full max-w-[500px]">
               Promujemy ideę sieci budowanej przez profesjonalistów, którzy
               znają wartość swojej wiedzy i są zawsze głodni nowych umiejętności
               i doświadczenia. Realizacje w sektorze prywatnym oraz publicznym,
