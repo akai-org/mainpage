@@ -2,8 +2,9 @@ import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaX } from 'react-icons/fa6';
 
 export const MAIL = 'kontakt@akai.org.pl';
-export const APPS = 'https://apps.akai.org.pl';
-export const BLOG = 'https://blog.akai.org.pl';
+export const APPS_LINK = 'https://apps.akai.org.pl';
+export const BLOG_LINK = 'https://blog.akai.org.pl';
+export const GITHUB_NAME = 'akai-org';
 
 export const JOBS = [
   {

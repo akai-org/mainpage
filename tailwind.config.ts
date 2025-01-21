@@ -25,8 +25,24 @@ export default {
         'radix-5': 'var(--shadow-5)',
         'radix-6': 'var(--shadow-6)',
       },
+      animation: {
+        shine: 'shine var(--shine-duration) infinite linear',
+      },
+      keyframes: {
+        shine: {
+          '0%': {
+            'background-position': '0% 0%',
+          },
+          '50%': {
+            'background-position': '100% 100%',
+          },
+          to: {
+            'background-position': '0% 0%',
+          },
+        },
+      },
     },
   },
   darkMode: 'class',
-  plugins: [],
+  plugins: [require('tailwindcss-animate')],
 } satisfies Config;
