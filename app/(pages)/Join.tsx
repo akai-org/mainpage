@@ -39,6 +39,7 @@ export default function Join() {
           );
         })}
       </Flex>
+      <Separator className="mt-5 w-full" />
       <div className="mt-5 w-full p-5">
         <Flex direction="column" justify="center" align="center" gap="2">
           <Heading size={{ initial: '5', xs: '6' }}>

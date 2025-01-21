@@ -36,7 +36,7 @@ export default function Page() {
               <Home />
               <Separator className="mb-5 w-full" />
               <About />
-              <Separator className="my-5 w-full" />
+              <Separator className="my-10 w-full sm:my-5" />
               <Join />
               <Separator className="my-10 w-full" />
               <Projects />

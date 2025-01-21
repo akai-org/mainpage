@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <DarkModeProvider defaultTheme="dark" attribute="class">
-          <Theme accentColor="amber" grayColor="gray" radius="small">
+          <Theme accentColor="amber" grayColor="gray" radius="none">
             {children}
           </Theme>
         </DarkModeProvider>

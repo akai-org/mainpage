@@ -4,7 +4,6 @@ import { Badge, Card, Flex, Heading, Text } from '@radix-ui/themes';
 import Image from 'next/image';
 import { NumberTicker } from '@/components/NumberTicker';
 import { useEffect, useState } from 'react';
-import { ShineBorder } from '@/components/ShineBorder';
 
 export default function Projects() {
   const [reposCount, setReposCount] = useState<number | null>(null);
@@ -32,10 +31,7 @@ export default function Projects() {
         <Badge variant="outline">I wiele innych...</Badge>
       </Flex>
       <a href={APPS_LINK} target="_blank">
-        <ShineBorder
-          color={['#FFFFFF', '#000000']}
-          className="bg-radix-gray-2 p-2"
-        >
+        <Card>
           <Flex align="center" gap="1">
             <Image
               src="/logos/AKAI_logo.png"
@@ -45,7 +41,7 @@ export default function Projects() {
             />
             <Heading>Apps</Heading>
           </Flex>
-        </ShineBorder>
+        </Card>
       </a>
     </div>
   );

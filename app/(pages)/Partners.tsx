@@ -1,35 +1,38 @@
 'use client';
 import { PARTNERS } from '@/resources/constants';
-import { Card, Heading } from '@radix-ui/themes';
-import clsx from 'clsx';
+import { Heading, Text } from '@radix-ui/themes';
 import Image from 'next/image';
+import { clsx } from 'clsx';
 
 export default function Partners() {
   return (
-    <div className="flex flex-col gap-10 px-1">
-      <Heading className="text-center">Nasi partnerzy</Heading>
-      <div className="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+    <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-1 pl-5">
+        <Heading size="8">Nasi partnerzy</Heading>
+        <Text>Którzy nam zaufali</Text>
+      </div>
+      <div className="grid grid-cols-2 justify-between gap-2 px-2 sm:grid-cols-5">
         {PARTNERS.map((partner, i) => (
-          <Card
+          <a
             key={i}
+            href={partner.link}
+            target="_blank"
+            rel="noopener noreferrer"
             className={clsx(
-              'col-span-2 flex w-full justify-center bg-radix-gray-1 p-1 shadow-radix-1 lg:col-span-1',
+              'mx-auto p-1 shadow-radix-1 duration-500 hover:bg-accent-6 hover:dark:bg-accent-2 sm:mx-0',
               {
-                'sm:col-start-2': i == PARTNERS.length - 2,
-                'col-start-2 sm:col-start-auto': i == PARTNERS.length - 1,
+                'col-span-2 sm:col-span-1': i == PARTNERS.length - 1,
               },
             )}
           >
-            <a href={partner.link} target="_blank" rel="noopener noreferrer">
-              <Image
-                alt={partner.name}
-                src={partner.logo}
-                width="158"
-                height="48"
-                className="mx-auto h-12 object-contain dark:grayscale dark:invert"
-              />
-            </a>
-          </Card>
+            <Image
+              alt={partner.name}
+              src={partner.logo}
+              width="158"
+              height="48"
+              className="mx-auto h-12 object-contain dark:grayscale dark:invert"
+            />
+          </a>
         ))}
       </div>
     </div>

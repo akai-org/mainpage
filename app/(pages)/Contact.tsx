@@ -38,7 +38,7 @@ export default function Contact() {
         id="contact-container"
         className="flex-center flex-col gap-10 text-center sm:flex-row"
       >
-        <Text id="mail" size="7">
+        <Text id="mail" size="7" className="size-full">
           {MAIL}
         </Text>
         <div className="flex gap-7">
