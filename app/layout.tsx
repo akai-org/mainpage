@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import '@radix-ui/themes/styles.css';
-import './styles/globals.css';
+import '@/styles/globals.css';
 import { ReactNode } from 'react';
 import { ThemeProvider as DarkModeProvider } from 'next-themes';
 import { Theme } from '@radix-ui/themes';

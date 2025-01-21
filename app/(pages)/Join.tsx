@@ -7,7 +7,7 @@ import {
   Separator,
   Text,
 } from '@radix-ui/themes';
-import { JOBS, MAIL } from '@/app/resources/constants';
+import { JOBS, MAIL } from '@/resources/constants';
 
 export default function Join() {
   return (
@@ -42,7 +42,7 @@ export default function Join() {
           })}
         </Flex>
       </div>
-      <div className="shadow-radix-2 w-full p-5">
+      <div className="w-full p-5 shadow-radix-2">
         <Flex direction="column" justify="center" align="center" gap="2">
           <Heading>Chcesz do nas dołączyć?</Heading>
           <a href={`mailto:${MAIL}`}>

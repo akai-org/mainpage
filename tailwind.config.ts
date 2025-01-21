@@ -26,6 +26,7 @@ export default {
         'radix-6': 'var(--shadow-6)',
       },
       animation: {
+        spin: 'spin 1s linear infinite',
         shine: 'shine var(--shine-duration) infinite linear',
       },
       keyframes: {

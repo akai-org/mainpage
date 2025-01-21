@@ -1,17 +1,10 @@
 'use client';
-import { APPS_LINK, GITHUB_NAME } from '../resources/constants';
-import {
-  Badge,
-  Card,
-  Flex,
-  Heading,
-  Text,
-  useThemeContext,
-} from '@radix-ui/themes';
+import { APPS_LINK, GITHUB_NAME } from '@/resources/constants';
+import { Badge, Card, Flex, Heading, Text } from '@radix-ui/themes';
 import Image from 'next/image';
-import { NumberTicker } from '@/app/components/NumberTicker';
+import { NumberTicker } from '@/components/NumberTicker';
 import { useEffect, useState } from 'react';
-import { ShineBorder } from '@/app/components/ShineBorder';
+import { ShineBorder } from '@/components/ShineBorder';
 
 export default function Projects() {
   const [reposCount, setReposCount] = useState<number | null>(null);

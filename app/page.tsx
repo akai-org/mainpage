@@ -1,16 +1,16 @@
 'use client';
-import useLoadingClient from './resources/useLoadingClient';
-import Home from './pages/Home';
-import About from './pages/About';
-import Projects from './pages/Projects';
-import Partners from './pages/Partners';
-import Contact from './pages/Contact';
+import useLoadingClient from '@/resources/useLoadingClient';
+import Home from '@/app/(pages)/Home';
+import About from '@/app/(pages)/About';
+import Projects from '@/app/(pages)/Projects';
+import Partners from '@/app/(pages)/Partners';
+import Contact from '@/app/(pages)/Contact';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextPlugin } from 'gsap/TextPlugin';
 import { useGSAP } from '@gsap/react';
-import Footer from '@/app/components/Footer';
-import Join from '@/app/pages/Join';
+import Footer from '@/components/Footer';
+import Join from '@/app/(pages)/Join';
 
 export default function Page() {
   const { loadingJSX, isClient } = useLoadingClient();
