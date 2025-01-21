@@ -10,18 +10,19 @@ export default function Contact() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '#contact-container',
-        start: 'top 80%',
-        end: 'bottom 80% ',
+        start: 'top 90%',
+        end: 'bottom 90% ',
+        markers: true,
       },
     });
-    tl.from('#contact-container', {
+    tl.from('#mail', {
       duration: 0.5,
       x: -100,
       opacity: 0,
     });
     tl.from(socials, {
       duration: 0.5,
-      y: 100,
+      x: 100,
       opacity: 0,
     });
     tl.to(socials, {
@@ -34,11 +35,10 @@ export default function Contact() {
 
   return (
     <div className="flex-center-col gap-10">
-      <div
-        id="contact-container"
-        className="flex-center-col gap-10 text-center"
-      >
-        <Text size="7">{MAIL}</Text>
+      <div id="contact-container" className="flex-center gap-10 text-center">
+        <Text id="mail" size="7">
+          {MAIL}
+        </Text>
         <div className="flex gap-7">
           {SOCIALS.map((social, i) => (
             <div

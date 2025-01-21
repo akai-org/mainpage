@@ -17,8 +17,8 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className="flex-center-col h-dvh gap-5">
-      <Heading size={{ initial: '5', xs: '7', sm: '8', md: '9' }}>
+    <div className="flex-center-col gap-5">
+      <Heading size={{ initial: '4', xs: '7', sm: '8', md: '9' }}>
         Zrobiliśmy ponad <NumberTicker value={reposCount!} /> projektów
       </Heading>
       <Text>W takich językach programowania jak: </Text>
@@ -32,18 +32,19 @@ export default function Projects() {
         <Badge variant="outline">I wiele innych...</Badge>
       </Flex>
       <a href={APPS_LINK} target="_blank">
-        <ShineBorder color={['#FFFFFF', '#000000']}>
-          <Card>
-            <Flex align="center" gap="1">
-              <Image
-                src="/logos/AKAI_logo.png"
-                alt="AKAI Apps logo"
-                width={50}
-                height={50}
-              />
-              <Heading>Apps</Heading>
-            </Flex>
-          </Card>
+        <ShineBorder
+          color={['#FFFFFF', '#000000']}
+          className="bg-radix-gray-2 p-2"
+        >
+          <Flex align="center" gap="1">
+            <Image
+              src="/logos/AKAI_logo.png"
+              alt="AKAI Apps logo"
+              width={50}
+              height={50}
+            />
+            <Heading>Apps</Heading>
+          </Flex>
         </ShineBorder>
       </a>
     </div>

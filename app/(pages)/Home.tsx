@@ -33,7 +33,10 @@ export default function Home() {
     });
   });
   return (
-    <div id="home" className="flex-center-col gap-main h-dvh scale-x-0">
+    <div
+      id="home"
+      className="flex-center-col gap-main h-[calc(100dvh+3px)] scale-x-0"
+    >
       <div className="flex-center w-fit text-5xl font-bold">
         <Image
           id="logo-left"

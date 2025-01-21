@@ -11,6 +11,7 @@ import { TextPlugin } from 'gsap/TextPlugin';
 import { useGSAP } from '@gsap/react';
 import Footer from '@/components/Footer';
 import Join from '@/app/(pages)/Join';
+import { Container, Separator } from '@radix-ui/themes';
 
 export default function Page() {
   const { loadingJSX, isClient } = useLoadingClient();
@@ -30,12 +31,21 @@ export default function Page() {
     <>
       {isClient ? (
         <>
-          <Home />
-          <About />
-          <Join />
-          <Projects />
-          <Partners />
-          <Contact />
+          <Container size="4" className="-mt-1 px-1">
+            <div className="flex flex-col lg:shadow-radix-1">
+              <Home />
+              <Separator className="mb-5 w-full" />
+              <About />
+              <Separator className="my-5 w-full" />
+              <Join />
+              <Separator className="my-10 w-full" />
+              <Projects />
+              <Separator className="my-10 w-full" />
+              <Partners />
+              <Separator className="my-10 w-full" />
+              <Contact />
+            </div>
+          </Container>
           <Footer />
         </>
       ) : (

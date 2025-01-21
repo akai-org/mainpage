@@ -16,6 +16,7 @@ export default {
         'accent-2': 'var(--accent-2)',
         'accent-6': 'var(--accent-6)',
         'radix-gray-1': 'var(--gray-1)',
+        'radix-gray-2': 'var(--gray-2)',
       },
       boxShadow: {
         'radix-1': 'var(--shadow-1)',
