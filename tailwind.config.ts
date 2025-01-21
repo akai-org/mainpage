@@ -12,8 +12,8 @@ export default {
         main: '80px',
       },
       colors: {
-        'main-border': 'black',
-        'dark-border': 'white',
+        'main-border': '#D9D9D9',
+        'dark-border': '#3A3A3A',
         'accent-2': 'var(--accent-2)',
         'accent-6': 'var(--accent-6)',
         'accent-9': 'var(--accent-9)',

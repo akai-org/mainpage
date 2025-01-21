@@ -16,7 +16,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className="flex-center-col gap-5">
+    <div className="flex-center-col border-main p-container gap-5 border-y py-20">
       <Heading size={{ initial: '4', xs: '7', sm: '8', md: '9' }}>
         Zrobiliśmy ponad <NumberTicker value={reposCount!} /> projektów
       </Heading>

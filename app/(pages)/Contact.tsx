@@ -3,7 +3,7 @@ import { Text } from '@radix-ui/themes';
 
 export default function Contact() {
   return (
-    <div className="flex-center-col gap-10">
+    <div className="border-main flex-center-col p-container gap-10 border-t pb-0">
       <div className="flex-center flex-col gap-7 text-center sm:flex-row">
         <Text id="mail" size="7" className="size-full">
           {MAIL}
@@ -11,7 +11,7 @@ export default function Contact() {
         <div className="flex gap-7">
           {SOCIALS.map((social, i) => (
             <div
-              className="rounded-full border-2 border-black p-2 text-2xl dark:border-white"
+              className="border-main rounded-full border-2 p-2 text-2xl"
               key={i}
             >
               <a target="_blank" href={social.link}>

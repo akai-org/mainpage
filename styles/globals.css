@@ -16,8 +16,12 @@
         align-items: center;
     }
 
-    .gap-main {
-        gap: 1rem;
+    .border-main {
+        @apply border-main-border dark:border-dark-border;
+    }
+
+    .p-container {
+        @apply py-5 px-1;
     }
 }
 
