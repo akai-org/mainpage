@@ -12,7 +12,6 @@ export default function Contact() {
         trigger: '#contact-container',
         start: 'top 90%',
         end: 'bottom 90% ',
-        markers: true,
       },
     });
     tl.from('#mail', {
