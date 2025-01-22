@@ -4,20 +4,20 @@ import { Text } from '@radix-ui/themes';
 export default function Contact() {
   return (
     <div className="border-main flex-center-col p-container gap-10 border-t pb-0">
-      <div className="flex-center flex-col gap-7 text-center sm:flex-row">
+      <div className="flex-center flex-col gap-7 text-center">
         <Text id="mail" size="7" className="size-full">
           {MAIL}
         </Text>
         <div className="flex gap-7">
           {SOCIALS.map((social, i) => (
-            <div
-              className="border-main rounded-full border-2 p-2 text-2xl"
+            <a
+              target="_blank"
+              href={social.link}
+              className="border-main rounded-full border-2 p-2 text-2xl transition-colors hover:text-accent-9"
               key={i}
             >
-              <a target="_blank" href={social.link}>
-                {social.icon}
-              </a>
-            </div>
+              {social.icon}
+            </a>
           ))}
         </div>
       </div>

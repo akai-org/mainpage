@@ -33,18 +33,12 @@ export default {
       },
       animation: {
         spin: 'spin 1s linear infinite',
-        shine: 'shine var(--shine-duration) infinite linear',
+        'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
       },
       keyframes: {
-        shine: {
-          '0%': {
-            'background-position': '0% 0%',
-          },
-          '50%': {
-            'background-position': '100% 100%',
-          },
-          to: {
-            'background-position': '0% 0%',
+        'border-beam': {
+          '100%': {
+            'offset-distance': '100%',
           },
         },
       },

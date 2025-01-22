@@ -12,6 +12,8 @@ import { useGSAP } from '@gsap/react';
 import Footer from '@/components/Footer';
 import Join from '@/app/(pages)/Join';
 import { Container } from '@radix-ui/themes';
+import { GridPattern } from '@/components/GridPattern';
+import { cn } from '@/lib/utils';
 
 export default function Page() {
   const { loadingJSX, isClient } = useLoadingClient();
@@ -24,6 +26,9 @@ export default function Page() {
       y: 0,
       ease: 'power2.inOut',
       duration: 1,
+      onComplete: () => {
+        document.body.style.overflow = 'auto';
+      },
     });
   }, [isClient]);
 
@@ -32,7 +37,7 @@ export default function Page() {
       {isClient ? (
         <>
           <Container size="4">
-            <div className="border-main flex flex-col bg-radix-gray-1 lg:border-x">
+            <div className="fade-up-gsap border-main relative z-10 flex flex-col border bg-radix-gray-1 xl:my-4">
               <Home />
               <About />
               <div className="h-10 w-full" />
@@ -48,8 +53,15 @@ export default function Page() {
           <Footer />
         </>
       ) : (
-        loadingJSX
+        <>{loadingJSX}</>
       )}
+      <GridPattern
+        className={cn(
+          'fixed -z-10 [mask-image:radial-gradient(60dvw_circle_at_center,white,transparent)]',
+        )}
+        width={20}
+        height={20}
+      />
     </>
   );
 }

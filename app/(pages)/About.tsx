@@ -1,7 +1,8 @@
-import { Card, Heading, Strong, Text } from '@radix-ui/themes';
+import { Card, Heading, Strong, Text, Link } from '@radix-ui/themes';
 import Image from 'next/image';
 import { DotPattern } from '@/components/DotPattern';
 import { cn } from '@/lib/utils';
+import { TextAnimate } from '@/components/TextAnimate';
 
 export default function About() {
   return (
@@ -13,7 +14,10 @@ export default function About() {
           </Heading>
           <Text className="px-2">
             Działamy na terenie całego Poznania od 2010 roku, kiedy powstaliśmy
-            na Wydziale Informatyki Politechniki Poznańskiej
+            na{' '}
+            <Link href="https://cat.put.poznan.pl/">
+              Wydziale Informatyki Politechniki Poznańskiej
+            </Link>
           </Text>
           <Text className="px-2 pb-5">
             Jesteśmy kołem naukowym które aktywnie działa w środowisku IT
@@ -32,9 +36,10 @@ export default function About() {
       <div className="flex flex-col">
         <div className="border-main border-b">
           <Heading className="p-2 py-10 text-center">
-            Naszym członkiem może być
-            <span className="text-accent-12"> każdy student</span>, niezależnie
-            na jakiej uczelni studiuje.
+            <TextAnimate animation="slideUp" by="word">
+              Naszym członkiem może być każdy student, niezależnie na jakiej
+              uczelni studiuje.
+            </TextAnimate>
           </Heading>
         </div>
 

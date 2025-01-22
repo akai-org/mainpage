@@ -25,10 +25,6 @@
     }
 }
 
-.main-container:nth-child(n + 2) {
-    margin-top: 1rem;
-}
-
 .radix-themes {
     --cursor-button: pointer;
     --cursor-checkbox: pointer;
@@ -43,14 +39,6 @@
 
 .fade-up-gsap {
     transform: translateY(100dvh);
-}
-
-.translate-y-dvh {
-    transform: translateY(100dvh);
-}
-
-.-translate-y-dvh {
-    transform: translateY(-100dvh);
 }
 
 /*Loading anim*/

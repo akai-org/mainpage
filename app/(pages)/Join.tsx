@@ -4,10 +4,10 @@ import {
   Code,
   Flex,
   Heading,
-  Separator,
   Text,
 } from '@radix-ui/themes';
 import { JOBS, MAIL } from '@/resources/constants';
+import { TextAnimate } from '@/components/TextAnimate';
 
 export default function Join() {
   return (
@@ -22,7 +22,11 @@ export default function Join() {
       <div className="flex-center-col gap-16">
         {JOBS.map((job, i) => (
           <div key={i} className="flex flex-col gap-5 md:w-1/2">
-            <Code className="w-fit">{job.name}</Code>
+            <Code className="w-fit">
+              <TextAnimate animation="slideLeft" by="character">
+                {job.name}
+              </TextAnimate>
+            </Code>
             <Blockquote>{job.desc}</Blockquote>
           </div>
         ))}

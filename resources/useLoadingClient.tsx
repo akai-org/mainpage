@@ -24,7 +24,6 @@ const useLoadingClient = () => {
       display: 'none',
       ease: 'power2.inOut',
       onComplete: () => {
-        document.body.style.overflow = 'auto';
         setIsClient(true);
       },
     });
@@ -32,12 +31,20 @@ const useLoadingClient = () => {
   return {
     loadingJSX: (
       <div ref={loadingRef}>
-        <div className="flex-center-col absolute h-dvh w-full gap-10 border-t shadow-radix-1">
+        <div className="flex-center-col border-main absolute h-dvh w-full gap-10 border-t bg-radix-gray-1 shadow-radix-1">
           <Image
-            src="/logos/AKAI_logo.png"
-            alt="logo"
+            src="/logos/AKAI_logo_white.svg"
+            alt="Logo"
             width={200}
             height={200}
+            className="hidden dark:block"
+          />
+          <Image
+            src="/logos/AKAI_logo.png"
+            alt="Logo"
+            width={200}
+            height={200}
+            className="block dark:hidden"
           />
           <Code className="loader"></Code>
         </div>
