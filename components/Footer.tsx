@@ -7,25 +7,38 @@ import Image from 'next/image';
 import { useCurrentLocale } from 'next-i18n-router/client';
 import i18nConfig from '@/resources/i18nConfig';
 import { usePathname, useRouter } from 'next/navigation';
+import { useGSAP } from '@gsap/react';
+import { gsap } from 'gsap';
 
 export default function Footer() {
+  const { contextSafe } = useGSAP();
   const router = useRouter();
   const currentPathname = usePathname();
   const locale = useCurrentLocale(i18nConfig);
   const otherLocale = locale === 'pl' ? 'en' : 'pl';
 
-  const changeLange = () => {
-    const days = 30;
-    const date = new Date();
-    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-    document.cookie = `NEXT_LOCALE=${otherLocale};expires=${date.toUTCString()};path=/`;
+  const changeLange = contextSafe(() => {
+    const loading = document.querySelector('#loading-screen') as HTMLDivElement;
+    loading.style.display = 'flex';
+    gsap.to(loading, {
+      y: '0',
+      duration: 1,
+      ease: 'power2.inOut',
+      onComplete: () => {
+        const days = 30;
+        const date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+        document.cookie = `NEXT_LOCALE=${otherLocale};expires=${date.toUTCString()};path=/`;
 
-    if (locale === i18nConfig.defaultLocale && !i18nConfig.prefixDefault)
-      router.push('/' + otherLocale + currentPathname);
-    else router.push(currentPathname.replace(`/${locale}`, `/${otherLocale}`));
+        if (locale === i18nConfig.defaultLocale && !i18nConfig.prefixDefault)
+          router.push('/' + otherLocale + currentPathname);
+        else
+          router.push(currentPathname.replace(`/${locale}`, `/${otherLocale}`));
 
-    router.refresh();
-  };
+        router.refresh();
+      },
+    });
+  });
 
   const { resolvedTheme, setTheme } = useTheme();
   const changeTheme = () => {

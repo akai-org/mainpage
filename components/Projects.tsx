@@ -6,6 +6,7 @@ import { NumberTicker } from '@/components/ui/NumberTicker';
 import { useEffect, useState } from 'react';
 import { BorderBeam } from '@/components/ui/BorderBeam';
 import { useTranslation } from 'react-i18next';
+import Logo from '@/components/Logo';
 
 export default function Projects() {
   const { t } = useTranslation('projects');
@@ -38,20 +39,7 @@ export default function Projects() {
       <a href={APPS_LINK} target="_blank">
         <Card className="relative">
           <Flex align="center" gap="1">
-            <Image
-              src="/logos/AKAI_logo_white.svg"
-              alt="Logo"
-              width={50}
-              height={50}
-              className="hidden dark:block"
-            />
-            <Image
-              src="/logos/AKAI_logo.png"
-              alt="Logo"
-              width={50}
-              height={50}
-              className="block dark:hidden"
-            />
+            <Logo width={50} height={50} />
             <Heading>Apps</Heading>
           </Flex>
           <BorderBeam
