@@ -2,9 +2,9 @@
 import { APPS_LINK, GITHUB_NAME } from '@/resources/constants';
 import { Badge, Card, Flex, Heading, Text } from '@radix-ui/themes';
 import Image from 'next/image';
-import { NumberTicker } from '@/components/NumberTicker';
+import { NumberTicker } from '@/components/ui/NumberTicker';
 import { useEffect, useState } from 'react';
-import { BorderBeam } from '@/components/BorderBeam';
+import { BorderBeam } from '@/components/ui/BorderBeam';
 
 export default function Projects() {
   const [reposCount, setReposCount] = useState<number | null>(null);

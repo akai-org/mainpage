@@ -1,6 +1,6 @@
 import { Separator } from '@radix-ui/themes';
 import { useTheme } from 'next-themes';
-import { Dock, DockIcon } from '@/components/Dock';
+import { Dock, DockIcon } from '@/components/ui/Dock';
 import { HiMoon, HiSun } from 'react-icons/hi';
 import Image from 'next/image';
 import { useState } from 'react';

@@ -7,7 +7,7 @@ import {
   Text,
 } from '@radix-ui/themes';
 import { JOBS, MAIL } from '@/resources/constants';
-import { TextAnimate } from '@/components/TextAnimate';
+import { TextAnimate } from '@/components/ui/TextAnimate';
 
 export default function Join() {
   return (

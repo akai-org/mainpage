@@ -1,8 +1,8 @@
 import { Card, Heading, Strong, Text, Link } from '@radix-ui/themes';
 import Image from 'next/image';
-import { DotPattern } from '@/components/DotPattern';
-import { cn } from '@/lib/utils';
-import { TextAnimate } from '@/components/TextAnimate';
+import { DotPattern } from '@/components/ui/DotPattern';
+import { cn } from '@/resources/utils';
+import { TextAnimate } from '@/components/ui/TextAnimate';
 
 export default function About() {
   return (

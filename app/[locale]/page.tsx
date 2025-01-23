@@ -1,19 +1,19 @@
 'use client';
 import useLoadingClient from '@/resources/useLoadingClient';
-import Home from '@/app/(pages)/Home';
-import About from '@/app/(pages)/About';
-import Projects from '@/app/(pages)/Projects';
-import Partners from '@/app/(pages)/Partners';
-import Contact from '@/app/(pages)/Contact';
+import Home from '@/components/Home';
+import About from '@/components/About';
+import Projects from '@/components/Projects';
+import Partners from '@/components/Partners';
+import Contact from '@/components/Contact';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextPlugin } from 'gsap/TextPlugin';
 import { useGSAP } from '@gsap/react';
 import Footer from '@/components/Footer';
-import Join from '@/app/(pages)/Join';
+import Join from '@/components/Join';
 import { Container } from '@radix-ui/themes';
-import { GridPattern } from '@/components/GridPattern';
-import { cn } from '@/lib/utils';
+import { GridPattern } from '@/components/ui/GridPattern';
+import { cn } from '@/resources/utils';
 
 export default function Page() {
   const { loadingJSX, isClient } = useLoadingClient();
