@@ -18,7 +18,7 @@ export default function Partners() {
             target="_blank"
             rel="noopener noreferrer"
             className={clsx(
-              'border-main mx-auto border p-1 duration-500 hover:bg-accent-6 hover:dark:bg-accent-2 sm:mx-0',
+              'border-main mx-auto rounded-sm p-1 duration-500 hover:bg-accent-6 hover:dark:bg-accent-2 sm:mx-0',
               {
                 'col-span-2 sm:col-span-1': i == PARTNERS.length - 1,
               },

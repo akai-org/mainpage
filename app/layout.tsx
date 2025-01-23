@@ -4,8 +4,6 @@ import '@/styles/globals.css';
 import { ReactNode } from 'react';
 import { ThemeProvider as DarkModeProvider } from 'next-themes';
 import { Theme } from '@radix-ui/themes';
-import { GridPattern } from '@/components/GridPattern';
-import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'AKAI',
@@ -21,7 +19,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <DarkModeProvider defaultTheme="dark" attribute="class">
-          <Theme accentColor="amber" grayColor="gray" radius="none">
+          <Theme accentColor="amber" grayColor="gray" radius="small">
             {children}
           </Theme>
         </DarkModeProvider>

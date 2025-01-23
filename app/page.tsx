@@ -37,7 +37,7 @@ export default function Page() {
       {isClient ? (
         <>
           <Container size="4">
-            <div className="fade-up-gsap border-main relative z-10 flex flex-col border bg-radix-gray-1 xl:my-4">
+            <div className="fade-up-gsap border-main relative z-10 !mb-14 flex flex-col border bg-radix-gray-1 shadow-radix-6 xl:mt-5">
               <Home />
               <About />
               <div className="h-10 w-full" />
