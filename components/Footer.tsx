@@ -1,15 +1,32 @@
+'use client';
 import { Separator } from '@radix-ui/themes';
 import { useTheme } from 'next-themes';
 import { Dock, DockIcon } from '@/components/ui/Dock';
 import { HiMoon, HiSun } from 'react-icons/hi';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useCurrentLocale } from 'next-i18n-router/client';
+import i18nConfig from '@/i18nConfig';
+import { usePathname, useRouter } from 'next/navigation';
 
 export default function Footer() {
-  const [lang, setLang] = useState<'PL' | 'ENG'>('ENG');
+  const router = useRouter();
+  const currentPathname = usePathname();
+  const locale = useCurrentLocale(i18nConfig);
+  const otherLocale = locale === 'pl' ? 'en' : 'pl';
+
   const changeLange = () => {
-    setLang(lang === 'PL' ? 'ENG' : 'PL');
+    const days = 30;
+    const date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    document.cookie = `NEXT_LOCALE=${otherLocale};expires=${date.toUTCString()};path=/`;
+
+    if (locale === i18nConfig.defaultLocale && !i18nConfig.prefixDefault)
+      router.push('/' + otherLocale + currentPathname);
+    else router.push(currentPathname.replace(`/${locale}`, `/${otherLocale}`));
+
+    router.refresh();
   };
+
   const { resolvedTheme, setTheme } = useTheme();
   const changeTheme = () => {
     setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
@@ -31,8 +48,8 @@ export default function Footer() {
         <Separator orientation="vertical" className="h-full" />
         <DockIcon onClick={() => changeLange()}>
           <Image
-            src={`/flags/${lang}.svg`}
-            alt="EN"
+            src={`/flags/${otherLocale.toUpperCase()}.svg`}
+            alt="Flag of language currently in use"
             width={24}
             height={24}
             className="border border-black/50"

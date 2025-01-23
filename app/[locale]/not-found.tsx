@@ -45,7 +45,7 @@ export default function NotFound() {
                   404
                 ) : (
                   <>
-                    <span className="text-secondary">A</span>KAI
+                    <span className="text-accent-9">A</span>KAI
                   </>
                 )}
               </div>
@@ -58,7 +58,7 @@ export default function NotFound() {
         <div className="flex-center-col z-50 mx-auto gap-5 rounded border-4 border-red-500 bg-radix-gray-1 p-5">
           <h1 className="text-4xl font-bold sm:text-5xl">Not Found :(</h1>
           <Link
-            href="/public#top"
+            href="/"
             className="active:bg-main select-none border border-red-500 p-1 duration-300 hover:border-black hover:underline"
           >
             Go to main page

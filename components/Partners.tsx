@@ -1,6 +1,6 @@
 'use client';
 import { PARTNERS } from '@/resources/constants';
-import { Heading, Text } from '@radix-ui/themes';
+import { Card, Heading, Text } from '@radix-ui/themes';
 import Image from 'next/image';
 import { clsx } from 'clsx';
 
@@ -18,19 +18,21 @@ export default function Partners() {
             target="_blank"
             rel="noopener noreferrer"
             className={clsx(
-              'border-main mx-auto rounded-sm p-1 duration-500 hover:bg-accent-6 hover:dark:bg-accent-2 sm:mx-0',
+              'border-main group mx-auto rounded-sm p-1 sm:mx-0',
               {
                 'col-span-2 sm:col-span-1': i == PARTNERS.length - 1,
               },
             )}
           >
-            <Image
-              alt={partner.name}
-              src={partner.logo}
-              width="158"
-              height="48"
-              className="mx-auto h-12 object-contain dark:grayscale dark:invert"
-            />
+            <Card className="duration-500 group-hover:bg-accent-6 group-hover:dark:bg-accent-2">
+              <Image
+                alt={partner.name}
+                src={partner.logo}
+                width="158"
+                height="48"
+                className="mx-auto h-12 object-contain dark:grayscale dark:invert"
+              />
+            </Card>
           </a>
         ))}
       </div>
