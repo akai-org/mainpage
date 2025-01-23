@@ -8,16 +8,18 @@ import {
 } from '@radix-ui/themes';
 import { JOBS, MAIL } from '@/resources/constants';
 import { TextAnimate } from '@/components/ui/TextAnimate';
+import { useTranslation } from 'react-i18next';
+import { useCurrentLocale } from 'next-i18n-router/client';
+import i18nConfig from '@/resources/i18nConfig';
 
 export default function Join() {
+  const { t } = useTranslation('join');
+  const locale = useCurrentLocale(i18nConfig);
+
   return (
     <div className="flex-center-col border-main p-container gap-5 border-y pb-0">
-      <Heading size={{ initial: '8', xs: '9' }}>Dołącz do nas</Heading>
-      <Text className="md:w-1/2">
-        Interesujesz się back-endem, front-endem, masz wyczucie designu czy może
-        chcesz sprawdzić swoje zdolności do zarządzania i organizacji? Dołącz do
-        nas, w każdej z tych ról będziesz mógł się realizować w AKAI.
-      </Text>
+      <Heading size={{ initial: '8', xs: '9' }}>{t('heading')}</Heading>
+      <Text className="md:w-1/2">{t('text')} </Text>
       <div className="border-main mb-5 !w-full border sm:!w-1/2" />
       <div className="flex-center-col gap-16">
         {JOBS.map((job, i) => (
@@ -27,18 +29,16 @@ export default function Join() {
                 {job.name}
               </TextAnimate>
             </Code>
-            <Blockquote>{job.desc}</Blockquote>
+            <Blockquote>{locale == 'en' ? job.descEn : job.desc}</Blockquote>
           </div>
         ))}
       </div>
       <div className="border-main p-container mt-5 w-full border-t">
         <Flex direction="column" justify="center" align="center" gap="2">
-          <Heading size={{ initial: '5', xs: '6' }}>
-            Chcesz do nas dołączyć?
-          </Heading>
+          <Heading size={{ initial: '5', xs: '6' }}>{t('join')}</Heading>
           <a href={`mailto:${MAIL}`}>
             <Button variant="classic" className="!cursor-pointer">
-              Napisz do nas
+              {t('button')}
             </Button>
           </a>
         </Flex>

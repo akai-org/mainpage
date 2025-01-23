@@ -5,7 +5,7 @@ import { Dock, DockIcon } from '@/components/ui/Dock';
 import { HiMoon, HiSun } from 'react-icons/hi';
 import Image from 'next/image';
 import { useCurrentLocale } from 'next-i18n-router/client';
-import i18nConfig from '@/i18nConfig';
+import i18nConfig from '@/resources/i18nConfig';
 import { usePathname, useRouter } from 'next/navigation';
 
 export default function Footer() {

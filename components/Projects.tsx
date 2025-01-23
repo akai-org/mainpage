@@ -5,8 +5,10 @@ import Image from 'next/image';
 import { NumberTicker } from '@/components/ui/NumberTicker';
 import { useEffect, useState } from 'react';
 import { BorderBeam } from '@/components/ui/BorderBeam';
+import { useTranslation } from 'react-i18next';
 
 export default function Projects() {
+  const { t } = useTranslation('projects');
   const [reposCount, setReposCount] = useState<number | null>(null);
   useEffect(() => {
     fetch(`https://api.github.com/users/${GITHUB_NAME}`)
@@ -19,11 +21,11 @@ export default function Projects() {
   return (
     <div className="flex-center-col border-main p-container gap-5 border-y py-20">
       <Heading size={{ initial: '4', xs: '7', sm: '8', md: '9' }}>
-        Zrobiliśmy ponad{' '}
+        {t('heading')}
         <NumberTicker className="text-accent-11" value={reposCount!} />{' '}
-        projektów
+        {t('projects')}
       </Heading>
-      <Text>W takich językach programowania jak: </Text>
+      <Text> {t('subheading')}</Text>
       <Flex direction={{ initial: 'column', sm: 'row' }} align="center" gap="2">
         <Flex align="center" gap="2">
           <Badge variant="outline">C#</Badge>
@@ -31,7 +33,7 @@ export default function Projects() {
           <Badge variant="outline">Python</Badge>
           <Badge variant="outline">React</Badge>
         </Flex>
-        <Badge variant="outline">I wiele innych...</Badge>
+        <Badge variant="outline">{t('badge')}</Badge>
       </Flex>
       <a href={APPS_LINK} target="_blank">
         <Card className="relative">
