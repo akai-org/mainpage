@@ -17,7 +17,7 @@ export default function Join() {
   const locale = useCurrentLocale(i18nConfig);
 
   return (
-    <div className="flex-center-col border-main p-container gap-5 border-y pb-0">
+    <div className="container-text flex-center-col border-main p-container gap-5 border-y pb-0">
       <Heading size={{ initial: '8', xs: '9' }}>{t('heading')}</Heading>
       <Text className="md:w-1/2">{t('text')} </Text>
       <div className="border-main mb-5 !w-full border sm:!w-1/2" />
@@ -33,7 +33,7 @@ export default function Join() {
           </div>
         ))}
       </div>
-      <div className="border-main p-container mt-5 w-full border-t">
+      <div className="p-container mt-5 w-full">
         <Flex direction="column" justify="center" align="center" gap="2">
           <Heading size={{ initial: '5', xs: '6' }}>{t('join')}</Heading>
           <a href={`mailto:${MAIL}`}>

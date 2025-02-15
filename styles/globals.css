@@ -23,6 +23,10 @@
     .p-container {
         @apply py-5 px-1;
     }
+
+    .container-text {
+        @apply p-5;
+    }
 }
 
 .radix-themes {

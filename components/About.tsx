@@ -13,14 +13,13 @@ export default function About() {
     <div className="flex w-full flex-col">
       <div className="flex flex-col-reverse md:flex-row">
         <div className="border-main flex w-full flex-col gap-2 border-y pt-5 md:w-1/2">
-          <Heading size="9" className="px-2">
+          <Heading size="9" className="container-text">
             {t('heading')}
           </Heading>
-          <Text className="px-2">
+          <Text className="container-text">
             {t('text11')} <Link href={CAT_LINK}>{t('PUT')}</Link>
           </Text>
-          <Text className="px-2 pb-5">{t('text12')}</Text>
-          <div className="border-main md:flex-center hidden w-full flex-grow overflow-hidden border-t bg-accent-2" />
+          <Text className="container-text">{t('text12')}</Text>
         </div>
         <div className="border-main relative min-h-80 w-full border-y md:w-1/2 md:border">
           <Image
@@ -33,7 +32,7 @@ export default function About() {
       </div>
       <div className="flex flex-col">
         <div className="border-main border-b">
-          <Heading className="p-2 py-10 text-center">
+          <Heading className="p-10 text-center">
             <TextAnimate animation="slideUp" by="word">
               {t('quote')}
             </TextAnimate>
@@ -47,15 +46,17 @@ export default function About() {
               '[mask-image:linear-gradient(to_bottom_left,white,transparent,transparent,white)]',
             )}
           />
-          <Heading className="text-center" size="8">
+          <Heading className="container-text text-center" size="8">
             {t('heading2')}
           </Heading>
-          <div className="flex flex-col gap-5 sm:gap-2">
-            <Card className="w-full sm:max-w-[400px]">{t('text21')}</Card>
-            <Card className="mx-auto w-full sm:max-w-[500px]">
+          <div className="flex flex-col gap-10 p-5">
+            <Card className="container-text w-full sm:max-w-[400px]">
+              {t('text21')}
+            </Card>
+            <Card className="container-text mx-auto w-full sm:max-w-[500px]">
               {t('text22')}
             </Card>
-            <Card className="ml-auto w-full sm:max-w-[500px]">
+            <Card className="container-text ml-auto w-full sm:max-w-[500px]">
               {t('text23')}
             </Card>
           </div>
