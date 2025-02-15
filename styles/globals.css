@@ -37,8 +37,8 @@
     --cursor-switch: pointer;
 }
 
-.fade-up-gsap {
-    transform: translateY(100dvh);
+* {
+    @apply !font-inter;
 }
 
 /*Loading anim*/

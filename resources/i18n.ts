@@ -1,9 +1,16 @@
 import { Resource, createInstance, i18n } from 'i18next';
 import { initReactI18next } from 'react-i18next/initReactI18next';
 import resourcesToBackend from 'i18next-resources-to-backend';
-import i18nConfig from '@/resources/i18nConfig';
+import { Config } from 'next-i18n-router/dist/types';
 
-export default async function initTranslations(
+export const i18nNamespaces = ['home', 'about', 'join', 'projects', 'partners'];
+
+export const i18nConfig: Config = {
+  locales: ['pl', 'en'],
+  defaultLocale: 'pl',
+};
+
+export async function initTranslations(
   locale: string,
   namespaces: string[],
   i18nInstance?: i18n,

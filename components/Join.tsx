@@ -10,7 +10,7 @@ import { JOBS, MAIL } from '@/resources/constants';
 import { TextAnimate } from '@/components/ui/TextAnimate';
 import { useTranslation } from 'react-i18next';
 import { useCurrentLocale } from 'next-i18n-router/client';
-import i18nConfig from '@/resources/i18nConfig';
+import { i18nConfig } from '@/resources/i18n';
 
 export default function Join() {
   const { t } = useTranslation('join');

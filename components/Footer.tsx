@@ -5,10 +5,10 @@ import { Dock, DockIcon } from '@/components/ui/Dock';
 import { HiMoon, HiSun } from 'react-icons/hi';
 import Image from 'next/image';
 import { useCurrentLocale } from 'next-i18n-router/client';
-import i18nConfig from '@/resources/i18nConfig';
 import { usePathname, useRouter } from 'next/navigation';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
+import { i18nConfig } from '@/resources/i18n';
 
 export default function Footer() {
   const { contextSafe } = useGSAP();
@@ -46,7 +46,10 @@ export default function Footer() {
   };
 
   return (
-    <div className="fade-up-gsap flex-center pointer-events-none fixed bottom-2 left-0 right-0 z-50 h-fit w-full">
+    <div
+      id="fade-up"
+      className="flex-center pointer-events-none fixed bottom-2 left-0 right-0 z-50 h-fit w-full"
+    >
       <Dock
         direction="middle"
         className="pointer-events-auto h-10 border-black bg-radix-gray-1 dark:border-white"

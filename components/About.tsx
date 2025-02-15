@@ -4,6 +4,7 @@ import { DotPattern } from '@/components/ui/DotPattern';
 import { cn } from '@/resources/utils';
 import { TextAnimate } from '@/components/ui/TextAnimate';
 import { useTranslation } from 'react-i18next';
+import { CAT_LINK } from '@/resources/constants';
 
 export default function About() {
   const { t } = useTranslation('about');
@@ -16,8 +17,7 @@ export default function About() {
             {t('heading')}
           </Heading>
           <Text className="px-2">
-            {t('text11')}{' '}
-            <Link href="https://cat.put.poznan.pl/">{t('PUT')}</Link>
+            {t('text11')} <Link href={CAT_LINK}>{t('PUT')}</Link>
           </Text>
           <Text className="px-2 pb-5">{t('text12')}</Text>
           <div className="border-main md:flex-center hidden w-full flex-grow overflow-hidden border-t bg-accent-2" />

@@ -2,19 +2,17 @@ import type { Metadata } from 'next';
 import '@radix-ui/themes/styles.css';
 import '@/styles/globals.css';
 import { ReactNode } from 'react';
-import { ThemeProvider as DarkModeProvider } from 'next-themes';
-import { Theme } from '@radix-ui/themes';
 import { notFound } from 'next/navigation';
-import i18nConfig from '@/resources/i18nConfig';
-import TranslationsProvider from '@/resources/TranslationProvider';
-import initTranslations from '@/resources/i18n';
+import { i18nConfig, i18nNamespaces, initTranslations } from '@/resources/i18n';
+import Providers from '@/resources/Providers';
+import { Inter } from 'next/font/google';
 
 export const metadata: Metadata = {
   title: 'AKAI',
   description: 'Akademickie Koło Aplikacji Internetowych',
 };
 
-const i18nNamespaces = ['home', 'about', 'join', 'projects', 'partners'];
+const InterFont = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export default async function RootLayout(props: {
   children: ReactNode;
@@ -28,18 +26,14 @@ export default async function RootLayout(props: {
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
-        <DarkModeProvider defaultTheme="dark" attribute="class">
-          <Theme accentColor="amber" grayColor="gray" radius="small">
-            <TranslationsProvider
-              locale={locale}
-              namespaces={i18nNamespaces}
-              resources={resources}
-            >
-              {children}
-            </TranslationsProvider>
-          </Theme>
-        </DarkModeProvider>
+      <body className={InterFont.variable}>
+        <Providers
+          locale={locale}
+          namespaces={i18nNamespaces}
+          resources={resources}
+        >
+          {children}
+        </Providers>
       </body>
     </html>
   );

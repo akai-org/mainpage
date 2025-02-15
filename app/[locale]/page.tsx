@@ -19,12 +19,12 @@ import Logo from '@/components/Logo';
 export default function Page() {
   const isClient = useClient();
 
-  gsap.registerPlugin(useGSAP, ScrollTrigger, TextPlugin); //register all plugins use in app
+  gsap.registerPlugin(useGSAP, ScrollTrigger, TextPlugin);
   useGSAP(() => {
     if (!isClient) return;
-    const elements = document.querySelectorAll('div.fade-up-gsap');
-    gsap.to(elements, {
-      y: 0,
+    const elements = document.querySelectorAll('div#fade-up');
+    gsap.from(elements, {
+      y: '100dvh',
       ease: 'power2.inOut',
       duration: 1,
       onComplete: () => {
@@ -38,7 +38,10 @@ export default function Page() {
       {isClient && (
         <>
           <Container size="4">
-            <div className="fade-up-gsap border-main relative z-10 !mb-14 flex flex-col border bg-radix-gray-1 shadow-radix-6 xl:mt-5">
+            <div
+              id="fade-up"
+              className="border-main relative z-10 !mb-14 flex flex-col border bg-radix-gray-1 shadow-radix-6 xl:mt-5"
+            >
               <Home />
               <About />
               <div className="h-10 w-full" />

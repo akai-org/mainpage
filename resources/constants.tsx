@@ -3,7 +3,8 @@ import { FaX } from 'react-icons/fa6';
 
 export const MAIL = 'kontakt@akai.org.pl';
 export const APPS_LINK = 'https://apps.akai.org.pl';
-export const GITHUB_NAME = 'akai-org';
+export const GITHUB_API = 'https://api.github.com/users/akai-org';
+export const CAT_LINK = 'https://cat.put.poznan.pl';
 
 export const JOBS = [
   {

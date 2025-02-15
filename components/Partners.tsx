@@ -1,6 +1,6 @@
 'use client';
 import { PARTNERS } from '@/resources/constants';
-import { Card, Heading, Text } from '@radix-ui/themes';
+import { Card, Heading } from '@radix-ui/themes';
 import Image from 'next/image';
 import { clsx } from 'clsx';
 import { useTranslation } from 'react-i18next';

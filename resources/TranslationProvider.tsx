@@ -2,8 +2,8 @@
 
 import { I18nextProvider } from 'react-i18next';
 import { ReactNode } from 'react';
-import initTranslations from '@/resources/i18n';
 import { Resource, createInstance } from 'i18next';
+import { initTranslations } from '@/resources/i18n';
 
 export default function TranslationsProvider({
   children,

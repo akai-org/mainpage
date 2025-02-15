@@ -1,7 +1,10 @@
 import { MAIL, SOCIALS } from '@/resources/constants';
 import { Text } from '@radix-ui/themes';
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
+  const { t } = useTranslation('home');
+
   return (
     <div className="border-main flex-center-col p-container gap-10 border-t pb-0">
       <div className="flex-center flex-col gap-7 text-center">
@@ -22,10 +25,9 @@ export default function Contact() {
         </div>
       </div>
       <div className="mt-auto flex flex-col items-center text-[10px]">
-        <span>Realizacja Beniamin Szawracki</span>
+        <span>{t('footer')} Beniamin Szawracki</span>
         <span>
-          © 2020-{new Date().getFullYear()} Akademickie Koło Aplikacji
-          Internetowych
+          © 2020-{new Date().getFullYear()} {t('heading')}
         </span>
       </div>
     </div>

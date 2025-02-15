@@ -339,7 +339,7 @@ export function TextAnimate({
       }
     : { container: defaultContainerVariants, item: defaultItemVariants };
 
-  let segments: string[] = [];
+  let segments: string[];
   switch (by) {
     case 'word':
       segments = children.split(/(\s+)/);
