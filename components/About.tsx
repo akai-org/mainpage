@@ -26,6 +26,7 @@ export default function About() {
             src="/members.jpg"
             alt="Founders of AKAI"
             fill
+            sizes={'(min-width: 768px) 50vw, 100vw'}
             className="asbolute h-fit w-full object-contain md:object-cover"
           />
         </div>

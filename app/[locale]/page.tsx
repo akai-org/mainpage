@@ -61,7 +61,7 @@ export default function Page() {
         id="loading-screen"
         className="flex-center-col border-main fixed left-0 top-0 z-50 h-dvh w-full gap-10 border-t bg-radix-gray-1 shadow-radix-1"
       >
-        <Logo width={200} height={200} />
+        <Logo width={100} height={100} />
         <Code className="loader"></Code>
       </div>
       <GridPattern

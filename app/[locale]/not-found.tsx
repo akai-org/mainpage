@@ -3,8 +3,10 @@ import Link from 'next/link';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function NotFound() {
+  const { t } = useTranslation('home');
   const referenceRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -56,12 +58,12 @@ export default function NotFound() {
 
       <div ref={referenceRef} className="flex-center mt-auto h-dvh w-full">
         <div className="flex-center-col z-50 mx-auto gap-5 rounded border-4 border-red-500 bg-radix-gray-1 p-5">
-          <h1 className="text-4xl font-bold sm:text-5xl">Not Found :(</h1>
+          <h1 className="text-4xl font-bold sm:text-5xl">{t('404')}</h1>
           <Link
             href="/"
             className="active:bg-main select-none border border-red-500 p-1 duration-300 hover:border-black hover:underline"
           >
-            Go to main page
+            {t('404button')}
           </Link>
         </div>
       </div>

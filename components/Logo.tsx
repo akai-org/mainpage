@@ -14,14 +14,16 @@ export default function Logo({
         alt="Logo"
         width={width}
         height={height}
-        className="dark:hidden"
+        priority
+        className="size-auto dark:hidden"
       />
       <Image
         src={`/logos/AKAI_logo_white.svg`}
         alt="Logo"
         width={width}
         height={height}
-        className="hidden dark:block"
+        priority
+        className="hidden size-auto dark:block"
       />
     </>
   );
