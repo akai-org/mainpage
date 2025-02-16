@@ -11,7 +11,7 @@ import { TextPlugin } from 'gsap/TextPlugin';
 import { useGSAP } from '@gsap/react';
 import Footer from '@/components/Footer';
 import Join from '@/components/Join';
-import { Code, Container } from '@radix-ui/themes';
+import { Container } from '@radix-ui/themes';
 import { GridPattern } from '@/components/ui/GridPattern';
 import { cn } from '@/resources/utils';
 import Logo from '@/components/Logo';
@@ -61,8 +61,11 @@ export default function Page() {
         id="loading-screen"
         className="flex-center-col border-main fixed left-0 top-0 z-50 h-dvh w-full gap-10 border-t bg-radix-gray-1 shadow-radix-1"
       >
-        <Logo size={100} />
-        <Code className="loader"></Code>
+        <Logo size={200} />
+        <div
+          className="text-surface inline-block size-10 animate-spin rounded-full border-[6px] border-solid border-accent-9 border-e-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white"
+          role="status"
+        />
       </div>
       <GridPattern
         className={cn(

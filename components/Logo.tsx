@@ -2,23 +2,25 @@ import Image from 'next/image';
 
 export default function Logo({ size }: { size: number }) {
   return (
-    <>
+    <div style={{ width: size, height: size }}>
       <Image
-        src={`/logos/AKAI_logo.png`}
+        src={`/logos/AKAI_logo_blue.svg`}
         alt="Logo"
-        width={size}
-        height={size}
+        width={0}
+        height={0}
         priority
-        className="size-auto dark:hidden"
+        sizes="100vw"
+        className="size-full dark:hidden"
       />
       <Image
         src={`/logos/AKAI_logo_white.svg`}
         alt="Logo"
-        width={size}
-        height={size}
+        width={0}
+        height={0}
         priority
-        className="hidden size-auto dark:block"
+        sizes="100vw"
+        className="hidden size-full dark:block"
       />
-    </>
+    </div>
   );
 }

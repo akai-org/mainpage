@@ -19,10 +19,10 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className="flex-center-col border-main p-container gap-5 border-y py-20">
+    <section className="flex-center-col border-main p-container gap-5 border-y py-20">
       <Heading size={{ initial: '3', xs: '7', sm: '8', md: '9' }}>
         {t('heading')}
-        <NumberTicker className="text-accent-11" value={reposCount!} />{' '}
+        <NumberTicker className="text-accent-11" value={reposCount!} />
         {t('projects')}
       </Heading>
       <Text> {t('subheading')}</Text>
@@ -38,9 +38,7 @@ export default function Projects() {
       <a href={APPS_LINK} target="_blank">
         <Card className="relative">
           <Flex align="center" gap="1" className="h-20">
-            <div className="size-16">
-              <Logo size={100} />
-            </div>
+            <Logo size={50} />
             <Heading>Apps</Heading>
           </Flex>
           <BorderBeam
@@ -53,6 +51,6 @@ export default function Projects() {
           />
         </Card>
       </a>
-    </div>
+    </section>
   );
 }

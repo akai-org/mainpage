@@ -6,7 +6,7 @@ export default function Contact() {
   const { t } = useTranslation('home');
 
   return (
-    <div className="border-main flex-center-col p-container gap-10 border-t pb-0">
+    <section className="border-main flex-center-col p-container gap-10 border-t pb-0">
       <div className="flex-center flex-col gap-7 text-center">
         <Text id="mail" size="7" className="size-full">
           {MAIL}
@@ -30,6 +30,6 @@ export default function Contact() {
           © 2020-{new Date().getFullYear()} {t('heading')}
         </span>
       </div>
-    </div>
+    </section>
   );
 }

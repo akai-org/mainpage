@@ -10,7 +10,7 @@ export default function About() {
   const { t } = useTranslation('about');
 
   return (
-    <div className="flex w-full flex-col">
+    <section className="flex w-full flex-col">
       <div className="flex flex-col-reverse md:flex-row">
         <div className="border-main flex w-full flex-col gap-2 border-y pt-5 md:w-1/2">
           <Heading size="9" className="container-text">
@@ -63,6 +63,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

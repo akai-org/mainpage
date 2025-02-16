@@ -19,11 +19,13 @@ export default function Footer() {
 
   const changeLange = contextSafe(() => {
     const loading = document.querySelector('#loading-screen') as HTMLDivElement;
-    loading.style.display = 'flex';
     gsap.to(loading, {
       y: '0',
       duration: 1,
       ease: 'power2.inOut',
+      onStart: () => {
+        loading.style.display = 'flex';
+      },
       onComplete: () => {
         const days = 30;
         const date = new Date();

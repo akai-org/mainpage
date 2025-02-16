@@ -22,7 +22,7 @@ export default function Join() {
   });
 
   return (
-    <div className="container-text flex-center-col border-main p-container gap-5 border-y pb-0">
+    <section className="container-text flex-center-col border-main p-container gap-5 border-y pb-0">
       <Heading size={{ initial: '8', xs: '9' }}>{t('heading')}</Heading>
       <Text className="md:w-1/2">{t('text')} </Text>
       <div className="border-main mb-5 !w-full border sm:!w-1/2" />
@@ -48,6 +48,6 @@ export default function Join() {
           </a>
         </Flex>
       </div>
-    </div>
+    </section>
   );
 }
