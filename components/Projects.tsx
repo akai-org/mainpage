@@ -37,8 +37,10 @@ export default function Projects() {
       </Flex>
       <a href={APPS_LINK} target="_blank">
         <Card className="relative">
-          <Flex align="center" gap="1">
-            <Logo width={50} height={50} />
+          <Flex align="center" gap="1" className="h-20">
+            <div className="size-16">
+              <Logo size={100} />
+            </div>
             <Heading>Apps</Heading>
           </Flex>
           <BorderBeam

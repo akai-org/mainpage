@@ -1,27 +1,21 @@
 import Image from 'next/image';
 
-export default function Logo({
-  width,
-  height,
-}: {
-  width: number;
-  height: number;
-}) {
+export default function Logo({ size }: { size: number }) {
   return (
     <>
       <Image
         src={`/logos/AKAI_logo.png`}
         alt="Logo"
-        width={width}
-        height={height}
+        width={size}
+        height={size}
         priority
         className="size-auto dark:hidden"
       />
       <Image
         src={`/logos/AKAI_logo_white.svg`}
         alt="Logo"
-        width={width}
-        height={height}
+        width={size}
+        height={size}
         priority
         className="hidden size-auto dark:block"
       />
