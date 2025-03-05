@@ -25,10 +25,13 @@ export default function Contact() {
         </div>
       </div>
       <div className="mt-auto flex flex-col items-center text-[10px]">
-        <span>{t('footer')} Beniamin Szawracki</span>
         <span>
           © 2020-{new Date().getFullYear()} {t('heading')}
         </span>
+        <a className="hover:underline" href="https://szawracki.pl" target="_blank">
+          {t('footer')}{' '}
+          Beniamin Szawracki
+        </a>
       </div>
     </section>
   );
