@@ -28,9 +28,12 @@ export default function Contact() {
         <span>
           © 2020-{new Date().getFullYear()} {t('heading')}
         </span>
-        <a className="hover:underline" href="https://szawracki.pl" target="_blank">
-          {t('footer')}{' '}
-          Beniamin Szawracki
+        <a
+          className="hover:underline"
+          href="https://szawracki.pl"
+          target="_blank"
+        >
+          {t('footer')} Beniamin Szawracki
         </a>
       </div>
     </section>

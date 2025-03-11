@@ -25,7 +25,7 @@ export default async function RootLayout(props: {
   const { resources } = await initTranslations(locale, i18nNamespaces);
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body className={InterFont.variable}>
         <Providers
           locale={locale}

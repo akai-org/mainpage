@@ -1,9 +1,7 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
-import Image from 'next/image';
-import { Code } from '@radix-ui/themes';
 
 const useClient = () => {
   const [isWindow, setIsWindow] = useState(false);
