@@ -5,6 +5,7 @@ import { cn } from '@/resources/utils';
 import { TextAnimate } from '@/components/ui/TextAnimate';
 import { useTranslation } from 'react-i18next';
 import { CAT_LINK } from '@/resources/constants';
+import members from '@/public/members.jpg';
 
 export default function About() {
   const { t } = useTranslation('about');
@@ -23,7 +24,7 @@ export default function About() {
         </div>
         <div className="border-main relative min-h-80 w-full border-y md:w-1/2 md:border">
           <Image
-            src="/members.jpg"
+            src={members}
             alt="Founders of AKAI"
             fill
             sizes={'(min-width: 768px) 50vw, 100vw'}
