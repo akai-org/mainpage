@@ -22,7 +22,7 @@ export default function Projects() {
     <section className="flex-center-col border-main p-container gap-5 border-y py-20">
       <Heading size={{ initial: '3', xs: '7', sm: '8', md: '9' }}>
         {t('heading')}
-        <NumberTicker className="text-accent-11" value={reposCount!} />
+        <NumberTicker className="text-accent-11" value={reposCount!} />{" "}
         {t('projects')}
       </Heading>
       <Text> {t('subheading')}</Text>

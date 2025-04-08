@@ -15,6 +15,8 @@ import { Container } from '@radix-ui/themes';
 import { GridPattern } from '@/components/ui/GridPattern';
 import { cn } from '@/resources/utils';
 import Logo from '@/components/Logo';
+import Image from "next/image";
+import backgroundImg from "@/public/background.svg"
 
 export default function Page() {
   const isClient = useClient();
@@ -67,13 +69,7 @@ export default function Page() {
           role="status"
         />
       </div>
-      <GridPattern
-        className={cn(
-          'fixed -z-10 [mask-image:radial-gradient(60dvw_circle_at_center,white,transparent)]',
-        )}
-        width={20}
-        height={20}
-      />
+      <Image src={backgroundImg} alt="Background image"  className="-z-10 fixed left-0 top-0 size-full object-cover"/>
     </>
   );
 }

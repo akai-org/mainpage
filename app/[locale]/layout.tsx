@@ -1,11 +1,11 @@
-import type { Metadata } from 'next';
+import '../globals.css';
 import '@radix-ui/themes/styles.css';
-import '@/styles/globals.css';
 import { ReactNode } from 'react';
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { Inter } from 'next/font/google';
 import { i18nConfig, i18nNamespaces, initTranslations } from '@/resources/i18n';
 import Providers from '@/resources/Providers';
-import { Inter } from 'next/font/google';
 
 export const metadata: Metadata = {
   title: 'AKAI',
@@ -14,10 +14,11 @@ export const metadata: Metadata = {
 
 const InterFont = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
-export default async function RootLayout(props: {
+type Props = {
   children: ReactNode;
   params: Promise<{ locale: string }>;
-}) {
+}
+export default async function RootLayout(props: Props) {
   const { locale } = await props.params;
   const { children } = props;
 
