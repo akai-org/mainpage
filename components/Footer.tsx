@@ -1,21 +1,23 @@
 'use client';
-import { Separator } from '@radix-ui/themes';
-import { useTheme } from 'next-themes';
-import { Dock, DockIcon } from '@/components/ui/Dock';
-import { HiMoon, HiSun } from 'react-icons/hi';
+
 import Image from 'next/image';
-import { useCurrentLocale } from 'next-i18n-router/client';
 import { usePathname, useRouter } from 'next/navigation';
+import { useTheme } from 'next-themes';
+import { HiMoon, HiSun } from 'react-icons/hi';
+import { Separator } from '@radix-ui/themes';
+import { useCurrentLocale } from 'next-i18n-router/client';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
+
 import { i18nConfig } from '@/resources/i18n';
+import { Dock, DockIcon } from '@/components/ui/Dock';
 
 export default function Footer() {
-  const { contextSafe } = useGSAP();
   const router = useRouter();
   const currentPathname = usePathname();
   const locale = useCurrentLocale(i18nConfig);
   const otherLocale = locale === 'pl' ? 'en' : 'pl';
+  const { contextSafe } = useGSAP();
 
   const changeLange = contextSafe(() => {
     const loading = document.querySelector('#loading-screen') as HTMLDivElement;

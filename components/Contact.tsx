@@ -1,15 +1,16 @@
-import { MAIL, SOCIALS } from '@/resources/constants';
-import {Heading, Text} from '@radix-ui/themes';
+import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
-import Image from "next/image";
-import cat2 from "@/public/cat2.svg"
+import { Heading, Text } from '@radix-ui/themes';
+
+import { MAIL, SOCIALS } from '@/resources/constants';
+import cat2 from '@/public/cat2.svg';
 
 export default function Contact() {
   const { t } = useTranslation('home');
 
   return (
     <section className="border-main flex-center-col p-container gap-10 border-t pb-0">
-        <Heading size={"6"}>Skontaktuj się z nami!</Heading>
+      <Heading size={'6'}>Skontaktuj się z nami!</Heading>
       <div className="flex-center flex-col gap-7 text-center">
         <Text id="mail" size="7" className="size-full">
           {MAIL}
@@ -27,7 +28,7 @@ export default function Contact() {
           ))}
         </div>
       </div>
-        <Image src={cat2} alt="Very happy cat image" className="max-w-[50%]"/>
+      <Image src={cat2} alt="Very happy cat image" className="max-w-[50%]" />
       <div className="mt-auto flex flex-col items-center text-[10px]">
         <span>
           © 2020-{new Date().getFullYear()} {t('heading')}

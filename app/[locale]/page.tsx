@@ -1,22 +1,22 @@
 'use client';
+
+import Image from 'next/image';
+import { Container } from '@radix-ui/themes';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { TextPlugin } from 'gsap/TextPlugin';
+import { useGSAP } from '@gsap/react';
+
+import backgroundImg from '@/public/background.svg';
 import useClient from '@/resources/useClient';
 import Home from '@/components/Home';
 import About from '@/components/About';
 import Projects from '@/components/Projects';
 import Partners from '@/components/Partners';
 import Contact from '@/components/Contact';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { TextPlugin } from 'gsap/TextPlugin';
-import { useGSAP } from '@gsap/react';
+import Logo from '@/components/Logo';
 import Footer from '@/components/Footer';
 import Join from '@/components/Join';
-import { Container } from '@radix-ui/themes';
-import { GridPattern } from '@/components/ui/GridPattern';
-import { cn } from '@/resources/utils';
-import Logo from '@/components/Logo';
-import Image from "next/image";
-import backgroundImg from "@/public/background.svg"
 
 export default function Page() {
   const isClient = useClient();
@@ -38,26 +38,24 @@ export default function Page() {
   return (
     <>
       {isClient && (
-        <>
-          <Container size="4">
-            <div
-              id="fade-up"
-              className="border-main relative z-10 !mb-14 flex flex-col border bg-radix-gray-1 shadow-radix-6 xl:mt-5"
-            >
-              <Home />
-              <About />
-              <div className="h-10 w-full" />
-              <Join />
-              <div className="h-10 w-full" />
-              <Projects />
-              <div className="h-10 w-full" />
-              <Partners />
-              <div className="h-10 w-full" />
-              <Contact />
-            </div>
-          </Container>
+        <Container size="4">
+          <div
+            id="fade-up"
+            className="border-main relative z-10 !mb-14 flex flex-col border bg-radix-gray-1 shadow-radix-6 xl:mt-5"
+          >
+            <Home />
+            <About />
+            <div className="h-10 w-full" />
+            <Join />
+            <div className="h-10 w-full" />
+            <Projects />
+            <div className="h-10 w-full" />
+            <Partners />
+            <div className="h-10 w-full" />
+            <Contact />
+          </div>
           <Footer />
-        </>
+        </Container>
       )}
       <div
         id="loading-screen"
@@ -69,7 +67,11 @@ export default function Page() {
           role="status"
         />
       </div>
-      <Image src={backgroundImg} alt="Background image"  className="-z-10 fixed left-0 top-0 size-full object-cover"/>
+      <Image
+        src={backgroundImg}
+        alt="Background image"
+        className="fixed left-0 top-0 -z-10 size-full object-cover"
+      />
     </>
   );
 }

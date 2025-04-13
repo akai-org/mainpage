@@ -1,9 +1,10 @@
-import { Card, Heading, Link, Text } from '@radix-ui/themes';
 import Image from 'next/image';
-import { DotPattern } from '@/components/ui/DotPattern';
-import { cn } from '@/resources/utils';
-import { TextAnimate } from '@/components/ui/TextAnimate';
 import { useTranslation } from 'react-i18next';
+import { Card, Heading, Link, Text } from '@radix-ui/themes';
+
+import { cn } from '@/resources/utils';
+import { DotPattern } from '@/components/ui/DotPattern';
+import { TextAnimate } from '@/components/ui/TextAnimate';
 import { CAT_LINK } from '@/resources/constants';
 import members from '@/public/members.jpg';
 

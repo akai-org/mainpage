@@ -17,7 +17,7 @@ const InterFont = Inter({ subsets: ['latin'], variable: '--font-inter' });
 type Props = {
   children: ReactNode;
   params: Promise<{ locale: string }>;
-}
+};
 export default async function RootLayout(props: Props) {
   const { locale } = await props.params;
   const { children } = props;
