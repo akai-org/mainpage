@@ -1,14 +1,13 @@
 'use client';
 
-import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import { useTheme } from 'next-themes';
-import { HiMoon, HiSun } from 'react-icons/hi';
-import { Separator } from '@radix-ui/themes';
 import { useCurrentLocale } from 'next-i18n-router/client';
+import { Moon, Sun } from 'lucide-react';
 
 import { i18nConfig } from '@/lib/i18n';
 import { Dock, DockIcon } from '@/components/ui/Dock';
+import { Separator } from '@/components/ui/separator';
 import { useEffect, useState } from 'react';
 import { Flags } from '@/components/ui/flags';
 
@@ -42,23 +41,17 @@ export default function Footer() {
   if (!isClient) return null;
 
   return (
-    <div className="flex-center pointer-events-none fixed right-0 bottom-2 left-0 z-50 h-fit w-full">
-      <Dock
-        direction="middle"
-        className="bg-radix-gray-1 pointer-events-auto h-10 border-black dark:border-white"
-      >
-        <DockIcon onClick={() => changeTheme()}>
-          {resolvedTheme === 'dark' ? (
-            <HiSun size="24" />
-          ) : (
-            <HiMoon size="24" />
-          )}
-        </DockIcon>
-        <Separator orientation="vertical" className="h-full" />
-        <DockIcon onClick={() => changeLange()}>
-          <Flags icon={otherLocale} />
-        </DockIcon>
-      </Dock>
-    </div>
+    <Dock
+      direction="middle"
+      className="bg-background pointer-events-auto fixed bottom-2 left-1/2 z-50 h-10 -translate-x-1/2 border"
+    >
+      <DockIcon onClick={changeTheme}>
+        {resolvedTheme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+      </DockIcon>
+      <Separator orientation="vertical" className="h-full" />
+      <DockIcon onClick={changeLange}>
+        <Flags icon={otherLocale} />
+      </DockIcon>
+    </Dock>
   );
 }

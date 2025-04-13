@@ -10,7 +10,7 @@ function Flags({ icon }: Props) {
           xmlns="http://www.w3.org/2000/svg"
           id="flag-icons-pl"
           viewBox="0 0 640 480"
-          className="border-background/50 border"
+          className="border-background/50 size-5 border"
         >
           <g fillRule="evenodd">
             <path fill="#fff" d="M640 480H0V0h640z" />
@@ -24,7 +24,7 @@ function Flags({ icon }: Props) {
           xmlns="http://www.w3.org/2000/svg"
           id="flag-icons-gb"
           viewBox="0 0 640 480"
-          className="border-background/50 border"
+          className="border-background/50 size-5 border"
         >
           <path fill="#012169" d="M0 0h640v480H0z" />
           <path
