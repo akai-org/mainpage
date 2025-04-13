@@ -1,11 +1,10 @@
 import '../globals.css';
-import '@radix-ui/themes/styles.css';
 import { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Inter } from 'next/font/google';
-import { i18nConfig, i18nNamespaces, initTranslations } from '@/lib/i18n';
 import Providers from '@/components/providers';
+import { i18nConfig, i18nNamespaces, initTranslations } from '@/lib/i18n';
 
 export const metadata: Metadata = {
   title: 'AKAI',

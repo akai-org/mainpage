@@ -1,17 +1,17 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { useTheme } from 'next-themes';
 import { useCurrentLocale } from 'next-i18n-router/client';
 import { Moon, Sun } from 'lucide-react';
 
-import { i18nConfig } from '@/lib/i18n';
 import { Dock, DockIcon } from '@/components/ui/dock';
 import { Separator } from '@/components/ui/separator';
-import { useEffect, useState } from 'react';
 import { Flags } from '@/components/ui/flags';
+import { i18nConfig } from '@/lib/i18n';
 
-export default function Footer() {
+function Footer() {
   const router = useRouter();
   const currentPathname = usePathname();
   const locale = useCurrentLocale(i18nConfig);
@@ -55,3 +55,4 @@ export default function Footer() {
     </Dock>
   );
 }
+export { Footer };

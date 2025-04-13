@@ -10,9 +10,9 @@ import { Home } from '@/components/sections/home';
 import { About } from '@/components/sections/about';
 import { Join } from '@/components/sections/join';
 import { Projects } from '@/components/sections/projects';
-import Partners from '@/components/sections/partners';
-import Contact from '@/components/sections/contact';
-import Footer from '@/components/footer';
+import { Partners } from '@/components/sections/partners';
+import { Contact } from '@/components/sections/contact';
+import { Footer } from '@/components/footer';
 
 export default function Page() {
   gsap.registerPlugin(useGSAP, ScrollTrigger, TextPlugin);

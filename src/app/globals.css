@@ -61,8 +61,8 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: #F7A823;
+  --primary: #a36e17;
+  --primary-foreground: #f7a823;
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
@@ -94,8 +94,8 @@
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: #F7A823;
+  --primary: #a36e17;
+  --primary-foreground: #f7a823;
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
@@ -129,10 +129,10 @@
     @apply bg-background text-foreground;
   }
   section {
-    @apply flex-center-col gap-5 border-y py-20 px-1;
+    @apply flex-center-col gap-5 border-y px-1 py-20;
   }
   a {
-    @apply decoration-1 underline-offset-2 hover:underline
+    @apply decoration-1 underline-offset-2 hover:underline;
   }
 }
 
