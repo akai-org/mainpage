@@ -8,7 +8,7 @@ import { TextPlugin } from 'gsap/TextPlugin';
 import { useGSAP } from '@gsap/react';
 
 import backgroundImg from '@/../public/background.svg';
-import useClient from '@/resources/useClient';
+import useClient from '@/lib/use-client';
 import Home from '@/components/Home';
 import About from '@/components/About';
 import Projects from '@/components/Projects';

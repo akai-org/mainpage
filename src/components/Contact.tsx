@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import { Heading, Text } from '@radix-ui/themes';
 
-import { MAIL, SOCIALS } from '@/resources/constants';
+import { MAIL, SOCIALS } from '@/lib/constants';
 import cat2 from '@/../public/cat2.svg';
 
 export default function Contact() {

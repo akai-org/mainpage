@@ -1,5 +1,5 @@
 'use client';
-import { PARTNERS } from '@/resources/constants';
+import { PARTNERS } from '@/lib/constants';
 import { Card, Heading } from '@radix-ui/themes';
 import Image from 'next/image';
 import { clsx } from 'clsx';

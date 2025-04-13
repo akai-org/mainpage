@@ -6,7 +6,7 @@ import {
   Heading,
   Text,
 } from '@radix-ui/themes';
-import { MAIL } from '@/resources/constants';
+import { MAIL } from '@/lib/constants';
 import { TextAnimate } from '@/components/ui/TextAnimate';
 import { useTranslation } from 'react-i18next';
 

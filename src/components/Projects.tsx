@@ -1,5 +1,5 @@
 'use client';
-import { APPS_LINK, GITHUB_API } from '@/resources/constants';
+import { APPS_LINK, GITHUB_API } from '@/lib/constants';
 import { Badge, Card, Flex, Heading, Text } from '@radix-ui/themes';
 import { NumberTicker } from '@/components/ui/NumberTicker';
 import { useEffect, useState } from 'react';

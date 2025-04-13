@@ -9,7 +9,7 @@ import { useCurrentLocale } from 'next-i18n-router/client';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 
-import { i18nConfig } from '@/resources/i18n';
+import { i18nConfig } from '@/lib/i18n';
 import { Dock, DockIcon } from '@/components/ui/Dock';
 
 export default function Footer() {

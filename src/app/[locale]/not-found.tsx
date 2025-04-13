@@ -57,11 +57,11 @@ export default function NotFound() {
       </div>
 
       <div ref={referenceRef} className="flex-center mt-auto h-dvh w-full">
-        <div className="flex-center-col z-50 mx-auto gap-5 rounded-sm border-4 border-red-500 bg-radix-gray-1 p-5">
+        <div className="flex-center-col bg-radix-gray-1 z-50 mx-auto gap-5 rounded-sm border-4 border-red-500 p-5">
           <h1 className="text-4xl font-bold sm:text-5xl">{t('404')}</h1>
           <Link
             href="/"
-            className="active:bg-main select-none border border-red-500 p-1 duration-300 hover:border-black hover:underline"
+            className="active:bg-main border border-red-500 p-1 duration-300 select-none hover:border-black hover:underline"
           >
             {t('404button')}
           </Link>

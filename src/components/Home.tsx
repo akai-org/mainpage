@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <section className="flex-center-col relative h-dvh gap-10 xl:h-[calc(100dvh-20px)]">
       <Logo size={200} />
-      <div className="h-1 w-7 rounded-sm bg-accent-9"></div>
+      <div className="bg-accent-9 h-1 w-7 rounded-sm"></div>
       <Heading size={{ initial: '2', xs: '4', sm: '8' }} id="akai">
         {t('heading')}
       </Heading>

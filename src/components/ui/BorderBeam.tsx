@@ -1,4 +1,4 @@
-import { cn } from '@/resources/utils';
+import { cn } from '@/lib/utils';
 import { ComponentPropsWithoutRef, CSSProperties } from 'react';
 
 interface BorderBeamProps extends ComponentPropsWithoutRef<'div'> {

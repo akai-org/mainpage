@@ -7,7 +7,6 @@
   "jsxSingleQuote": false,
   "quoteProps": "as-needed",
   "bracketSpacing": true,
-  "jsxBracketSameLine": false,
   "arrowParens": "avoid",
   "plugins": ["prettier-plugin-tailwindcss"]
 }
