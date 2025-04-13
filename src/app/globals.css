@@ -4,75 +4,9 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme {
+@theme inline {
   --font-inter: var(--font-inter);
 
-  --padding-main: 80px;
-
-  --color-main-border: #d9d9d9;
-  --color-dark-border: #3a3a3a;
-  --color-accent-2: var(--accent-2);
-  --color-accent-6: var(--accent-6);
-  --color-accent-9: var(--accent-9);
-  --color-accent-10: var(--accent-10);
-  --color-accent-11: var(--accent-11);
-  --color-accent-12: var(--accent-12);
-  --color-radix-gray-1: var(--gray-1);
-  --color-radix-gray-2: var(--gray-2);
-
-  --shadow-radix-1: var(--shadow-1);
-  --shadow-radix-2: var(--shadow-2);
-  --shadow-radix-3: var(--shadow-3);
-  --shadow-radix-4: var(--shadow-4);
-  --shadow-radix-5: var(--shadow-5);
-  --shadow-radix-6: var(--shadow-6);
-
-  --animate-spin: spin 1s linear infinite;
-  --animate-border-beam: border-beam calc(var(--duration) * 1s) infinite linear;
-
-  @keyframes border-beam {
-    100% {
-      offset-distance: 100%;
-    }
-  }
-}
-
-@utility flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@utility flex-center-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-@utility border-main {
-  @apply border-main-border dark:border-dark-border;
-}
-
-
-
-@utility container-text {
-  @apply p-5;
-}
-
-.radix-themes {
-  --cursor-button: pointer;
-  --cursor-checkbox: pointer;
-  --cursor-disabled: default;
-  --cursor-link: pointer;
-  --cursor-menu-item: pointer;
-  --cursor-radio: pointer;
-  --cursor-slider-thumb: grab;
-  --cursor-slider-thumb-active: grabbing;
-  --cursor-switch: pointer;
-}
-
-@theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -108,6 +42,15 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  --animate-spin: spin 1s linear infinite;
+  --animate-border-beam: border-beam calc(var(--duration) * 1s) infinite linear;
+
+  @keyframes border-beam {
+    100% {
+      offset-distance: 100%;
+    }
+  }
 }
 
 :root {
@@ -119,7 +62,7 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
   --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
+  --primary-foreground: #F7A823;
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
@@ -151,9 +94,8 @@
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
   --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
+  --primary-foreground: #F7A823;
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
@@ -179,10 +121,6 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-@utility p-container {
-  @apply px-1 py-5;
-}
-
 @layer base {
   * {
     @apply border-border outline-ring/50 font-inter;
@@ -193,4 +131,20 @@
   section {
     @apply flex-center-col gap-5 border-y py-20 px-1;
   }
+  a {
+    @apply decoration-1 underline-offset-2 hover:underline
+  }
+}
+
+@utility flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@utility flex-center-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

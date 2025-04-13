@@ -7,7 +7,7 @@ import { useGSAP } from '@gsap/react';
 
 import backgroundImg from '@/../public/background.svg';
 import { Home } from '@/components/sections/home';
-import About from '@/components/sections/about';
+import { About } from '@/components/sections/about';
 import Projects from '@/components/sections/projects';
 import Partners from '@/components/sections/partners';
 import Contact from '@/components/sections/contact';

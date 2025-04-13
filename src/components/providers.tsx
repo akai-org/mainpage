@@ -1,7 +1,6 @@
 'use client';
 import { ReactNode } from 'react';
 import { ThemeProvider as DarkModeProvider } from 'next-themes';
-import { Theme } from '@radix-ui/themes';
 import { Resource, createInstance } from 'i18next';
 import { I18nextProvider } from 'react-i18next';
 import { initTranslations } from '@/lib/i18n';
@@ -25,9 +24,7 @@ export default function Providers(props: Props) {
       disableTransitionOnChange
       attribute="class"
     >
-      <Theme accentColor="amber" grayColor="gray" radius="small">
-        <I18nextProvider i18n={i18n}>{children}</I18nextProvider>
-      </Theme>
+      <I18nextProvider i18n={i18n}>{children}</I18nextProvider>
     </DarkModeProvider>
   );
 }
