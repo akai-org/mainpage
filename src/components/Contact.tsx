@@ -9,10 +9,10 @@ export default function Contact() {
   const { t } = useTranslation('home');
 
   return (
-    <section className="border-main flex-center-col p-container gap-10 border-t pb-0">
+    <section className="flex-center-col p-container gap-10 border-t !pb-0">
       <Heading size={'6'}>Skontaktuj się z nami!</Heading>
       <div className="flex-center flex-col gap-7 text-center">
-        <Text id="mail" size="7" className="size-full">
+        <Text size="7" className="size-full">
           {MAIL}
         </Text>
         <div className="flex gap-7">
@@ -20,7 +20,7 @@ export default function Contact() {
             <a
               target="_blank"
               href={social.link}
-              className="border-main text-accent-9 rounded-full border-2 p-2 text-2xl"
+              className="text-accent-9 rounded-full border-2 p-2 text-2xl"
               key={i}
             >
               {social.icon}

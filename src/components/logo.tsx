@@ -1,4 +1,4 @@
-export default function Logo({ size }: { size: number }) {
+function Logo({ size }: { size: number }) {
   return (
     <div style={{ width: size, height: size }}>
       <svg
@@ -11,6 +11,7 @@ export default function Logo({ size }: { size: number }) {
         height="211.778px"
         viewBox="0 0 189.211 211.778"
         enableBackground="new 0 0 189.211 211.778"
+        className="size-full"
       >
         <g>
           <path
@@ -66,3 +67,5 @@ export default function Logo({ size }: { size: number }) {
     </div>
   );
 }
+
+export { Logo };

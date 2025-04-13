@@ -5,7 +5,7 @@ import { NumberTicker } from '@/components/ui/NumberTicker';
 import { useEffect, useState } from 'react';
 import { BorderBeam } from '@/components/ui/BorderBeam';
 import { useTranslation } from 'react-i18next';
-import Logo from '@/components/Logo';
+import { Logo } from '@/components/logo';
 
 export default function Projects() {
   const { t } = useTranslation('projects');
@@ -45,7 +45,6 @@ export default function Projects() {
             colorFrom="var(--accent-6)"
             colorTo="var(--accent-9)"
             size={250}
-            borderWidth={2}
             duration={9}
             delay={9}
           />

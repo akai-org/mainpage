@@ -6,7 +6,7 @@ import { TextPlugin } from 'gsap/TextPlugin';
 import { useGSAP } from '@gsap/react';
 
 import backgroundImg from '@/../public/background.svg';
-import Home from '@/components/Home';
+import { Home } from '@/components/home';
 import About from '@/components/About';
 import Projects from '@/components/Projects';
 import Partners from '@/components/Partners';
@@ -26,8 +26,8 @@ export default function Page() {
         <Projects />
         <Partners />
         <Contact />
-        <Footer />
       </main>
+      <Footer />
       <Image
         src={backgroundImg}
         alt="Background image"
