@@ -41,7 +41,7 @@ export default function NotFound() {
             {Array.from({ length: 10 }, (_, i2) => (
               <div
                 key={i2}
-                className="w-fit flex-shrink-0 px-5 text-[70px] sm:text-[150px]"
+                className="w-fit shrink-0 px-5 text-[70px] sm:text-[150px]"
               >
                 {i2 % 2 == 0 ? (
                   404
@@ -57,7 +57,7 @@ export default function NotFound() {
       </div>
 
       <div ref={referenceRef} className="flex-center mt-auto h-dvh w-full">
-        <div className="flex-center-col z-50 mx-auto gap-5 rounded border-4 border-red-500 bg-radix-gray-1 p-5">
+        <div className="flex-center-col z-50 mx-auto gap-5 rounded-sm border-4 border-red-500 bg-radix-gray-1 p-5">
           <h1 className="text-4xl font-bold sm:text-5xl">{t('404')}</h1>
           <Link
             href="/"

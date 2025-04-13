@@ -20,13 +20,13 @@ export default function Partners() {
             target="_blank"
             rel="noopener noreferrer"
             className={clsx(
-              'border-main group mx-auto rounded-sm p-1 sm:mx-0',
+              'border-main group mx-auto rounded-xs p-1 sm:mx-0',
               {
                 'col-span-2 sm:col-span-1': i == PARTNERS.length - 1,
               },
             )}
           >
-            <Card className="duration-500 group-hover:bg-accent-6 group-hover:dark:bg-accent-2">
+            <Card className="group-hover:bg-accent-6 dark:group-hover:bg-accent-2 duration-500">
               <Image
                 alt={partner.name}
                 src={partner.logo}

@@ -6,7 +6,7 @@ import { cn } from '@/resources/utils';
 import { DotPattern } from '@/components/ui/DotPattern';
 import { TextAnimate } from '@/components/ui/TextAnimate';
 import { CAT_LINK } from '@/resources/constants';
-import members from '@/public/members.jpg';
+import members from '@/../public/members.jpg';
 
 export default function About() {
   const { t } = useTranslation('about');

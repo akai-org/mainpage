@@ -1,5 +1,5 @@
-import AKAI_logo_blue from '@/public/logos/AKAI_logo_blue.svg';
-import AKAI_logo_white from '@/public/logos/AKAI_logo_white.svg';
+import AKAI_logo_blue from '@/../public/logos/AKAI_logo_blue.svg';
+import AKAI_logo_white from '@/../public/logos/AKAI_logo_white.svg';
 import Image from 'next/image';
 
 export default function Logo({ size }: { size: number }) {

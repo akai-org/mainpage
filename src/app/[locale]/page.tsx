@@ -7,7 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextPlugin } from 'gsap/TextPlugin';
 import { useGSAP } from '@gsap/react';
 
-import backgroundImg from '@/public/background.svg';
+import backgroundImg from '@/../public/background.svg';
 import useClient from '@/resources/useClient';
 import Home from '@/components/Home';
 import About from '@/components/About';
@@ -41,7 +41,7 @@ export default function Page() {
         <Container size="4">
           <div
             id="fade-up"
-            className="border-main relative z-10 !mb-14 flex flex-col border bg-radix-gray-1 shadow-radix-6 xl:mt-5"
+            className="border-main bg-radix-gray-1 shadow-radix-6 relative z-10 mb-14! flex flex-col border xl:mt-5"
           >
             <Home />
             <About />
@@ -59,18 +59,18 @@ export default function Page() {
       )}
       <div
         id="loading-screen"
-        className="flex-center-col border-main fixed left-0 top-0 z-50 h-dvh w-full gap-10 border-t bg-radix-gray-1 shadow-radix-1"
+        className="flex-center-col border-main bg-radix-gray-1 shadow-radix-1 fixed top-0 left-0 z-50 h-dvh w-full gap-10 border-t"
       >
         <Logo size={200} />
         <div
-          className="text-surface inline-block size-10 animate-spin rounded-full border-[6px] border-solid border-accent-9 border-e-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white"
+          className="text-surface border-accent-9 inline-block size-10 animate-spin rounded-full border-[6px] border-solid border-e-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white"
           role="status"
         />
       </div>
       <Image
         src={backgroundImg}
         alt="Background image"
-        className="fixed left-0 top-0 -z-10 size-full object-cover"
+        className="fixed top-0 left-0 -z-10 size-full object-cover"
       />
     </>
   );

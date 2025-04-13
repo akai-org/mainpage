@@ -52,11 +52,11 @@ export default function Footer() {
   return (
     <div
       id="fade-up"
-      className="flex-center pointer-events-none fixed bottom-2 left-0 right-0 z-50 h-fit w-full"
+      className="flex-center pointer-events-none fixed right-0 bottom-2 left-0 z-50 h-fit w-full"
     >
       <Dock
         direction="middle"
-        className="pointer-events-auto h-10 border-black bg-radix-gray-1 dark:border-white"
+        className="bg-radix-gray-1 pointer-events-auto h-10 border-black dark:border-white"
       >
         <DockIcon onClick={() => changeTheme()}>
           {resolvedTheme === 'dark' ? (

@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Heading, Text } from '@radix-ui/themes';
 
 import { MAIL, SOCIALS } from '@/resources/constants';
-import cat2 from '@/public/cat2.svg';
+import cat2 from '@/../public/cat2.svg';
 
 export default function Contact() {
   const { t } = useTranslation('home');
@@ -20,7 +20,7 @@ export default function Contact() {
             <a
               target="_blank"
               href={social.link}
-              className="border-main rounded-full border-2 p-2 text-2xl text-accent-9"
+              className="border-main text-accent-9 rounded-full border-2 p-2 text-2xl"
               key={i}
             >
               {social.icon}
