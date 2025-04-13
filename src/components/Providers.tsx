@@ -26,7 +26,7 @@ export default function Providers(props: Props) {
       attribute="class"
     >
       <Theme accentColor="amber" grayColor="gray" radius="small">
-        <I18nextProvider i18n={i18n}>{children}</I18nextProvider>;
+        <I18nextProvider i18n={i18n}>{children}</I18nextProvider>
       </Theme>
     </DarkModeProvider>
   );
