@@ -43,7 +43,7 @@ function Projects() {
         <Badge variant="outline">{t('badge')}</Badge>
       </div>
       <Link href={APPS_LINK} target="_blank" className="hover:no-underline">
-        <Card className="relative">
+        <Card className="relative overflow-hidden">
           <CardContent className="flex-center">
             <Logo size={50} />
             <h2>Apps</h2>
