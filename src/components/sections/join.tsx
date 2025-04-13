@@ -19,7 +19,9 @@ function Join() {
 
   return (
     <section className="md:*:!w-1/2">
-      <h1 className="p-5 text-3xl font-bold sm:text-6xl">{t('heading')}</h1>
+      <h1 className="p-5 text-center text-3xl font-bold sm:text-6xl">
+        {t('heading')}
+      </h1>
       <p>{t('text')} </p>
       <Separator className="mb-5" />
       <div className="flex-center-col gap-16">

@@ -20,10 +20,7 @@ function About() {
         <div className="flex w-full flex-col gap-2 border-y pt-5 md:w-1/2">
           <h1 className="p-5 text-6xl font-bold">{t('heading')}</h1>
           <p className="p-5">
-            {t('text11')}{' '}
-            <Link className="text-primary-foreground" href={CAT_LINK}>
-              {t('PUT')}
-            </Link>
+            {t('text11')} <Link href={CAT_LINK}>{t('PUT')}</Link>
           </p>
           <p className="p-5">{t('text12')}</p>
         </div>

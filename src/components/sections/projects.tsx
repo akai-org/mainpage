@@ -24,7 +24,7 @@ function Projects() {
 
   return (
     <section>
-      <h1 className="text-5xl font-bold">
+      <h1 className="text-center text-xl font-bold sm:text-5xl">
         {' '}
         {t('heading')}
         {reposCount ? (
@@ -35,7 +35,7 @@ function Projects() {
         {t('projects')}
       </h1>
       <p> {t('subheading')}</p>
-      <div className="flex items-center gap-2">
+      <div className="flex-center flex-wrap gap-2">
         <Badge variant="outline">C#</Badge>
         <Badge variant="outline">Java</Badge>
         <Badge variant="outline">Python</Badge>
@@ -49,8 +49,8 @@ function Projects() {
             <h2>Apps</h2>
           </CardContent>
           <BorderBeam
-            colorFrom="red"
-            colorTo="blue"
+            colorFrom="var(--primary)"
+            colorTo="var(--primary-foreground)"
             size={250}
             duration={9}
             delay={9}

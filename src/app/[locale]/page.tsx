@@ -19,7 +19,7 @@ export default function Page() {
 
   return (
     <>
-      <main className="bg-background relative z-10 mx-auto mb-14 max-w-6xl space-y-10 rounded-xl border shadow-xl xl:mt-5">
+      <main className="bg-background relative z-10 mx-auto mb-14 w-full max-w-6xl space-y-10 rounded-xl border shadow-xl xl:mt-5">
         <Home />
         <About />
         <Join />

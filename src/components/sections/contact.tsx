@@ -11,7 +11,7 @@ function Contact() {
 
   return (
     <section className="border-b-0 pb-0">
-      <h1 className="text-5xl font-bold">Skontaktuj się z nami!</h1>
+      <h1 className="text-center text-5xl font-bold">Skontaktuj się z nami!</h1>
       <p className="text-xl">{MAIL}</p>
       <div className="flex gap-7">
         {SOCIALS.map((social, i) => (
@@ -28,11 +28,11 @@ function Contact() {
           </Button>
         ))}
       </div>
-      <Image src={cat2} alt="Very happy cat image" className="max-w-[50%]" />
-      <div className="mt-auto flex flex-col items-center text-xs">
-        <span>
+      <Image src={cat2} alt="Very happy cat image" className="max-w-1/2" />
+      <div className="mt-auto text-center text-xs">
+        <p>
           © 2020-{new Date().getFullYear()} {t('heading')}
-        </span>
+        </p>
         <Link
           className="hover:underline"
           href="https://szawracki.pl"
