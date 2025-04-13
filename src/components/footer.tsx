@@ -6,7 +6,7 @@ import { useCurrentLocale } from 'next-i18n-router/client';
 import { Moon, Sun } from 'lucide-react';
 
 import { i18nConfig } from '@/lib/i18n';
-import { Dock, DockIcon } from '@/components/ui/Dock';
+import { Dock, DockIcon } from '@/components/ui/dock';
 import { Separator } from '@/components/ui/separator';
 import { useEffect, useState } from 'react';
 import { Flags } from '@/components/ui/flags';

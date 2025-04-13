@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Inter } from 'next/font/google';
 import { i18nConfig, i18nNamespaces, initTranslations } from '@/lib/i18n';
-import Providers from '@/components/Providers';
+import Providers from '@/components/providers';
 
 export const metadata: Metadata = {
   title: 'AKAI',

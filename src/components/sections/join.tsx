@@ -7,7 +7,7 @@ import {
   Text,
 } from '@radix-ui/themes';
 import { MAIL } from '@/lib/constants';
-import { TextAnimate } from '@/components/ui/TextAnimate';
+import { TextAnimate } from '@/components/ui/text-animate';
 import { useTranslation } from 'react-i18next';
 
 type JobItemT = {
@@ -22,7 +22,7 @@ export default function Join() {
   });
 
   return (
-    <section className="container-text flex-center-col border-main p-container gap-5 border-y pb-0">
+    <section>
       <Heading size={{ initial: '8', xs: '9' }}>{t('heading')}</Heading>
       <Text className="md:w-1/2">{t('text')} </Text>
       <div className="border-main mb-5 w-full! border sm:w-1/2!" />

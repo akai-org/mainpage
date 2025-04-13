@@ -1,11 +1,11 @@
 import { useTranslation } from 'react-i18next';
-import { Logo } from '@/components/logo';
+import { Logo } from '@/components/ui/logo';
 
 function Home() {
   const { t } = useTranslation('home');
 
   return (
-    <section className="flex-center-col relative h-dvh gap-10 xl:h-[calc(100dvh-20px)]">
+    <section className="min-h-screen border-t-0 py-0 xl:h-[calc(100vh-20px)] xl:min-h-auto">
       <Logo size={200} />
       <div className="bg-accent-9 h-1 w-7 rounded-sm"></div>
       <h1 className="text-2xl font-bold">{t('heading')}</h1>

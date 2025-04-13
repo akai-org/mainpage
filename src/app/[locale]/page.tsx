@@ -6,20 +6,20 @@ import { TextPlugin } from 'gsap/TextPlugin';
 import { useGSAP } from '@gsap/react';
 
 import backgroundImg from '@/../public/background.svg';
-import { Home } from '@/components/home';
-import About from '@/components/About';
-import Projects from '@/components/Projects';
-import Partners from '@/components/Partners';
-import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
-import Join from '@/components/Join';
+import { Home } from '@/components/sections/home';
+import About from '@/components/sections/about';
+import Projects from '@/components/sections/projects';
+import Partners from '@/components/sections/partners';
+import Contact from '@/components/sections/contact';
+import Footer from '@/components/footer';
+import Join from '@/components/sections/join';
 
 export default function Page() {
   gsap.registerPlugin(useGSAP, ScrollTrigger, TextPlugin);
 
   return (
     <>
-      <main className="bg-background relative z-10 mx-auto mb-14 max-w-6xl space-y-10 border shadow-xl xl:mt-5">
+      <main className="bg-background relative z-10 mx-auto mb-14 max-w-6xl space-y-10 rounded-xl border shadow-xl xl:mt-5">
         <Home />
         <About />
         <Join />

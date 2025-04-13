@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 export default function Partners() {
   const { t } = useTranslation('partners');
   return (
-    <section className="border-main p-container flex flex-col gap-5 border-y py-20">
+    <section>
       <div className="flex flex-col gap-1 pl-5 text-center sm:text-left">
         <Heading size="8">{t('heading')}</Heading>
       </div>

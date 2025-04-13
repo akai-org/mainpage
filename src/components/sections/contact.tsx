@@ -3,13 +3,14 @@ import { useTranslation } from 'react-i18next';
 import { Heading, Text } from '@radix-ui/themes';
 
 import { MAIL, SOCIALS } from '@/lib/constants';
-import cat2 from '@/../public/cat2.svg';
+import cat2 from '../../../public/cat2.svg';
+import Link from 'next/link';
 
 export default function Contact() {
   const { t } = useTranslation('home');
 
   return (
-    <section className="flex-center-col p-container gap-10 border-t !pb-0">
+    <section className="border-b-0 pb-0">
       <Heading size={'6'}>Skontaktuj się z nami!</Heading>
       <div className="flex-center flex-col gap-7 text-center">
         <Text size="7" className="size-full">
@@ -17,14 +18,14 @@ export default function Contact() {
         </Text>
         <div className="flex gap-7">
           {SOCIALS.map((social, i) => (
-            <a
+            <Link
               target="_blank"
               href={social.link}
               className="text-accent-9 rounded-full border-2 p-2 text-2xl"
               key={i}
             >
               {social.icon}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
@@ -33,13 +34,13 @@ export default function Contact() {
         <span>
           © 2020-{new Date().getFullYear()} {t('heading')}
         </span>
-        <a
+        <Link
           className="hover:underline"
           href="https://szawracki.pl"
           target="_blank"
         >
           {t('footer')} Beniamin Szawracki
-        </a>
+        </Link>
       </div>
     </section>
   );
