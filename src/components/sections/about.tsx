@@ -1,12 +1,13 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 
 import { cn } from '@/lib/utils';
 import { DotPattern } from '@/components/ui/dot-pattern';
 import { TextAnimate } from '@/components/ui/text-animate';
+import { Card, CardContent } from '@/components/ui/card';
 import { CAT_LINK } from '@/lib/constants';
-import members from '../../../public/members.jpg';
-import Link from 'next/link';
+import members from '@/../public/members.jpg';
 
 function About() {
   const { t } = useTranslation('about');
@@ -55,17 +56,19 @@ function About() {
           </h3>
           <div className="flex flex-col gap-10 p-5">
             {texts.map((text, i) => (
-              <div
+              <Card
+                key={i}
                 className={cn(
-                  'bg-muted/30 w-full rounded-md border p-5 sm:max-w-[500px]',
+                  'sm:max-w-[500px]',
                   i == 0 && 'mr-auto',
                   i == 1 && 'mx-auto',
                   i == 2 && 'ml-auto',
                 )}
-                key={i}
               >
-                {t(text)}
-              </div>
+                <CardContent>
+                  <p>{t(text)}</p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>

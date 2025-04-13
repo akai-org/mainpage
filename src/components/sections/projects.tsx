@@ -1,13 +1,17 @@
 'use client';
-import { APPS_LINK, GITHUB_API } from '@/lib/constants';
-import { Badge, Card, Flex, Heading, Text } from '@radix-ui/themes';
-import { NumberTicker } from '@/components/ui/number-ticker';
 import { useEffect, useState } from 'react';
-import { BorderBeam } from '@/components/ui/border-beam';
 import { useTranslation } from 'react-i18next';
-import { Logo } from '@/components/ui/logo';
 
-export default function Projects() {
+import { Card, CardContent } from '@/components/ui/card';
+import { NumberTicker } from '@/components/ui/number-ticker';
+import { BorderBeam } from '@/components/ui/border-beam';
+import { Logo } from '@/components/ui/logo';
+import { Badge } from '@/components/ui/badge';
+
+import { APPS_LINK, GITHUB_API } from '@/lib/constants';
+import Link from 'next/link';
+
+function Projects() {
   const { t } = useTranslation('projects');
   const [reposCount, setReposCount] = useState<number | null>(null);
   useEffect(() => {
@@ -19,8 +23,9 @@ export default function Projects() {
   }, []);
 
   return (
-    <section className="flex-center-col border-main p-container gap-5 border-y py-20">
-      <Heading size={{ initial: '3', xs: '7', sm: '8', md: '9' }}>
+    <section>
+      <h1 className="text-5xl font-bold">
+        {' '}
         {t('heading')}
         {reposCount ? (
           <NumberTicker className="text-accent-11" value={reposCount} />
@@ -28,32 +33,31 @@ export default function Projects() {
           0
         )}{' '}
         {t('projects')}
-      </Heading>
-      <Text> {t('subheading')}</Text>
-      <Flex direction={{ initial: 'column', sm: 'row' }} align="center" gap="2">
-        <Flex align="center" gap="2">
-          <Badge variant="outline">C#</Badge>
-          <Badge variant="outline">Java</Badge>
-          <Badge variant="outline">Python</Badge>
-          <Badge variant="outline">React</Badge>
-        </Flex>
+      </h1>
+      <p> {t('subheading')}</p>
+      <div className="flex items-center gap-2">
+        <Badge variant="outline">C#</Badge>
+        <Badge variant="outline">Java</Badge>
+        <Badge variant="outline">Python</Badge>
+        <Badge variant="outline">React</Badge>
         <Badge variant="outline">{t('badge')}</Badge>
-      </Flex>
-      <a href={APPS_LINK} target="_blank">
+      </div>
+      <Link href={APPS_LINK} target="_blank" className="hover:no-underline">
         <Card className="relative">
-          <Flex align="center" gap="1" className="h-20">
+          <CardContent className="flex-center">
             <Logo size={50} />
-            <Heading>Apps</Heading>
-          </Flex>
+            <h2>Apps</h2>
+          </CardContent>
           <BorderBeam
-            colorFrom="var(--accent-6)"
-            colorTo="var(--accent-9)"
+            colorFrom="red"
+            colorTo="blue"
             size={250}
             duration={9}
             delay={9}
           />
         </Card>
-      </a>
+      </Link>
     </section>
   );
 }
+export { Projects };
