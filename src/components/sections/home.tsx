@@ -1,8 +1,8 @@
-import { useTranslation } from 'react-i18next';
 import { Logo } from '@/components/ui/logo';
+import { getTranslations } from 'next-intl/server';
 
-function Home() {
-  const { t } = useTranslation('home');
+async function Home() {
+  const t = await getTranslations('home');
 
   return (
     <section className="min-h-screen border-t-0 py-0 xl:h-[calc(100vh-20px)] xl:min-h-auto">

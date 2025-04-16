@@ -1,0 +1,57 @@
+{
+  "home": {
+    "heading": "Academic Circle of Web Applications"
+  },
+  "about": {
+    "heading": "About Us",
+    "text11": "We have been active in the whole area of Poznań since 2010, when we were founded at",
+    "PUT": "The Faculty of Computer Science at Poznań University of Technology",
+    "text12": "We are a scientific circle actively operating in the IT environment",
+    "quote": "Anyone can become a member, regardless of the university they study at",
+    "heading2": "What do we do?",
+    "text21": "We bring together young and ambitious people who set themselves the goal of development and success in the field of web applications.",
+    "text22": "We establish collaborations with research institutions, company representatives, and well-known specialists from the IT world. We take on new challenges and show that the knowledge and experience shared by our organization represent the future of web application design.",
+    "text23": "We promote the idea of a network built by professionals who know the value of their knowledge and are always hungry for new skills and experience. Our projects in both the private and public sectors give AKAI members the chance to build professionalism and gain valuable experience for their current and future careers."
+  },
+  "join": {
+    "heading": "Join Us",
+    "text": "Are you interested in back-end, front-end, have a flair for design, or maybe want to test your management and organizational skills? Join us, in any of these roles you can realize yourself in AKAI.",
+    "jobs": [
+      {
+        "name": "Front-end development",
+        "desc": "Everything that the user sees. It is responsible for the appearance and behavior of the website or web application. It is created using HTML, CSS, and JavaScript, but nowadays, this is often not enough. That’s why we frequently use frameworks like React, Vue, Next.js, and Gatsby."
+      },
+      {
+        "name": "Back-end development",
+        "desc": "Software running on the server-side. It processes data and performs various operations. This is where the magic happens. In our circle, we use various programming languages (e.g., Python, Java, PHP, Go, Ruby)."
+      },
+      {
+        "name": "Mobile development",
+        "desc": "The world of mobile applications, available at your fingertips on iOS and Android devices. We write native Android apps in Kotlin or use Flutter for cross-platform development. In the mobile section, we sometimes also create PWAs."
+      },
+      {
+        "name": "Graphic design / UI / UX",
+        "desc": "Before we create something, it's worth designing it. Besides making it visually appealing, it's also important to ensure that the interface is intuitive for the user."
+      }
+    ],
+    "join": "Do you want to join us?",
+    "button": "Write to us"
+  },
+  "projects": {
+    "heading": "We’ve completed over ",
+    "projects": " projects",
+    "subheading": "In programming languages such as:",
+    "badge": "And many more..."
+  },
+  "partners": {
+    "heading": "Our Partners"
+  },
+  "contact": {
+    "heading": "Contact Us!",
+    "footer": "Implementation"
+  },
+  "not-found": {
+    "404": "Page not found :(",
+    "404button": "Back to the homepage"
+  }
+}

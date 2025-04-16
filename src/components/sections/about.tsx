@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { useTranslation } from 'react-i18next';
 
 import { cn } from '@/lib/utils';
 import { DotPattern } from '@/components/ui/dot-pattern';
@@ -8,11 +7,11 @@ import { TextAnimate } from '@/components/ui/text-animate';
 import { Card, CardContent } from '@/components/ui/card';
 import { CAT_LINK } from '@/lib/constants';
 import members from '@/../public/members.jpg';
+import { getTranslations } from 'next-intl/server';
 
-function About() {
-  const { t } = useTranslation('about');
-
-  const texts = ['text21', 'text22', 'text23'];
+async function About() {
+  const t = await getTranslations('about');
+  const texts = ['text21', 'text22', 'text23'] as const;
 
   return (
     <section className="*:w-full">

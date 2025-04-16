@@ -4,7 +4,8 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Inter } from 'next/font/google';
 import Providers from '@/components/providers';
-import { i18nConfig, i18nNamespaces, initTranslations } from '@/lib/i18n';
+import { routing } from '@/i18n/routing';
+import { hasLocale } from 'next-intl';
 
 export const metadata: Metadata = {
   title: 'AKAI',
@@ -12,9 +13,7 @@ export const metadata: Metadata = {
 };
 
 export function generateStaticParams() {
-  return i18nConfig.locales.map(l => ({
-    locale: l,
-  }));
+  return routing.locales.map(locale => ({ locale }));
 }
 
 const InterFont = Inter({ subsets: ['latin'], variable: '--font-inter' });
@@ -26,21 +25,13 @@ type Props = {
 
 export default async function RootLayout(props: Props) {
   const { locale } = await props.params;
+  if (!hasLocale(routing.locales, locale)) notFound();
   const { children } = props;
-
-  if (!i18nConfig.locales.includes(locale)) notFound();
-  const { resources } = await initTranslations(locale, i18nNamespaces);
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={InterFont.variable}>
-        <Providers
-          locale={locale}
-          namespaces={i18nNamespaces}
-          resources={resources}
-        >
-          {children}
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

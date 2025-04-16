@@ -1,7 +1,3 @@
-'use client';
-import { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-
 import { Card, CardContent } from '@/components/ui/card';
 import { NumberTicker } from '@/components/ui/number-ticker';
 import { BorderBeam } from '@/components/ui/border-beam';
@@ -10,28 +6,19 @@ import { Badge } from '@/components/ui/badge';
 
 import { APPS_LINK, GITHUB_API } from '@/lib/constants';
 import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
 
-function Projects() {
-  const { t } = useTranslation('projects');
-  const [reposCount, setReposCount] = useState<number | null>(null);
-  useEffect(() => {
-    fetch(GITHUB_API)
-      .then(response => response.json())
-      .then(data => {
-        setReposCount(Math.floor(data.public_repos / 10) * 10); //TEN CONSOLE LOG ROBI ZE TO DZIALA XD
-      });
-  }, []);
+async function Projects() {
+  const t = await getTranslations('projects');
+  const res = await fetch(GITHUB_API);
+  const data = await res.json();
+  const reposCount = Math.floor(data.public_repos / 10) * 10;
 
   return (
     <section>
       <h1 className="text-center text-xl font-bold sm:text-5xl">
-        {' '}
         {t('heading')}
-        {reposCount ? (
-          <NumberTicker className="text-accent-11" value={reposCount} />
-        ) : (
-          0
-        )}{' '}
+        <NumberTicker className="text-accent-11" value={reposCount} />
         {t('projects')}
       </h1>
       <p> {t('subheading')}</p>
@@ -60,4 +47,5 @@ function Projects() {
     </section>
   );
 }
+
 export { Projects };

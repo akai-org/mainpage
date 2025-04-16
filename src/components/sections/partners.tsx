@@ -1,14 +1,14 @@
-'use client';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useTranslation } from 'react-i18next';
 
 import { Card, CardContent } from '@/components/ui/card';
 import { PARTNERS } from '@/lib/constants';
 import { cn } from '@/lib/utils';
+import { getTranslations } from 'next-intl/server';
 
-function Partners() {
-  const { t } = useTranslation('partners');
+async function Partners() {
+  const t = await getTranslations('partners');
+
   return (
     <section>
       <h1 className="text-5xl font-bold">{t('heading')}</h1>
