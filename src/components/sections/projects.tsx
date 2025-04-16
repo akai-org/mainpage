@@ -29,7 +29,12 @@ async function Projects() {
         <Badge variant="outline">React</Badge>
         <Badge variant="outline">{t('badge')}</Badge>
       </div>
-      <Link href={APPS_LINK} target="_blank" className="hover:no-underline">
+      <Link
+        aria-label="Check out our apps"
+        href={APPS_LINK}
+        target="_blank"
+        className="hover:no-underline"
+      >
         <Card className="relative overflow-hidden">
           <CardContent className="flex-center">
             <Logo size={50} />

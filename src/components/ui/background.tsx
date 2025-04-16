@@ -4,6 +4,7 @@ export default function Background(props: SVGProps<any>) {
   return (
     <svg
       {...props}
+      aria-label="Background image"
       xmlns="http://www.w3.org/2000/svg"
       width="1440"
       zoomAndPan="magnify"

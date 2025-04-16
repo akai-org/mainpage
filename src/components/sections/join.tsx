@@ -30,7 +30,7 @@ async function Join() {
       </div>
       <div className="flex-center-col mt-5 space-y-5">
         <h2 className="text-2xl font-semibold sm:text-4xl">{t('join')}</h2>
-        <Button asChild>
+        <Button aria-label="Contact us on mail" asChild>
           <Link href={`mailto:${MAIL}`}>{t('button')}</Link>
         </Button>
       </div>

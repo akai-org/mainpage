@@ -7,9 +7,14 @@ import { Flags } from '@/components/ui/flags';
 async function LocaleButton() {
   const locale = await getLocale();
   const otherLocale = locale == 'pl' ? 'en' : 'pl';
+  const otherLocaleFull = locale == 'pl' ? 'English' : 'Polish';
 
   return (
-    <Link href="/" locale={otherLocale}>
+    <Link
+      href="/"
+      aria-label={`Change locale to ${otherLocaleFull}`}
+      locale={otherLocale}
+    >
       <DockIcon>
         <Flags icon={otherLocale} />
       </DockIcon>

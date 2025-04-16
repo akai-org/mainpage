@@ -4,6 +4,7 @@ import { useTheme } from 'next-themes';
 import { Loader2, Moon, Sun } from 'lucide-react';
 
 import { DockIcon } from '@/components/ui/dock';
+import { Button } from '@/components/ui/button';
 
 function ThemeButton() {
   const { resolvedTheme, setTheme } = useTheme();
@@ -19,13 +20,31 @@ function ThemeButton() {
   if (!isClient)
     return (
       <DockIcon>
-        <Loader2 size={20} className="animate-spin" />
+        <Button
+          onClick={changeTheme}
+          variant="none"
+          size="icon"
+          aria-label="Loading toggle theme"
+        >
+          <Loader2 size={20} className="animate-spin" />
+        </Button>
       </DockIcon>
     );
 
   return (
-    <DockIcon onClick={changeTheme}>
-      {resolvedTheme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+    <DockIcon>
+      <Button
+        onClick={changeTheme}
+        variant="none"
+        size="icon"
+        aria-label="Toggle theme"
+      >
+        {resolvedTheme === 'dark' ? (
+          <Sun aria-label="Light mode icon" size={20} />
+        ) : (
+          <Moon aria-label="Dark mode icon" size={20} />
+        )}
+      </Button>
     </DockIcon>
   );
 }

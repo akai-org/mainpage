@@ -7,6 +7,7 @@ function Flags({ icon }: Props) {
     case 'pl':
       return (
         <svg
+          aria-label="Polish flag"
           xmlns="http://www.w3.org/2000/svg"
           id="flag-icons-pl"
           viewBox="0 0 640 480"
@@ -21,6 +22,7 @@ function Flags({ icon }: Props) {
     case 'en':
       return (
         <svg
+          aria-label="English flag"
           xmlns="http://www.w3.org/2000/svg"
           id="flag-icons-gb"
           viewBox="0 0 640 480"

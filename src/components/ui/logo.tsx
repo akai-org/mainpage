@@ -2,6 +2,7 @@ function Logo({ size }: { size: number }) {
   return (
     <div style={{ width: size, height: size }}>
       <svg
+        aria-label="AKAI logo"
         version="1.1"
         id="Layer_1"
         xmlns="http://www.w3.org/2000/svg"
