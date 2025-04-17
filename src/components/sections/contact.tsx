@@ -12,7 +12,7 @@ async function Contact() {
   return (
     <section id="contact" className="border-b-0 pb-0">
       <h1 className="text-center text-5xl font-bold">{t('heading')}</h1>
-      <p className="text-xl" aria-label={MAIL}>
+      <p className="from-foreground to-primary bg-gradient-to-r bg-clip-text text-xl text-transparent">
         {MAIL}
       </p>
       <ul aria-label="AKAI socials" className="flex gap-7">

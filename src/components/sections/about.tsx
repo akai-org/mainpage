@@ -17,7 +17,7 @@ async function About() {
     <section id="about" className="*:w-full">
       <div className="flex flex-col-reverse md:flex-row">
         <div className="flex w-full flex-col gap-2 border-y pt-5 md:w-1/2">
-          <h1 className="p-5 text-6xl font-bold">{t('heading')}</h1>
+          <h1>{t('heading')}</h1>
           <p className="p-5">
             {t('text11')}{' '}
             <Link href={CAT_LINK} className="text-primary">
@@ -31,6 +31,7 @@ async function About() {
             src={members}
             alt="Founders of AKAI"
             loading="lazy"
+            placeholder="blur"
             fill
             sizes={'(min-width: 768px) 50vw, 100vw'}
             className="asbolute h-fit w-full object-contain md:object-cover"
@@ -38,11 +39,14 @@ async function About() {
         </div>
       </div>
       <div className="flex flex-col">
-        <h2 className="border-b p-10 text-center text-2xl font-semibold">
-          <TextAnimate animation="slideUp" by="word">
-            {t('quote')}
-          </TextAnimate>
-        </h2>
+        <TextAnimate
+          as="h2"
+          className="border-b p-10 text-center"
+          animation="slideUp"
+          by="word"
+        >
+          {t('quote')}
+        </TextAnimate>
 
         <div className="relative flex flex-col gap-5 border-b py-5">
           <DotPattern

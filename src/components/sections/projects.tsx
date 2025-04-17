@@ -16,18 +16,18 @@ async function Projects() {
 
   return (
     <section id="projects">
-      <h1 className="text-center text-xl font-bold sm:text-5xl">
+      <h1>
         {t('heading')}
-        <NumberTicker className="text-accent-11" value={reposCount} />
+        <NumberTicker className="text-primary" value={reposCount} />
         {t('projects')}
       </h1>
       <p> {t('subheading')}</p>
       <div className="flex-center flex-wrap gap-2">
-        <Badge variant="outline">C#</Badge>
-        <Badge variant="outline">Java</Badge>
-        <Badge variant="outline">Python</Badge>
-        <Badge variant="outline">React</Badge>
-        <Badge variant="outline">{t('badge')}</Badge>
+        <Badge>C#</Badge>
+        <Badge>Java</Badge>
+        <Badge>Python</Badge>
+        <Badge>React</Badge>
+        <Badge>{t('badge')}</Badge>
       </div>
       <Link
         aria-label="Check out our apps"
@@ -42,7 +42,7 @@ async function Projects() {
           </CardContent>
           <BorderBeam
             colorFrom="var(--primary)"
-            colorTo="var(--primary-foreground)"
+            colorTo="var(--foreground)"
             size={250}
             duration={9}
             delay={9}

@@ -11,7 +11,7 @@ async function Partners() {
 
   return (
     <section id="partners">
-      <h1 className="text-5xl font-bold">{t('heading')}</h1>
+      <h1>{t('heading')}</h1>
       <ul
         aria-label="AKAI partners"
         className="grid grid-cols-2 justify-between gap-2 px-2 sm:grid-cols-5"
@@ -31,7 +31,7 @@ async function Partners() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Card className="group-hover:bg-primary py-2 duration-500">
+              <Card className="group-hover:bg-primary/50 py-2 duration-500">
                 <CardContent className="px-1">
                   <Image
                     alt={`${partner.name} logo`}
