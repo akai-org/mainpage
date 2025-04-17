@@ -10,7 +10,7 @@ async function Contact() {
   const t = await getTranslations('contact');
 
   return (
-    <section className="border-b-0 pb-0">
+    <section id="contact" className="border-b-0 pb-0">
       <h1 className="text-center text-5xl font-bold">{t('heading')}</h1>
       <p className="text-xl" aria-label={MAIL}>
         {MAIL}

@@ -15,7 +15,7 @@ async function Projects() {
   const reposCount = Math.floor(data.public_repos / 10) * 10;
 
   return (
-    <section>
+    <section id="projects">
       <h1 className="text-center text-xl font-bold sm:text-5xl">
         {t('heading')}
         <NumberTicker className="text-accent-11" value={reposCount} />

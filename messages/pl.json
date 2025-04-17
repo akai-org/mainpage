@@ -1,4 +1,11 @@
 {
+  "header": {
+    "about": "O nas",
+    "join": "Dołącz do nas",
+    "projects": "Nasze projekty",
+    "partners": "Partnerzy",
+    "contact": "Kontakt"
+  },
   "home": {
     "heading": "Akademickie Koło Aplikacji Internetowych"
   },

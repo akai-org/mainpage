@@ -1,4 +1,11 @@
 {
+  "header": {
+    "about": "About us",
+    "join": "Join us",
+    "projects": "Our projects",
+    "partners": "Partners",
+    "contact": "Contact us!"
+  },
   "home": {
     "heading": "Academic Circle of Web Applications"
   },

@@ -1,6 +1,6 @@
 import { SVGProps } from 'react';
 
-export default function Background(props: SVGProps<any>) {
+function Background(props: SVGProps<any>) {
   return (
     <svg
       {...props}
@@ -138,3 +138,5 @@ export default function Background(props: SVGProps<any>) {
     </svg>
   );
 }
+
+export { Background };

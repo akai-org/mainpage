@@ -10,7 +10,7 @@ async function Join() {
   const t = await getTranslations('join');
 
   return (
-    <section className="md:*:!w-1/2">
+    <section id="join" className="md:*:!w-1/2">
       <h1 className="p-5 text-center text-3xl font-bold sm:text-6xl">
         {t('heading')}
       </h1>

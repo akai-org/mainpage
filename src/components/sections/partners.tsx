@@ -10,7 +10,7 @@ async function Partners() {
   const t = await getTranslations('partners');
 
   return (
-    <section>
+    <section id="partners">
       <h1 className="text-5xl font-bold">{t('heading')}</h1>
       <ul
         aria-label="AKAI partners"
