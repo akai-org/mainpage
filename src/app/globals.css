@@ -116,7 +116,7 @@
   }
 
   h1 {
-    @apply p-5 text-center text-3xl font-bold sm:text-6xl;
+    @apply pb-5 text-center text-3xl font-bold sm:text-6xl;
   }
   h2 {
     @apply text-2xl font-semibold;

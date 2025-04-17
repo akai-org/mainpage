@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 
 import { MAIL } from '@/lib/constants';
@@ -10,13 +11,13 @@ import frontend from '@/../public/jobs/frontend.jpg';
 import backend from '@/../public/jobs/backend.jpg';
 import mobile from '@/../public/jobs/mobile.jpg';
 import design from '@/../public/jobs/design.jpg';
-import Image from 'next/image';
+import cat1 from '@/../public/cat1.svg';
 
 async function Join() {
   const t = await getTranslations('join');
   const images = [frontend, backend, mobile, design];
   return (
-    <section id="join" className="md:*:!w-1/2">
+    <section id="join" className="sm:px-5">
       <h1>{t('heading')}</h1>
       <p>{t('text')} </p>
       <Separator className="mb-5" />
@@ -43,6 +44,11 @@ async function Join() {
         <Button aria-label="Contact us on mail" asChild>
           <Link href={`mailto:${MAIL}`}>{t('button')}</Link>
         </Button>
+        <Image
+          src={cat1}
+          alt="Very happy guitar cat image"
+          className="max-w-1/2 object-cover"
+        />
       </div>
     </section>
   );

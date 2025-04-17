@@ -14,29 +14,24 @@ async function About() {
   const texts = ['text21', 'text22', 'text23'] as const;
 
   return (
-    <section id="about" className="*:w-full">
-      <div className="flex flex-col-reverse md:flex-row">
-        <div className="flex w-full flex-col gap-2 border-y pt-5 md:w-1/2">
-          <h1>{t('heading')}</h1>
-          <p className="p-5">
-            {t('text11')}{' '}
-            <Link href={CAT_LINK} className="text-primary">
-              {t('PUT')}
-            </Link>
-          </p>
-          <p className="p-5">{t('text12')}</p>
-        </div>
-        <div className="relative size-full min-h-80 md:w-1/2">
-          <Image
-            src={members}
-            alt="Founders of AKAI"
-            loading="lazy"
-            placeholder="blur"
-            fill
-            sizes={'(min-width: 768px) 50vw, 100vw'}
-            className="asbolute h-fit w-full object-contain md:object-cover"
-          />
-        </div>
+    <section id="about">
+      <div className="flex-center-col">
+        <h1>{t('heading')}</h1>
+        <p className="p-5">
+          {t('text11')}{' '}
+          <Link href={CAT_LINK} className="text-primary">
+            {t('PUT')}
+          </Link>
+          <br />
+          {t('text12')}
+        </p>
+        <Image
+          src={members}
+          alt="Founders of AKAI"
+          loading="lazy"
+          placeholder="blur"
+          className="h-auto w-full"
+        />
       </div>
       <div className="flex flex-col">
         <TextAnimate
@@ -55,7 +50,7 @@ async function About() {
               '[mask-image:linear-gradient(to_bottom_left,white,transparent,transparent,white)]',
             )}
           />
-          <h3 className="p-10 text-center text-5xl font-semibold">
+          <h3 className="pb-5 text-center text-3xl font-bold sm:text-6xl">
             {t('heading2')}
           </h3>
           <div className="flex flex-col gap-10 p-5">
