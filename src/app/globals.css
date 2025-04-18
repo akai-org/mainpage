@@ -55,7 +55,7 @@
   --primary: #f7a823;
   --primary-foreground: #011e44;
 
-  --secondary: oklch(0.97 0 0);
+  --secondary: #00628c;
   --secondary-foreground: #011e44;
 
   --muted: oklch(0.97 0 0);
@@ -115,9 +115,6 @@
     @apply decoration-1 underline-offset-2 hover:underline;
   }
 
-  h1 {
-    @apply pb-5 text-center text-3xl font-bold sm:text-6xl;
-  }
   h2 {
     @apply text-2xl font-semibold;
   }

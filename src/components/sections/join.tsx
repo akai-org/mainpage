@@ -6,6 +6,7 @@ import { MAIL } from '@/lib/constants';
 import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Heading } from '@/components/ui/heading';
 
 import frontend from '@/../public/jobs/frontend.jpg';
 import backend from '@/../public/jobs/backend.jpg';
@@ -18,23 +19,25 @@ async function Join() {
   const images = [frontend, backend, mobile, design];
   return (
     <section id="join" className="sm:px-5">
-      <h1>{t('heading')}</h1>
+      <Heading>{t('heading')}</Heading>
       <p>{t('text')} </p>
       <Separator className="mb-5" />
       <div className="flex-center-col gap-16">
         {Array.from({ length: 4 }).map((_, i) => (
           <Card key={i}>
             <CardHeader>
-              <CardTitle className="italic">{t(`jobs.${i}.name`)}</CardTitle>
+              <CardTitle className="text-secondary italic">
+                {t(`jobs.${i}.name`)}
+              </CardTitle>
             </CardHeader>
-            <CardContent className="flex-center-col gap-2">
+            <CardContent className="flex flex-col items-center justify-center gap-2 sm:flex-row">
+              <p>{t(`jobs.${i}.desc`)}</p>
               <Image
                 src={images[i]}
                 alt={`Job image nr${i}`}
                 placeholder="blur"
                 className="h-auto max-h-60 w-auto rounded-lg"
               />
-              <p>{t(`jobs.${i}.desc`)}</p>
             </CardContent>
           </Card>
         ))}

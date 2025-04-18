@@ -9,7 +9,6 @@ import { routing } from '@/i18n/routing';
 import Providers from '@/components/providers';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { Background } from '@/components/ui/background';
 
 export const metadata: Metadata = {
   title: 'AKAI',
@@ -34,12 +33,13 @@ export default async function RootLayout(props: Props) {
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={InterFont.variable}>
+      <body
+        className={`${InterFont.variable} bg-[url(/background.svg)] bg-cover bg-fixed bg-no-repeat`}
+      >
         <Providers>
           <Header />
           {children}
           <Footer />
-          <Background className="fixed top-0 left-0 -z-10 size-full" />
         </Providers>
       </body>
     </html>

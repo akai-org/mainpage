@@ -4,6 +4,7 @@ import { getTranslations } from 'next-intl/server';
 
 import { MAIL, SOCIALS } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
+import { Heading } from '@/components/ui/heading';
 import cat2 from '@/../public/cat2.svg';
 
 async function Contact() {
@@ -11,7 +12,7 @@ async function Contact() {
 
   return (
     <section id="contact" className="border-b-0 pb-0">
-      <h1 className="text-center text-5xl font-bold">{t('heading')}</h1>
+      <Heading>{t('heading')}</Heading>
       <p className="from-foreground to-primary bg-gradient-to-r bg-clip-text text-xl text-transparent">
         {MAIL}
       </p>
@@ -22,7 +23,7 @@ async function Contact() {
               variant="outline"
               size="icon"
               aria-label="Go to Akai social media"
-              className="hover:text-primary rounded-full"
+              className="hover:text-primary size-12 rounded-full"
               asChild
             >
               <Link target="_blank" href={social.link}>
@@ -33,7 +34,7 @@ async function Contact() {
         ))}
       </ul>
       <Image src={cat2} alt="Very happy cat image" className="max-w-1/2" />
-      <div className="mt-auto text-center text-xs">
+      <div className="text-secondary mt-auto mb-5 text-center text-xs">
         <p>
           © 2020-{new Date().getFullYear()} Akademickie Koło Aplikacji
           Internetowych

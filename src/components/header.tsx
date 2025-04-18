@@ -16,7 +16,7 @@ import { useTranslations } from 'next-intl';
 
 function Header() {
   const t = useTranslations('header');
-  const items = ['about', 'join', 'projects', 'partners'] as const;
+  const items = ['about', 'work', 'join', 'projects', 'partners'] as const;
   const navItems = items.map(item => ({
     name: t(item),
     link: `#${item}`,
@@ -37,7 +37,7 @@ function Header() {
       {/* Mobile Navigation */}
       <MobileNav>
         <MobileNavHeader>
-          <NavbarLogo />
+          <NavbarLogo onClick={() => setIsMobileMenuOpen(false)} />
           <MobileNavToggle
             isOpen={isMobileMenuOpen}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -54,7 +54,12 @@ function Header() {
               {item.name}
             </Link>
           ))}
-          <NavbarButton href="#contact" variant="primary" className="w-full">
+          <NavbarButton
+            href="#contact"
+            onClick={() => setIsMobileMenuOpen(false)}
+            variant="primary"
+            className="w-full"
+          >
             {t('contact')}
           </NavbarButton>
         </MobileNavMenu>

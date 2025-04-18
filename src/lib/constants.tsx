@@ -1,5 +1,4 @@
 import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { FaX } from 'react-icons/fa6';
 
 export const MAIL = 'kontakt@akai.org.pl';
 export const APPS_LINK = 'https://apps.akai.org.pl';
@@ -37,18 +36,14 @@ export const PARTNERS = [
 export const SOCIALS = [
   {
     link: 'https://www.facebook.com/akai.pp',
-    icon: <FaFacebook />,
+    icon: <FaFacebook className="size-8" />,
   },
   {
     link: 'https://github.com/akai-org',
-    icon: <FaGithub />,
-  },
-  {
-    link: 'https://x.com/akai_pp',
-    icon: <FaX />,
+    icon: <FaGithub className="size-8" />,
   },
   {
     link: 'https://www.linkedin.com/company/akai-pp',
-    icon: <FaLinkedin />,
+    icon: <FaLinkedin className="size-8" />,
   },
 ];

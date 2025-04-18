@@ -3,6 +3,7 @@ import { NumberTicker } from '@/components/ui/number-ticker';
 import { BorderBeam } from '@/components/ui/border-beam';
 import { Logo } from '@/components/ui/logo';
 import { Badge } from '@/components/ui/badge';
+import { Heading } from '@/components/ui/heading';
 
 import { APPS_LINK, GITHUB_API } from '@/lib/constants';
 import Link from 'next/link';
@@ -16,11 +17,11 @@ async function Projects() {
 
   return (
     <section id="projects">
-      <h1>
+      <Heading withoutLine>
         {t('heading')}
         <NumberTicker className="text-primary" value={reposCount} />
         {t('projects')}
-      </h1>
+      </Heading>
       <p> {t('subheading')}</p>
       <div className="flex-center flex-wrap gap-2">
         <Badge>C#</Badge>

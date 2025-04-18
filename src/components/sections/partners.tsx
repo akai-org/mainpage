@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import { Card, CardContent } from '@/components/ui/card';
+import { Heading } from '@/components/ui/heading';
 import { PARTNERS } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 import { getTranslations } from 'next-intl/server';
@@ -11,7 +12,7 @@ async function Partners() {
 
   return (
     <section id="partners">
-      <h1>{t('heading')}</h1>
+      <Heading>{t('heading')}</Heading>
       <ul
         aria-label="AKAI partners"
         className="grid grid-cols-2 justify-between gap-2 px-2 sm:grid-cols-5"

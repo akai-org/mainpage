@@ -1,6 +1,7 @@
 {
   "header": {
     "about": "About us",
+    "work": "Our work",
     "join": "Join us",
     "projects": "Our projects",
     "partners": "Partners",
@@ -11,14 +12,16 @@
   },
   "about": {
     "heading": "About Us",
-    "text11": "We have been active in the whole area of Poznań since 2010, when we were founded at",
+    "text1": "We have been active in the whole area of Poznań since 2010, when we were founded at",
     "PUT": "The Faculty of Computer Science at Poznań University of Technology",
-    "text12": "We are a scientific circle actively operating in the IT environment",
-    "quote": "Anyone can become a member, regardless of the university they study at",
-    "heading2": "What do we do?",
-    "text21": "We bring together young and ambitious people who set themselves the goal of development and success in the field of web applications.",
-    "text22": "We establish collaborations with research institutions, company representatives, and well-known specialists from the IT world. We take on new challenges and show that the knowledge and experience shared by our organization represent the future of web application design.",
-    "text23": "We promote the idea of a network built by professionals who know the value of their knowledge and are always hungry for new skills and experience. Our projects in both the private and public sectors give AKAI members the chance to build professionalism and gain valuable experience for their current and future careers."
+    "text2": "We are a scientific circle actively operating in the IT environment",
+    "quote": "Anyone can become our member, no matter which university they study at — just let us know!"
+  },
+  "work": {
+    "heading": "What do we do?",
+    "text1": "We bring together young and ambitious people who set themselves the goal of development and success in the field of web applications.",
+    "text2": "We establish collaborations with research institutions, company representatives, and well-known specialists from the IT world. We take on new challenges and show that the knowledge and experience shared by our organization represent the future of web application design.",
+    "text3": "We promote the idea of a network built by professionals who know the value of their knowledge and are always hungry for new skills and experience. Our projects in both the private and public sectors give AKAI members the chance to build professionalism and gain valuable experience for their current and future careers."
   },
   "join": {
     "heading": "Join Us",
