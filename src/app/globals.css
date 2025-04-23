@@ -114,7 +114,6 @@
   a {
     @apply decoration-1 underline-offset-2 hover:underline;
   }
-
   h2 {
     @apply text-2xl font-semibold;
   }

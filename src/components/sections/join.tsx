@@ -11,7 +11,7 @@ import frontend from '@/../public/jobs/frontend.jpg';
 import backend from '@/../public/jobs/backend.jpg';
 import mobile from '@/../public/jobs/mobile.jpg';
 import design from '@/../public/jobs/design.jpg';
-import cat1 from '@/../public/cat1.svg';
+import cat1 from '@/../public/cat1.png';
 import { cn } from '@/lib/utils';
 import { RichText } from '@/components/ui/rich-text';
 
