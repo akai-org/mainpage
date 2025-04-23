@@ -3,12 +3,11 @@ import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
 export const MAIL = 'kontakt@akai.org.pl';
 export const APPS_LINK = 'https://apps.akai.org.pl';
 export const GITHUB_API = 'https://api.github.com/users/akai-org';
-export const CAT_LINK = 'https://cat.put.poznan.pl';
 
 import appUniteImg from '@/../public/partners/AppUnite.png';
 import withSecureImg from '@/../public/partners/WithSecure.svg';
 import inetumImg from '@/../public/partners/Inetum.svg';
-import noblImg from '@/../public/partners/Inetum.svg';
+import noblImg from '@/../public/partners/nobl9.svg';
 import vmlImg from '@/../public/partners/VML.png';
 
 export const PARTNERS = [

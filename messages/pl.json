@@ -12,9 +12,7 @@
   },
   "about": {
     "heading": "O nas",
-    "text1": "Działamy na terenie całego Poznania od 2010 roku, kiedy powstaliśmy na",
-    "PUT": "Wydziale Informatyki Politechniki Poznańskiej",
-    "text2": "Jesteśmy kołem naukowym które aktywnie działa w środowisku IT",
+    "text": "<p><b>Działamy na terenie całego Poznania od 2010 roku</b>, kiedy to powstaliśmy na <accent>Wydziale Informatyki i Telekomunikacji Politechniki Poznańskiej</accent>. Jesteśmy <b>aktywnie działającym kołem naukowym</b>, które specjalizuje się w tworzeniu aplikacji internetowych oraz szeroko pojętym rozwoju w obszarze IT.</p><br></br><p>W 2022 roku zorganizowaliśmy pierwszą edycję hackathonu <accent>AKAI CODE</accent>, którego tematem przewodnim był <b>wpływ społeczny</b>. W kolejnym roku, 2023, przygotowaliśmy <accent>AKAI CAMP</accent> – serię prelekcji prowadzonych przez doświadczonych ekspertów z branży IT. Wydarzenie to koncentrowało się na tematyce <b>rozwoju kariery</b>, oferując uczestnikom nie tylko solidną dawkę wiedzy o aktualnych trendach technologicznych, ale również doskonałą okazję do nawiązywania kontaktów z przedstawicielami firm partnerskich. <accent>AKAI CAMP</accent> to przestrzeń, w której <b>edukacja spotyka się z inspiracją i networkingiem.</b></p><br></br><p>Nie zwalniamy tempa – nadal aktywnie działamy, regularnie organizując wspólnie z firmami <b>cotygodniowe warsztaty</b>, które pozwalają nam rozwijać się w różnych kierunkach. Dbamy również o integrację naszej społeczności poprzez <b>wewnętrzne konkursy</b>, spotkania towarzyskie oraz inicjatywy sprzyjające wymianie doświadczeń i budowaniu relacji.</p>",
     "quote": "Naszym członkiem może być każdy student, niezależnie na jakiej uczelni studiuje, po prostu daj nam znać!"
   },
   "work": {

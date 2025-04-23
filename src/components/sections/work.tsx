@@ -19,8 +19,20 @@ async function Work() {
       <Heading>{t('heading')}</Heading>
       {texts.map((text, i) => (
         <Card key={i}>
-          <CardContent>
-            <p>{t(text)}</p>
+          <CardContent
+            className={cn('flex flex-col items-center gap-2', {
+              'sm:flex-row-reverse': i % 2 === 0,
+              'sm:flex-row': i % 2 !== 0,
+            })}
+          >
+            <p className="text-center sm:text-left">{t(text)}</p>
+            <Image
+              src={images[i]}
+              alt="Work Image"
+              loading="lazy"
+              placeholder="blur"
+              className="h-auto max-h-50 w-full min-w-1/2 object-cover sm:w-1/2"
+            />
           </CardContent>
         </Card>
       ))}

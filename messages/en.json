@@ -12,9 +12,7 @@
   },
   "about": {
     "heading": "About Us",
-    "text1": "We have been active in the whole area of Poznań since 2010, when we were founded at",
-    "PUT": "The Faculty of Computer Science at Poznań University of Technology",
-    "text2": "We are a scientific circle actively operating in the IT environment",
+"text": "<p><b>We have been operating throughout the city of Poznań since 2010</b>, when we were founded at the <accent>Faculty of Computing and Telecommunications of Poznań University of Technology</accent>. We are an <b>actively operating student research group</b> specializing in web application development and broadly defined growth in the IT sector.</p><br></br><p>In 2022, we organized the first edition of the <accent>AKAI CODE</accent> hackathon, with <b>social impact</b> as its main theme.  In the following year, 2023, we launched <accent>AKAI CAMP</accent> – a series of lectures delivered by experienced experts from the IT industry. The event focused on <b>career development</b>, offering participants not only a solid dose of knowledge about current tech trends, but also a great opportunity to network with representatives of partner companies. <accent>AKAI CAMP</accent> is a space where <b>education meets inspiration and networking.</b></p><br></br><p>We’re not slowing down – we continue to be active, regularly organizing <b>weekly workshops</b> in collaboration with companies, helping us grow in various directions. We also care about community integration through <b>internal competitions</b>, social gatherings, and initiatives that foster experience sharing and relationship building.</p>",
     "quote": "Anyone can become our member, no matter which university they study at — just let us know!"
   },
   "work": {

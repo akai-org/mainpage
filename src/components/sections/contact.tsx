@@ -39,11 +39,7 @@ async function Contact() {
           © 2020-{new Date().getFullYear()} Akademickie Koło Aplikacji
           Internetowych
         </p>
-        <Link
-          className="hover:underline"
-          href="https://szawracki.pl"
-          target="_blank"
-        >
+        <Link className="underline" href="https://szawracki.pl" target="_blank">
           {t('footer')} Beniamin Szawracki
         </Link>
       </div>
