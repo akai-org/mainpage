@@ -17,31 +17,32 @@
   },
   "work": {
     "heading": "Co robimy?",
-    "text1": "Skupiamy młodych i ambitnych ludzi, którzy jako cel stawiają sobie rozwój i osiągnięcie sukcesu w dziedzinie aplikacji internetowych.",
-    "text2": "Nawiązujemy współprace z placówkami naukowymi, przedstawicielami firm oraz znanymi specjalistami ze świata IT. Podejmujemy kolejne wyzwania i pokazujemy, że wiedza i doświadczenie przekazywane przez naszą organizacja stanowi przyszłość projektowania aplikacji internetowych.",
-    "text3": "Promujemy ideę sieci budowanej przez profesjonalistów, którzy znają wartość swojej wiedzy i są zawsze głodni nowych umiejętności i doświadczenia. Realizacje w sektorze prywatnym oraz publicznym, dają członkom AKAI szansę na budowanie profesjonalizmu i zdobycie tak ważnego doświadczenia dla obecnej i przyszłej działalności."
+    "title1": "Praca zespołowa",
+    "title2": "Partnerzy i współprace",
+    "title3": "Nasz cel",
+    "text1": "<p>Skupiamy <b>młodych i ambitnych</b> ludzi, którzy jako cel stawiają sobie rozwój i osiągnięcie sukcesu w dziedzinie <accent>aplikacji internetowych.</accent></p>",
+    "text2": "<p>Nawiązujemy współprace z <b>placówkami naukowymi, przedstawicielami firm oraz znanymi specjalistami ze świata IT</b>. Podejmujemy kolejne wyzwania i pokazujemy, że <accent>wiedza i doświadczenie</accent> przekazywane przez naszą organizacja stanowi przyszłość projektowania aplikacji internetowych.</p>",
+    "text3": "<p><b>Promujemy ideę sieci budowanej przez profesjonalistów</b>, którzy znają wartość swojej wiedzy i są zawsze głodni nowych umiejętności i doświadczenia. Realizacje w sektorze prywatnym oraz publicznym, dają członkom <accent>AKAI</accent> szansę na <accent>budowanie profesjonalizmu</accent> i zdobycie tak ważnego doświadczenia dla obecnej i przyszłej działalności.</p>"
   },
   "join": {
     "heading": "Dołącz do nas",
-    "text": "Interesujesz się back-endem, front-endem, masz wyczucie designu czy może chcesz sprawdzić swoje zdolności do zarządzania i organizacji? Dołącz do nas, w każdej z tych ról będziesz mógł się realizować w AKAI.",
-    "jobs": [
-      {
-        "name": "Front-end development",
-        "desc": "Wszystko to, co widzi użytkownik. Odpowiada za wygląd i zachowanie strony lub aplikacji internetowej. Powstaje przy pomocy HTML, CSS i JavaScript, ale w dzisiejszych czasach często nie jest to wystarczające. Dlatego często korzystamy z różnych frameworków jak React, Vue, Next.js i Gatsby."
-      },
-      {
-        "name": "Back-end development",
-        "desc": "Oprogramowanie uruchamiane po stronie serwera. Przetwarza dane i wykonuje różne operacje. To tutaj dzieje się magia. W kole korzystamy z różnych języków programowania (m. in. Python, Java, PHP, Go, Ruby)"
-      },
-      {
-        "name": "Mobile development",
-        "desc": "Świat aplikacji mobilnych, dostępnych na wyciągnięcie ręki, na urządzeniach z systemami iOS i Android. Aplikacje piszemy najczęściej natywnie dla Androida w języku Kotlin lub multiplatform przy użyciu Fluttera. W ramach sekcji mobile tworzymy także czasem PWA."
-      },
-      {
-        "name": "Graphic design / UI / UX",
-        "desc": "Zanim coś stworzymy, warto to zaprojektować. Oprócz tego, żeby było przyjemne dla oka - warto również zadbać o to, aby interfejs był intuicyjny dla użytkownika."
-      }
-    ],
+    "text": "<p>Interesujesz się back-endem, front-endem, masz wyczucie designu czy może chcesz sprawdzić swoje zdolności do zarządzania i organizacji? <br></br><accent>Dołącz do nas, w każdej z tych ról będziesz mógł się realizować w AKAI.</accent></p>",
+    "front": {
+      "name": "Front-end development",
+      "desc": "<p><accent>Wszystko to, co widzi użytkownik</accent>. Odpowiada za wygląd i zachowanie strony lub aplikacji internetowej. Powstaje przy pomocy HTML, CSS i JavaScript, ale w dzisiejszych czasach często nie jest to wystarczające. Dlatego często korzystamy z różnych frameworków jak <b>React, Vue, Next.js i Gatsby.</b></p>"
+    },
+    "back": {
+      "name": "Back-end development",
+      "desc": "<p><accent>Oprogramowanie uruchamiane po stronie serwera.</accent> Przetwarza dane i wykonuje różne operacje. To tutaj dzieje się magia. W kole korzystamy z różnych języków programowania <b>(m. in. Python, Java, PHP, Go, Ruby).</b></p>"
+    },
+    "mobile": {
+      "name": "Mobile development",
+      "desc": "<p><accent>Świat aplikacji mobilnych</accent>, dostępnych na wyciągnięcie ręki, na urządzeniach z systemami <b>iOS i Android</b>. Aplikacje piszemy najczęściej natywnie dla Androida w języku Kotlin lub multiplatform przy użyciu Fluttera. W ramach sekcji mobile tworzymy także czasem PWA.</p>"
+    },
+    "ui": {
+      "name": "Graphic design / UI / UX",
+      "desc": "<p><accent>Zanim coś stworzymy, warto to zaprojektować.</accent> Oprócz tego, żeby było przyjemne dla oka - warto również zadbać o to, aby <b>interfejs był intuicyjny dla użytkownika.</b></p>"
+    },
     "join": "Chcesz do nas dołączyć?",
     "button": "Napisz do nas"
   },

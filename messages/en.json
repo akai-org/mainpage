@@ -12,36 +12,37 @@
   },
   "about": {
     "heading": "About Us",
-"text": "<p><b>We have been operating throughout the city of Poznań since 2010</b>, when we were founded at the <accent>Faculty of Computing and Telecommunications of Poznań University of Technology</accent>. We are an <b>actively operating student research group</b> specializing in web application development and broadly defined growth in the IT sector.</p><br></br><p>In 2022, we organized the first edition of the <accent>AKAI CODE</accent> hackathon, with <b>social impact</b> as its main theme.  In the following year, 2023, we launched <accent>AKAI CAMP</accent> – a series of lectures delivered by experienced experts from the IT industry. The event focused on <b>career development</b>, offering participants not only a solid dose of knowledge about current tech trends, but also a great opportunity to network with representatives of partner companies. <accent>AKAI CAMP</accent> is a space where <b>education meets inspiration and networking.</b></p><br></br><p>We’re not slowing down – we continue to be active, regularly organizing <b>weekly workshops</b> in collaboration with companies, helping us grow in various directions. We also care about community integration through <b>internal competitions</b>, social gatherings, and initiatives that foster experience sharing and relationship building.</p>",
+    "text": "<p><b>We have been operating throughout the city of Poznań since 2010</b>, when we were founded at the <accent>Faculty of Computing and Telecommunications of Poznań University of Technology</accent>. We are an <b>actively operating student research group</b> specializing in web application development and broadly defined growth in the IT sector.</p><br></br><p>In 2022, we organized the first edition of the <accent>AKAI CODE</accent> hackathon, with <b>social impact</b> as its main theme.  In the following year, 2023, we launched <accent>AKAI CAMP</accent> – a series of lectures delivered by experienced experts from the IT industry. The event focused on <b>career development</b>, offering participants not only a solid dose of knowledge about current tech trends, but also a great opportunity to network with representatives of partner companies. <accent>AKAI CAMP</accent> is a space where <b>education meets inspiration and networking.</b></p><br></br><p>We’re not slowing down – we continue to be active, regularly organizing <b>weekly workshops</b> in collaboration with companies, helping us grow in various directions. We also care about community integration through <b>internal competitions</b>, social gatherings, and initiatives that foster experience sharing and relationship building.</p>",
     "quote": "Anyone can become our member, no matter which university they study at — just let us know!"
   },
   "work": {
     "heading": "What do we do?",
-    "text1": "We bring together young and ambitious people who set themselves the goal of development and success in the field of web applications.",
-    "text2": "We establish collaborations with research institutions, company representatives, and well-known specialists from the IT world. We take on new challenges and show that the knowledge and experience shared by our organization represent the future of web application design.",
-    "text3": "We promote the idea of a network built by professionals who know the value of their knowledge and are always hungry for new skills and experience. Our projects in both the private and public sectors give AKAI members the chance to build professionalism and gain valuable experience for their current and future careers."
+    "title1": "Teamwork",
+    "title2": "Partners and Collaborations",
+    "title3": "Our Goal",
+    "text1": "<p>We bring together <b>young and ambitious</b> individuals who aim for growth and success in the field of <accent>web applications.</accent></p>",
+    "text2": "<p>We establish collaborations with <b>academic institutions, company representatives, and well-known specialists from the IT world</b>. We take on new challenges and demonstrate that the <accent>knowledge and experience</accent> shared by our organization represent the future of web application design.</p>",
+    "text3": "<p><b>We promote the idea of a network built by professionals</b> who know the value of their knowledge and are always hungry for new skills and experience. Projects in both the private and public sectors give members of <accent>AKAI</accent> the opportunity to <accent>build professionalism</accent> and gain valuable experience for their current and future endeavors.</p>"
   },
   "join": {
     "heading": "Join Us",
-    "text": "Are you interested in back-end, front-end, have a flair for design, or maybe want to test your management and organizational skills? Join us, in any of these roles you can realize yourself in AKAI.",
-    "jobs": [
-      {
-        "name": "Front-end development",
-        "desc": "Everything that the user sees. It is responsible for the appearance and behavior of the website or web application. It is created using HTML, CSS, and JavaScript, but nowadays, this is often not enough. That’s why we frequently use frameworks like React, Vue, Next.js, and Gatsby."
-      },
-      {
-        "name": "Back-end development",
-        "desc": "Software running on the server-side. It processes data and performs various operations. This is where the magic happens. In our circle, we use various programming languages (e.g., Python, Java, PHP, Go, Ruby)."
-      },
-      {
-        "name": "Mobile development",
-        "desc": "The world of mobile applications, available at your fingertips on iOS and Android devices. We write native Android apps in Kotlin or use Flutter for cross-platform development. In the mobile section, we sometimes also create PWAs."
-      },
-      {
-        "name": "Graphic design / UI / UX",
-        "desc": "Before we create something, it's worth designing it. Besides making it visually appealing, it's also important to ensure that the interface is intuitive for the user."
-      }
-    ],
+    "text": "<p>Are you interested in back-end, front-end, have a sense of design, or maybe you want to test your management and organizational skills? <br></br><accent>Join us — at AKAI, you can thrive in any of these roles.</accent></p>",
+    "front": {
+      "name": "Front-end development",
+      "desc": "<p><accent>Everything the user sees.</accent> It's responsible for the appearance and behavior of a website or web application. It’s built using HTML, CSS, and JavaScript, but nowadays that’s often not enough. That’s why we frequently use various frameworks like <b>React, Vue, Next.js, and Gatsby.</b></p>"
+    },
+    "back": {
+      "name": "Back-end development",
+      "desc": "<p><accent>Software that runs on the server side.</accent> It processes data and performs various operations. This is where the magic happens. In our group, we use various programming languages <b>(including Python, Java, PHP, Go, and Ruby).</b></p>"
+    },
+    "mobile": {
+      "name": "Mobile development",
+      "desc": "<p><accent>The world of mobile applications</accent>, always at your fingertips on devices with <b>iOS and Android</b>. We usually develop apps natively for Android in Kotlin or cross-platform using Flutter. Sometimes we also create PWAs in the mobile section.</p>"
+    },
+    "ui": {
+      "name": "Graphic design / UI / UX",
+      "desc": "<p><accent>Before we build something, it's worth designing it.</accent> Besides making it visually pleasing, we also focus on ensuring that the <b>interface is intuitive for the user.</b></p>"
+    },
     "join": "Do you want to join us?",
     "button": "Write to us"
   },

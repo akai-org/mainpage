@@ -13,7 +13,9 @@ async function Projects() {
   const t = await getTranslations('projects');
   const res = await fetch(GITHUB_API);
   const data = await res.json();
-  const reposCount = Math.floor(data.public_repos / 10) * 10;
+  const reposCount = data.public_repos
+    ? Math.floor(data.public_repos / 10) * 10
+    : 130;
 
   return (
     <section id="projects">

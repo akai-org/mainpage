@@ -96,6 +96,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
           : 'none',
         width: visible ? '40%' : '100%',
         y: visible ? -10 : 0,
+        border: visible ? '1px solid var(--border)' : 'none',
       }}
       transition={{
         type: 'spring',

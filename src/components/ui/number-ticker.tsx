@@ -50,6 +50,8 @@ export function NumberTicker({
     <span
       className={cn('inline-block tracking-wider tabular-nums', className)}
       ref={ref}
-    />
+    >
+      {direction === 'down' ? value : 0}
+    </span>
   );
 }

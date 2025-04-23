@@ -13,10 +13,12 @@ function RichText(props: Props) {
     <div className={className}>
       {children({
         p: (chunks: ReactNode) => <p>{chunks}</p>,
-        b: (chunks: ReactNode) => <b className="font-semibold">{chunks}</b>,
+        b: (chunks: ReactNode) => (
+          <b className="dark:text-primary font-bold">{chunks}</b>
+        ),
         i: (chunks: ReactNode) => <i className="italic">{chunks}</i>,
         accent: (chunks: ReactNode) => (
-          <span className="text-primary">{chunks}</span>
+          <span className="text-primary font-bold">{chunks}</span>
         ),
         br: () => <br />,
       })}

@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 
 import { MAIL } from '@/lib/constants';
-import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Heading } from '@/components/ui/heading';
@@ -13,25 +12,34 @@ import backend from '@/../public/jobs/backend.jpg';
 import mobile from '@/../public/jobs/mobile.jpg';
 import design from '@/../public/jobs/design.jpg';
 import cat1 from '@/../public/cat1.svg';
+import { cn } from '@/lib/utils';
+import { RichText } from '@/components/ui/rich-text';
 
 async function Join() {
   const t = await getTranslations('join');
+  const jobs = ['front', 'back', 'mobile', 'ui'] as const;
   const images = [frontend, backend, mobile, design];
   return (
     <section id="join" className="sm:px-5">
       <Heading>{t('heading')}</Heading>
-      <p>{t('text')} </p>
-      <Separator className="mb-5" />
+      <RichText className="text-center">
+        {tags => t.rich('text', { ...tags })}
+      </RichText>
       <div className="flex-center-col gap-16">
-        {Array.from({ length: 4 }).map((_, i) => (
+        {jobs.map((job, i) => (
           <Card key={i}>
             <CardHeader>
               <CardTitle className="text-secondary italic">
-                {t(`jobs.${i}.name`)}
+                {t(`${job}.name`)}
               </CardTitle>
             </CardHeader>
-            <CardContent className="flex flex-col items-center justify-center gap-2 sm:flex-row">
-              <p>{t(`jobs.${i}.desc`)}</p>
+            <CardContent
+              className={cn('flex flex-col items-center justify-center gap-2', {
+                'sm:flex-row-reverse': i % 2 !== 0,
+                'sm:flex-row': i % 2 === 0,
+              })}
+            >
+              <RichText>{tags => t.rich(`${job}.desc`, { ...tags })}</RichText>
               <Image
                 src={images[i]}
                 alt={`Job image nr${i}`}
