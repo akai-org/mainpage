@@ -21,8 +21,8 @@ async function Partners() {
           <li
             key={i}
             className={cn(
-              'border-main group mx-auto rounded-xs p-1 sm:mx-0',
-              i == PARTNERS.length - 1 && 'col-span-2 sm:col-span-1',
+              'border-main group mx-auto w-full rounded-xs p-1 sm:mx-0',
+              i == PARTNERS.length - 1 && 'col-span-2 w-fit sm:col-span-1',
             )}
             aria-label={`AKAI partner card: ${partner.name}`}
           >
@@ -37,9 +37,8 @@ async function Partners() {
                   <Image
                     alt={`${partner.name} logo`}
                     src={partner.logo}
-                    width="158"
-                    height="48"
-                    className="mx-auto h-12 object-contain dark:grayscale dark:invert"
+                    loading="lazy"
+                    className="mx-auto h-20 w-auto object-contain dark:grayscale dark:invert"
                   />
                 </CardContent>
               </Card>

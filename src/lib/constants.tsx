@@ -5,30 +5,36 @@ export const APPS_LINK = 'https://apps.akai.org.pl';
 export const GITHUB_API = 'https://api.github.com/users/akai-org';
 export const CAT_LINK = 'https://cat.put.poznan.pl';
 
+import appUniteImg from '@/../public/partners/AppUnite.png';
+import withSecureImg from '@/../public/partners/WithSecure.svg';
+import inetumImg from '@/../public/partners/Inetum.svg';
+import noblImg from '@/../public/partners/Inetum.svg';
+import vmlImg from '@/../public/partners/VML.png';
+
 export const PARTNERS = [
   {
     name: 'AppUnite',
-    logo: '/partners/AppUnite.png',
+    logo: appUniteImg,
     link: 'https://www.appunite.com',
   },
   {
     name: 'WITH secure',
-    logo: '/partners/WithSecure.svg',
+    logo: withSecureImg,
     link: 'https://www.withsecure.com',
   },
   {
     name: 'inetum',
-    logo: '/partners/Inetum.svg',
+    logo: inetumImg,
     link: 'https://inetum.pl',
   },
   {
     name: 'NOBL',
-    logo: '/partners/nobl9.svg',
+    logo: noblImg,
     link: 'https://www.nobl9.com',
   },
   {
     name: 'VML',
-    logo: '/partners/VML.png',
+    logo: vmlImg,
     link: 'https://www.vml.com',
   },
 ];
