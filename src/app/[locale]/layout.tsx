@@ -1,16 +1,22 @@
 import '../globals.css';
 import { ReactNode } from 'react';
+import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Inter } from 'next/font/google';
-import { hasLocale } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
-
+import { hasLocale, Locale } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { Providers } from '@/components/providers';
 
-export async function generateMetadata(params: Promise<{ locale: string }>) {
-  const { locale } = await params;
-  // @ts-expect-error
+type Props = {
+  children: ReactNode;
+  params: Promise<{ locale: Locale }>;
+};
+
+export async function generateMetadata(
+  props: Omit<Props, 'children'>,
+): Promise<Metadata> {
+  const { locale } = await props.params;
   const t = await getTranslations({ locale, namespace: 'metadata' });
 
   return {
@@ -39,22 +45,19 @@ export function generateStaticParams() {
 
 const InterFont = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
-type Props = {
-  children: ReactNode;
-  params: Promise<{ locale: string }>;
-};
-
 export default async function RootLayout(props: Props) {
   const { locale } = await props.params;
   if (!hasLocale(routing.locales, locale)) notFound();
-  const { children } = props;
+
+  // Enable static rendering
+  setRequestLocale(locale);
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
         className={`${InterFont.variable} bg-[url(/background.svg)] bg-cover bg-fixed bg-no-repeat`}
       >
-        <Providers>{children}</Providers>
+        <Providers>{props.children}</Providers>
       </body>
     </html>
   );
