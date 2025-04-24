@@ -1,4 +1,8 @@
 {
+  "metadata": {
+    "title": "AKAI - Academic Circle of Web Applications",
+    "description": "Academic Circle of Web Applications. We are an actively operating student research group based in Poznań University of Technology, specializing in web application development and broadly defined growth in the IT sector."
+  },
   "header": {
     "about": "About us",
     "work": "Our work",

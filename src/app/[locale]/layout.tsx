@@ -1,17 +1,37 @@
 import '../globals.css';
 import { ReactNode } from 'react';
-import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Inter } from 'next/font/google';
 import { hasLocale } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
 import { routing } from '@/i18n/routing';
 import { Providers } from '@/components/providers';
 
-export const metadata: Metadata = {
-  title: 'AKAI',
-  description: 'Akademickie Koło Aplikacji Internetowych',
-};
+export async function generateMetadata(params: Promise<{ locale: string }>) {
+  const { locale } = await params;
+  // @ts-expect-error
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      url: 'https://akai.org.pl',
+      siteName: t('title'),
+      locale,
+      type: 'website',
+      images: [
+        {
+          url: '/logo.svg',
+          alt: t('title'),
+        },
+      ],
+    },
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }));

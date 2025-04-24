@@ -1,4 +1,8 @@
 {
+  "metadata": {
+    "title": "AKAI - Akademickie Koło Aplikacji Internetowych",
+    "description": "Akademickie Koło Aplikacji Internetowych. Jesteśmy aktywnie działającym kołem naukowym przy Politechnice Poznańskiej, które specjalizuje się w tworzeniu aplikacji internetowych oraz szeroko pojętym rozwoju w obszarze IT."
+  },
   "header": {
     "about": "O nas",
     "work": "Co robimy?",
