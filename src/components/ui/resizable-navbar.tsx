@@ -11,6 +11,7 @@ import React, { useRef, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Logo } from '@/components/ui/logo';
 import { Link } from '@/i18n/navigation';
+import { Button } from '@/components/ui/button';
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -70,7 +71,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
       ref={ref}
       // IMPORTANT: Change this to class of `fixed` if you want the navbar to be fixed
       className={cn(
-        'fixed inset-x-0 top-2 left-1/2 z-40 w-full max-w-3xl -translate-x-1/2 lg:top-5',
+        'fixed inset-x-0 top-2 left-1/2 z-40 w-full max-w-4xl -translate-x-1/2 lg:top-5',
         className,
       )}
     >
@@ -227,21 +228,31 @@ export const MobileNavToggle = ({
   isOpen: boolean;
   onClick: () => void;
 }) => {
-  return isOpen ? <X onClick={onClick} /> : <Menu onClick={onClick} />;
+  return (
+    <Button
+      variant="none"
+      size="icon"
+      aria-label="Scroll to top of the page"
+      onClick={onClick}
+    >
+      {isOpen ? <X /> : <Menu />}
+    </Button>
+  );
 };
 
 export const NavbarLogo = ({ onClick }: { onClick?: () => void }) => {
   return (
-    <button
+    <Button
+      variant="none"
+      size="icon"
       aria-label="Scroll to top of the page"
       onClick={() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
         if (onClick) onClick();
       }}
-      className="relative z-20 mr-4 flex cursor-pointer items-center space-x-2 px-2 py-1 text-sm font-normal"
     >
       <Logo size={30} />
-    </button>
+    </Button>
   );
 };
 

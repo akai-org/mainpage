@@ -1,18 +1,12 @@
-import { Dock } from '@/components/ui/dock';
-import { Separator } from '@/components/ui/separator';
-import { LocaleButton } from '@/components/locale-button';
 import { ThemeButton } from '@/components/theme-button';
+import { LocaleButton } from '@/components/locale-button';
 
 function Footer() {
   return (
-    <Dock
-      direction="middle"
-      className="bg-background pointer-events-auto fixed bottom-2 left-1/2 z-50 h-10 -translate-x-1/2 border"
-    >
+    <div className="bg-background fixed right-2 bottom-2 z-50 hidden rounded-lg border lg:flex">
       <ThemeButton />
-      <Separator orientation="vertical" className="h-full" />
       <LocaleButton />
-    </Dock>
+    </div>
   );
 }
 

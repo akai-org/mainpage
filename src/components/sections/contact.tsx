@@ -11,7 +11,7 @@ async function Contact() {
   const t = await getTranslations('contact');
 
   return (
-    <section id="contact" className="border-b-0 pb-0">
+    <section id="contact" className="pb-0">
       <Heading>{t('heading')}</Heading>
       <p className="from-foreground to-primary bg-gradient-to-r bg-clip-text text-xl text-transparent">
         {MAIL}

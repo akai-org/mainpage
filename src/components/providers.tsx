@@ -6,7 +6,7 @@ type Props = {
   children: ReactNode;
 };
 
-export default function Providers(props: Props) {
+function Providers(props: Props) {
   const { children } = props;
 
   return (
@@ -20,3 +20,4 @@ export default function Providers(props: Props) {
     </DarkModeProvider>
   );
 }
+export { Providers };

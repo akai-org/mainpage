@@ -6,23 +6,29 @@ import { Projects } from '@/components/sections/projects';
 import { Partners } from '@/components/sections/partners';
 import { Contact } from '@/components/sections/contact';
 import { Separator } from '@/components/ui/separator';
+import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
 
 export default function Page() {
   return (
-    <main className="bg-background mx-auto mb-14 w-full max-w-4xl space-y-10 rounded-xl border shadow-xl xl:mt-5">
-      <Home />
-      <Separator />
-      <About />
-      <Separator />
-      <Work />
-      <Separator />
-      <Join />
-      <Separator />
-      <Projects />
-      <Separator />
-      <Partners />
-      <Separator />
-      <Contact />
-    </main>
+    <>
+      <Header />
+      <main className="bg-background relative mx-auto w-full max-w-4xl space-y-10 rounded-xl border shadow-xl lg:my-5">
+        <Home />
+        <Separator decorative />
+        <About />
+        <Separator decorative />
+        <Work />
+        <Separator decorative />
+        <Join />
+        <Separator decorative />
+        <Projects />
+        <Separator decorative />
+        <Partners />
+        <Separator decorative />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 }

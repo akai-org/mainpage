@@ -20,7 +20,7 @@ async function Join() {
   const jobs = ['front', 'back', 'mobile', 'ui'] as const;
   const images = [frontend, backend, mobile, design];
   return (
-    <section id="join" className="sm:px-5">
+    <section id="join">
       <Heading>{t('heading')}</Heading>
       <RichText className="text-center">
         {tags => t.rich('text', { ...tags })}

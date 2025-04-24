@@ -109,7 +109,7 @@
     @apply bg-background text-foreground;
   }
   section {
-    @apply flex-center-col gap-5 px-1 py-20 md:px-5;
+    @apply flex-center-col gap-5 px-1 py-20 md:px-10;
   }
   a {
     @apply decoration-1 underline-offset-2 hover:underline;

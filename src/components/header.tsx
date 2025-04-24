@@ -13,6 +13,8 @@ import {
 import { useState } from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import { LocaleButton } from '@/components/locale-button';
+import { ThemeButton } from '@/components/theme-button';
 
 function Header() {
   const t = useTranslations('header');
@@ -38,10 +40,14 @@ function Header() {
       <MobileNav>
         <MobileNavHeader>
           <NavbarLogo onClick={() => setIsMobileMenuOpen(false)} />
-          <MobileNavToggle
-            isOpen={isMobileMenuOpen}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          />
+          <div className="flex">
+            <LocaleButton />
+            <ThemeButton />
+            <MobileNavToggle
+              isOpen={isMobileMenuOpen}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            />
+          </div>
         </MobileNavHeader>
 
         <MobileNavMenu isOpen={isMobileMenuOpen}>

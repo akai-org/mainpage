@@ -1,24 +1,36 @@
-import { getLocale } from 'next-intl/server';
+'use client';
 
 import { Link } from '@/i18n/navigation';
-import { DockIcon } from '@/components/ui/dock';
 import { Flags } from '@/components/ui/flags';
+import { useLocale } from 'use-intl';
+import { useIsClient } from '@/hooks/use-is-client';
+import { Button } from '@/components/ui/button';
+import { Loader2 } from 'lucide-react';
 
-async function LocaleButton() {
-  const locale = await getLocale();
+function LocaleButton() {
+  const isClient = useIsClient();
+  const locale = useLocale();
   const otherLocale = locale == 'pl' ? 'en' : 'pl';
   const otherLocaleFull = locale == 'pl' ? 'English' : 'Polish';
 
+  if (!isClient) {
+    return (
+      <Button variant="none" size="icon" aria-label="Loading toggle locale">
+        <Loader2 size={20} className="animate-spin" />
+      </Button>
+    );
+  }
   return (
-    <Link
-      href="/"
+    <Button
+      variant="none"
+      size="icon"
       aria-label={`Change locale to ${otherLocaleFull}`}
-      locale={otherLocale}
+      asChild
     >
-      <DockIcon>
+      <Link href="/" locale={otherLocale}>
         <Flags icon={otherLocale} />
-      </DockIcon>
-    </Link>
+      </Link>
+    </Button>
   );
 }
 

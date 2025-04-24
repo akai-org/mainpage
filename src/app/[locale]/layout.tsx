@@ -6,9 +6,7 @@ import { Inter } from 'next/font/google';
 import { hasLocale } from 'next-intl';
 
 import { routing } from '@/i18n/routing';
-import Providers from '@/components/providers';
-import { Header } from '@/components/header';
-import { Footer } from '@/components/footer';
+import { Providers } from '@/components/providers';
 
 export const metadata: Metadata = {
   title: 'AKAI',
@@ -36,11 +34,7 @@ export default async function RootLayout(props: Props) {
       <body
         className={`${InterFont.variable} bg-[url(/background.svg)] bg-cover bg-fixed bg-no-repeat`}
       >
-        <Providers>
-          <Header />
-          {children}
-          <Footer />
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

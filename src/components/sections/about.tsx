@@ -19,7 +19,7 @@ async function About() {
         alt="Founders of AKAI"
         loading="lazy"
         placeholder="blur"
-        className="h-auto w-full"
+        className="h-auto w-full rounded-lg"
       />
       <TextAnimate
         as="h2"

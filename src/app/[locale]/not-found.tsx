@@ -15,9 +15,9 @@ export default async function NotFound() {
             style={{ top: 200 * i1 }}
           >
             {Array.from({ length: 10 }, (_, i2) => (
-              <div
+              <p
                 key={i2}
-                className="w-fit shrink-0 px-5 text-[70px] sm:text-[150px]"
+                className="w-fit shrink-0 px-5 text-[70px] text-white sm:text-[150px]"
               >
                 {i2 % 2 == 0 ? (
                   404
@@ -26,7 +26,7 @@ export default async function NotFound() {
                     <span className="text-primary">A</span>KAI
                   </>
                 )}
-              </div>
+              </p>
             ))}
           </div>
         ))}
