@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const host = process.env.HOST || 'http://localhost:3000/';
+  const host = process.env.HOST || 'http://localhost:3000';
   const lastModified = new Date().toISOString();
 
   return [

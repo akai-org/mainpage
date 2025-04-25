@@ -10,12 +10,7 @@ function Providers(props: Props) {
   const { children } = props;
 
   return (
-    <DarkModeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-    >
+    <DarkModeProvider attribute="class" disableTransitionOnChange>
       <NextIntlClientProvider>{children}</NextIntlClientProvider>
     </DarkModeProvider>
   );

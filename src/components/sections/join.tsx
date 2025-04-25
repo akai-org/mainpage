@@ -4,7 +4,13 @@ import { getTranslations } from 'next-intl/server';
 
 import { MAIL } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import { Heading } from '@/components/ui/heading';
 
 import frontend from '@/../public/jobs/frontend.jpg';
@@ -27,26 +33,33 @@ async function Join() {
       </RichText>
       <div className="flex-center-col gap-16">
         {jobs.map((job, i) => (
-          <Card key={i}>
-            <CardHeader>
-              <CardTitle className="text-secondary italic">
-                {t(`${job}.name`)}
-              </CardTitle>
-            </CardHeader>
-            <CardContent
-              className={cn('flex flex-col items-center justify-center gap-2', {
-                'sm:flex-row-reverse': i % 2 !== 0,
-                'sm:flex-row': i % 2 === 0,
-              })}
-            >
-              <RichText>{tags => t.rich(`${job}.desc`, { ...tags })}</RichText>
+          <Card
+            key={i}
+            className={cn('flex flex-col items-center gap-2', {
+              'sm:flex-row-reverse': i % 2 !== 0,
+              'sm:flex-row': i % 2 === 0,
+            })}
+          >
+            <div className="space-y-2 sm:w-1/2">
+              <CardHeader>
+                <CardTitle className="text-secondary italic">
+                  {t(`${job}.name`)}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <RichText>
+                  {tags => t.rich(`${job}.desc`, { ...tags })}
+                </RichText>
+              </CardContent>
+            </div>
+            <CardFooter className="sm:w-1/2">
               <Image
                 src={images[i]}
                 alt={`Job image nr${i}`}
                 placeholder="blur"
-                className="h-auto max-h-60 w-auto rounded-lg"
+                className="h-auto max-h-50 w-full rounded-lg object-cover"
               />
-            </CardContent>
+            </CardFooter>
           </Card>
         ))}
       </div>
