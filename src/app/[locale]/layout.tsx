@@ -27,12 +27,15 @@ export async function generateMetadata(
       description: t('description'),
       url: 'https://akai.org.pl',
       siteName: t('title'),
-      locale,
+      locale: locale == 'en' ? 'en_US' : 'pl_PL',
+      alternateLocale: locale == 'en' ? 'pl_PL' : 'en_US',
       type: 'website',
       images: [
         {
-          url: '/logo.svg',
+          url: '/openGraph.png',
           alt: t('title'),
+          height: 700,
+          width: 900,
         },
       ],
     },
