@@ -3,10 +3,10 @@ import { ReactNode } from 'react';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Inter } from 'next/font/google';
-import { hasLocale, Locale } from 'next-intl';
+import { hasLocale, Locale, NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { ThemeProvider } from 'next-themes';
 import { routing } from '@/i18n/routing';
-import { Providers } from '@/components/providers';
 
 type Props = {
   children: ReactNode;
@@ -18,14 +18,22 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const { locale } = await props.params;
   const t = await getTranslations({ locale, namespace: 'metadata' });
+  const host = process.env.HOST || 'http://localhost:3000';
 
   return {
     title: t('title'),
     description: t('description'),
+    metadataBase: new URL(host),
+    alternates: {
+      canonical: '/',
+      languages: {
+        'en-US': '/en',
+      },
+    },
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: 'https://akai.org.pl',
+      url: host,
       siteName: t('title'),
       locale: locale == 'en' ? 'en_US' : 'pl_PL',
       alternateLocale: locale == 'en' ? 'pl_PL' : 'en_US',
@@ -48,7 +56,7 @@ export function generateStaticParams() {
 
 const InterFont = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
-export default async function RootLayout(props: Props) {
+export default async function LocaleLayout(props: Props) {
   const { locale } = await props.params;
   if (!hasLocale(routing.locales, locale)) notFound();
 
@@ -60,7 +68,9 @@ export default async function RootLayout(props: Props) {
       <body
         className={`${InterFont.variable} bg-[url(/background.svg)] bg-cover bg-fixed bg-no-repeat`}
       >
-        <Providers>{props.children}</Providers>
+        <NextIntlClientProvider>
+          <ThemeProvider attribute="class">{props.children}</ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
