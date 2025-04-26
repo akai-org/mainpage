@@ -13,7 +13,7 @@ export default function Page() {
   return (
     <>
       <Header />
-      <main className="bg-background relative mx-auto w-full max-w-4xl space-y-10 rounded-xl border shadow-xl lg:my-5">
+      <main className="bg-background relative mx-auto w-full max-w-4xl space-y-10 rounded-xl border shadow-xl lg:my-5 2xl:max-w-1/2 2xl:min-w-4xl">
         <Home />
         <Separator decorative />
         <About />

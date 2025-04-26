@@ -50,7 +50,7 @@ async function Work() {
               alt="Work Image"
               loading="lazy"
               placeholder="blur"
-              className="h-auto max-h-50 w-full rounded-lg object-cover"
+              className="h-auto max-h-50 min-w-full rounded-lg object-cover"
             />
           </CardFooter>
         </Card>

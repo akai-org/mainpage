@@ -71,7 +71,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
       ref={ref}
       // IMPORTANT: Change this to class of `fixed` if you want the navbar to be fixed
       className={cn(
-        'fixed inset-x-0 top-2 left-1/2 z-40 w-full max-w-4xl -translate-x-1/2 lg:top-5',
+        'fixed inset-x-0 top-2 left-1/2 z-40 w-full max-w-4xl -translate-x-1/2 lg:top-5 2xl:max-w-1/2 2xl:min-w-4xl',
         className,
       )}
     >

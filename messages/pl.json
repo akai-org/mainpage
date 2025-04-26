@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "AKAI - Akademickie Koło Aplikacji Internetowych",
-    "description": "Akademickie Koło Aplikacji Internetowych. Jesteśmy aktywnie działającym kołem naukowym przy Politechnice Poznańskiej, które specjalizuje się w tworzeniu aplikacji internetowych oraz szeroko pojętym rozwoju w obszarze IT."
+    "description": "Jesteśmy aktywnie działającym kołem naukowym przy Politechnice Poznańskiej, które specjalizuje się w tworzeniu aplikacji internetowych oraz szeroko pojętym rozwoju w obszarze IT."
   },
   "header": {
     "about": "O nas",
@@ -46,6 +46,10 @@
     "ui": {
       "name": "Graphic design / UI / UX",
       "desc": "<p><accent>Zanim coś stworzymy, warto to zaprojektować.</accent> Oprócz tego, żeby było przyjemne dla oka - warto również zadbać o to, aby <b>interfejs był intuicyjny dla użytkownika.</b></p>"
+    },
+    "projects": {
+      "name": "Zarządzanie projektami",
+      "desc": "<p>Zajmujemy się również zarządzaniem projektami w obszarze IT, stosując podejścia takie jak <accent>Agile i Scrum</accent>. Nasze doświadczenie w tych metodykach pozwala nam efektywnie dostosowywać się do zmieniających się wymagań projektowych oraz <b>lepiej komunikować się z członkami zespołu.</b></p>"
     },
     "join": "Chcesz do nas dołączyć?",
     "button": "Napisz do nas"

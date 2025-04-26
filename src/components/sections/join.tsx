@@ -17,14 +17,15 @@ import frontend from '@/../public/jobs/frontend.jpg';
 import backend from '@/../public/jobs/backend.jpg';
 import mobile from '@/../public/jobs/mobile.jpg';
 import design from '@/../public/jobs/design.jpg';
+import projects from '@/../public/jobs/projects.jpg';
 import cat1 from '@/../public/cat1.png';
 import { cn } from '@/lib/utils';
 import { RichText } from '@/components/ui/rich-text';
 
 async function Join() {
   const t = await getTranslations('join');
-  const jobs = ['front', 'back', 'mobile', 'ui'] as const;
-  const images = [frontend, backend, mobile, design];
+  const jobs = ['front', 'back', 'mobile', 'ui', 'projects'] as const;
+  const images = [frontend, backend, mobile, design, projects];
   return (
     <section id="join">
       <Heading>{t('heading')}</Heading>
@@ -65,7 +66,7 @@ async function Join() {
       </div>
       <div className="flex-center-col mt-5 space-y-5">
         <h2>{t('join')}</h2>
-        <Button aria-label="Contact us on mail" asChild>
+        <Button asChild>
           <Link href={`mailto:${MAIL}`}>{t('button')}</Link>
         </Button>
         <Image

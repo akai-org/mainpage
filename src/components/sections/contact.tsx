@@ -13,9 +13,12 @@ async function Contact() {
   return (
     <section id="contact" className="pb-0">
       <Heading>{t('heading')}</Heading>
-      <p className="from-foreground to-primary bg-gradient-to-r bg-clip-text text-xl text-transparent">
+      <Link
+        href={`mailto:${MAIL}`}
+        className="from-foreground to-primary bg-gradient-to-r bg-clip-text text-xl text-transparent"
+      >
         {MAIL}
-      </p>
+      </Link>
       <ul aria-label="AKAI socials" className="flex gap-7">
         {SOCIALS.map((social, i) => (
           <li key={i}>

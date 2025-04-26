@@ -16,6 +16,7 @@ async function Projects() {
       <Heading withoutLine>
         {t('heading')}
         <NumberTicker className="text-primary" value={GITHUB_REPOS} />
+        <br />
         {t('projects')}
       </Heading>
       <p> {t('subheading')}</p>
@@ -27,7 +28,7 @@ async function Projects() {
         <Badge>{t('badge')}</Badge>
       </div>
       <Link
-        aria-label="Check out our apps"
+        aria-label="Check out our Apps"
         href={APPS_LINK}
         target="_blank"
         className="hover:no-underline"
