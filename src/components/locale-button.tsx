@@ -20,16 +20,21 @@ function LocaleButton() {
       </Button>
     );
   }
+
+  //  This is an only way to change lang without theme flickering
+  //  https://github.com/pacocoursey/next-themes/issues/199
+  const changeLocale = () => {
+    window.location.href = `/${otherLocale}`;
+  };
+
   return (
     <Button
       variant="none"
       size="icon"
       aria-label={`Change locale to ${otherLocaleFull}`}
-      asChild
+      onClick={changeLocale}
     >
-      <Link href="/" locale={otherLocale}>
-        <Flags icon={otherLocale} />
-      </Link>
+      <Flags icon={otherLocale} />
     </Button>
   );
 }
